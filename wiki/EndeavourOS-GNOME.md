@@ -161,3 +161,10 @@ source ~/.bashrc
     ```
 
     - Then update all themes and fonts in GNOME Tweaks tool.
+
+- Btop.
+
+  ```bash
+  rm ~/.config/btop
+  ln -s ~/.dotfiles/configs/btop ~/.config
+  ```
