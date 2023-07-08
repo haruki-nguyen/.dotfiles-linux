@@ -105,3 +105,16 @@ source ~/.bashrc
   rm -rf ~/.config/gitui
   ln -s ~/.dotfiles/configs/gitui ~/.config
   ```
+
+- GitHub SSH.
+
+  - Setting up SSH key on your device.
+
+    ```bash
+    ssh-keygen -t ed25519 -C "your_email@example.com"
+    eval "$(ssh-agent -s)"
+    ssh-add ~/.ssh/id_ed25519
+    ```
+
+  - Then on your GitHub account: <https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account>.
+  - Update remove URL: `git remote set-url origin <URL>`.
