@@ -13,11 +13,13 @@ First, update the GNOME's settings.
 - `zip`.
 - `starship`.
 - `gitui`.
+- `gnome-browser-connector`: for installing GNOME Shell extensions.
+- `sassc`: for installing WhiteSur GTK theme.
 
 ## Installation
 
 ```bash
-sudo pacman -S kitty nodejs npm neovim tmux zip starship gitui
+sudo pacman -S kitty nodejs npm neovim tmux zip starship gitui gnome-browser-connector sassc
 ```
 
 Install `pnpm`:
@@ -78,7 +80,7 @@ source ~/.bashrc
     - Simple Translate.
     - DuckDuckGo Privacy Essentials.
     - React Developer Tools.
-  - Themes: [Catppuccin](https://github.com/catppuccin/firefox).
+    - GNOME Shell integration: for installing GNOME Shell extensions.
 
 - Starship
 
@@ -118,3 +120,19 @@ source ~/.bashrc
 
   - Then on your GitHub account: <https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account>.
   - Update remove URL: `git remote set-url origin <URL>`.
+
+- WhiteSur GTK theme for GNOME.
+
+  - Required GNOME Shell extensions:
+    - [`user-themes`](https://extensions.gnome.org/extension/19/user-themes/).
+    - [`dash-to-dock`](https://extensions.gnome.org/extension/307/dash-to-dock/).
+    - [`blur-my-shell`](https://extensions.gnome.org/extension/3193/blur-my-shell/).
+  - Setting up:
+
+    ```bash
+    cd ~/Downloads/ && git clone https://github.com/vinceliuice/WhiteSur-gtk-theme.git --depth=1
+    cd WhiteSur-gtk-theme/
+    ./install.sh -o 'solid' -c 'Dark' -i 'arch' -b ~/'.dotfiles/configs/wallpapers/waves-dark.jpg' -m -l
+    sudo ./tweaks.sh -g -o 'solid' -c 'Dark' -t 'blue' -N -b ~/'.dotfiles/configs/wallpapers/waves-dark.jpg'
+    ./tweaks.sh -f 'alt'
+    ```
