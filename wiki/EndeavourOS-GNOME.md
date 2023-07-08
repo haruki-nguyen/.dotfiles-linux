@@ -135,4 +135,5 @@ source ~/.bashrc
     ./install.sh -o 'solid' -c 'Dark' -i 'arch' -b ~/'.dotfiles/configs/wallpapers/waves-dark.jpg' -m -l
     sudo ./tweaks.sh -g -o 'solid' -c 'Dark' -t 'blue' -N -b ~/'.dotfiles/configs/wallpapers/waves-dark.jpg'
     ./tweaks.sh -f 'alt'
+    cd .. && rm -rf WhiteSur-gtk-theme
     ```
