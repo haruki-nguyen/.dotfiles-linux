@@ -49,7 +49,8 @@ source ~/.bashrc
     ```
 
     ```bash
-    ln -s ~/.dotfiles/configs/tmux ~/.config/tmux
+    mkdir ~/.config/tmux
+    ln -s ~/.dotfiles/configs/tmux.conf ~/.config/tmux
     ```
 
   - Then reload Tmux with `tmux source ~/.config/tmux/tmux.conf` and install the plugins with `<prefix> + I`.
