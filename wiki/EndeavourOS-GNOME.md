@@ -15,11 +15,14 @@ First, update the GNOME's settings.
 - `gitui`.
 - `gnome-browser-connector`: for installing GNOME Shell extensions.
 - `sassc`: for installing WhiteSur GTK theme.
+- `make`: for installing Materail Cursors.
+- `inkscape`: for installing Materail Cursors.
+- `xorg-xcursorgen`: for installing Materail Cursors.
 
 ## Installation
 
 ```bash
-sudo pacman -S kitty nodejs npm neovim tmux zip starship gitui gnome-browser-connector sassc
+sudo pacman -S kitty nodejs npm neovim tmux zip starship gitui gnome-browser-connector sassc make inkscape xorg-xcursorgen
 ```
 
 Install `pnpm`:
@@ -129,6 +132,8 @@ source ~/.bashrc
     - [`blur-my-shell`](https://extensions.gnome.org/extension/3193/blur-my-shell/).
   - Setting up:
 
+    - Setting up window, GDM, and Firefox themes:
+
     ```bash
     cd ~/Downloads/ && git clone https://github.com/vinceliuice/WhiteSur-gtk-theme.git --depth=1
     cd WhiteSur-gtk-theme/
@@ -137,3 +142,22 @@ source ~/.bashrc
     ./tweaks.sh -f 'alt'
     cd .. && rm -rf WhiteSur-gtk-theme
     ```
+
+    - Setting up icon themes:
+
+    ```bash
+    cd ~/Downloads/ && git clone https://github.com/vinceliuice/WhiteSur-icon-theme
+    cd WhiteSur-icon-theme/
+    ./install.sh -b
+    cd .. && rm -rf WhiteSur-icon-theme
+    ```
+
+    - Setting cursor themes:
+
+    ```bash
+    cd ~/Downloads/ && git clone https://github.com/varlesh/material-cursors
+    cd material-cursors && make build && sudo make install
+    cd .. && rm -rf material-cursors
+    ```
+
+    - Then update all themes and fonts in GNOME Tweaks tool.
