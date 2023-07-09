@@ -76,6 +76,8 @@ source ~/.bashrc
 
 Follow the steps below to set up the Ubuntu machine:
 
+First, install the repository: `git clone https://github.com/haruki-nguyen/.dotfiles.git ~/.dotfiles`.
+
 ### Setting up Nerd Font for terminal emulator
 
 1. Visit [https://www.nerdfonts.com/font-downloads](https://www.nerdfonts.com/font-downloads) and download a Nerd font of your choice (e.g., Iosevka).
