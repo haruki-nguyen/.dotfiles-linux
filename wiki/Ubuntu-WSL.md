@@ -14,6 +14,7 @@ The following dependencies are required for the setup:
 - `tmux`
 - `zip`
 - `starship`
+- `cargo`: for installing `gitui`
 - `gitui`
 - `btop`
 
@@ -28,7 +29,13 @@ sudo ntpdate time.windows.com
 
 ```bash
 sudo apt-get update
-sudo apt install nodejs npm neovim tmux zip starship gitui btop
+sudo apt install nodejs npm neovim tmux zip starship cargo btop
+```
+
+Install `gitui`:
+
+```bash
+cargo install gitui
 ```
 
 Install `pnpm`:
