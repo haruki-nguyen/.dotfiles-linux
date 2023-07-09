@@ -8,7 +8,9 @@ First, update the GNOME's settings.
 - `nodejs`.
 - `npm`.
 - `pnpm`.
-- `neovim`.
+- `neovim`, with dependencies:
+  - `ripgrep`.
+  - `fd`:
 - `tmux`.
 - `zip`.
 - `starship`.

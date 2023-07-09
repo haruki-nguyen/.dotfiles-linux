@@ -11,7 +11,9 @@ The following dependencies are required for the setup:
 - `nodejs`
 - `npm`
 - `pnpm`
-- `neovim`
+- `neovim`, with dependencies:
+  - `ripgrep`.
+  - `fd`:
 - `tmux`
 - `zip`
 - `starship`
