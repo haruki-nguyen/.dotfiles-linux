@@ -18,11 +18,12 @@ First, update the GNOME's settings.
 - `make`: for installing Materail Cursors.
 - `inkscape`: for installing Materail Cursors.
 - `xorg-xcursorgen`: for installing Materail Cursors.
+- `btop`.
 
 ## Installation
 
 ```bash
-sudo pacman -S nodejs npm neovim tmux zip starship gitui gnome-browser-connector sassc make inkscape xorg-xcursorgen gnome-terminal
+sudo pacman -S nodejs npm neovim tmux zip starship gitui gnome-browser-connector sassc make inkscape xorg-xcursorgen gnome-terminal btop
 ```
 
 Install `pnpm`:
