@@ -76,7 +76,7 @@ source ~/.bashrc
 
 Follow the steps below to set up the Ubuntu machine:
 
-### Nerd Font Installation
+### Setting up Nerd Font for terminal emulator
 
 1. Visit [https://www.nerdfonts.com/font-downloads](https://www.nerdfonts.com/font-downloads) and download a Nerd font of your choice (e.g., Iosevka).
 2. Extract the font archive and move the font files to the `C:\Windows\Fonts` directory.
