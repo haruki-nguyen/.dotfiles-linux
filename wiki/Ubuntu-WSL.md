@@ -6,7 +6,7 @@ The following dependencies are required for the setup:
 
 - Windows Terminal
 - LibreWolf
-- `ntpdate`: to fix time issues (run `sudo ntpdate time.windows.com`).
+- `ntpdate`.
 - `nodejs`
 - `npm`
 - `pnpm`
@@ -19,7 +19,15 @@ The following dependencies are required for the setup:
 
 ## Installation
 
+Run this before installation
+
 ```bash
+sudo apt install ntpdate
+sudo ntpdate time.windows.com
+```
+
+```bash
+sudo apt-get update
 sudo apt install nodejs npm neovim tmux zip starship gitui btop
 ```
 
