@@ -5,6 +5,7 @@
 The following dependencies are required for the setup:
 
 - Windows Terminal
+- LibreWolf
 - `nodejs`
 - `npm`
 - `pnpm`
@@ -70,7 +71,7 @@ rm -rf ~/.config/nvim/lua/custom/
 ln -s ~/.dotfiles/configs/neovim ~/.config/nvim/lua/custom
 ```
 
-### Firefox
+### LibreWolf
 
 - Login to sync Bookmarks, Settings, and Add-ons.
 - Set up the following add-ons:
