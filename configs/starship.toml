@@ -20,7 +20,6 @@ format = "[ $path ](bold $style)[$read_only]($read_only_style)"
 read_only = ''
 read_only_style = 'red'
 truncation_length = 3
-truncation_symbol = "…/"
 
 [git_branch]
 format = '[ $symbol $branch ]($style)'
