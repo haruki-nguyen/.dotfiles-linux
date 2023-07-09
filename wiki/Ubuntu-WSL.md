@@ -6,6 +6,7 @@ The following dependencies are required for the setup:
 
 - Windows Terminal
 - LibreWolf
+- `ntpdate`: to fix time issues (run `sudo ntpdate time.windows.com`).
 - `nodejs`
 - `npm`
 - `pnpm`
