@@ -29,7 +29,13 @@ sudo ntpdate time.windows.com
 
 ```bash
 sudo apt-get update
-sudo apt install nodejs npm neovim tmux zip starship cargo btop
+sudo apt install nodejs npm neovim tmux zip cargo btop
+```
+
+Install `starship`:
+
+```bash
+curl -sS https://starship.rs/install.sh | sh
 ```
 
 Install `gitui`:
