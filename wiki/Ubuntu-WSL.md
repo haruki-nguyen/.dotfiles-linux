@@ -13,7 +13,7 @@ The following dependencies are required for the setup:
 - `pnpm`
 - `neovim`, with dependencies:
   - `ripgrep`.
-  - `fd`:
+  - `fd-find`: it is `fd`.
 - `tmux`
 - `zip`
 - `starship`
@@ -43,7 +43,7 @@ nvm install node # Install the latest version of NodeJS
 
 ```bash
 sudo apt-get update
-sudo apt install npm tmux zip cargo btop software-properties-common
+sudo apt install npm tmux zip cargo btop software-properties-common ripgrep fd-find
 ```
 
 Install `neovim`:
