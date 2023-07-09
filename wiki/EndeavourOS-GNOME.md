@@ -4,7 +4,7 @@ First, update the GNOME's settings.
 
 ## Dependencies
 
-- `kitty`.
+- `gnome-terminal`
 - `nodejs`.
 - `npm`.
 - `pnpm`.
@@ -22,7 +22,7 @@ First, update the GNOME's settings.
 ## Installation
 
 ```bash
-sudo pacman -S kitty nodejs npm neovim tmux zip starship gitui gnome-browser-connector sassc make inkscape xorg-xcursorgen
+sudo pacman -S nodejs npm neovim tmux zip starship gitui gnome-browser-connector sassc make inkscape xorg-xcursorgen gnome-terminal
 ```
 
 Install `pnpm`:
@@ -35,15 +35,15 @@ source ~/.bashrc
 
 ## Setting up
 
-- Kitty.
+- First, install a Nerd font on <https://www.nerdfonts.com/font-downloads> to `/usr/share/fonts/`. For example: Iosevka.
 
-  - First, install a Nerd font on <https://www.nerdfonts.com/font-downloads> to `/usr/share/fonts/`. For example: Iosevka.
-  - Then, setting up the configs:
+- GNOME Terminal.
 
-    ```bash
-    rm -rf ~/.config/kitty/
-    ln -s ~/.dotfiles/configs/kitty/ ~/.config/
-    ```
+  - Install Catppuccin theme:
+
+  ```bash
+  curl -L https://raw.githubusercontent.com/catppuccin/gnome-terminal/v0.2.0/install.py | python3 -
+  ```
 
 - Tmux.
 
