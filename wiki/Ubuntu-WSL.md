@@ -18,6 +18,7 @@ The following dependencies are required for the setup:
 - `cargo`: for installing `gitui`
 - `gitui`
 - `btop`
+- `software-properties-common`: enable `add-apt-repository` command.
 
 ## Installation
 
@@ -40,7 +41,15 @@ nvm install node # Install the latest version of NodeJS
 
 ```bash
 sudo apt-get update
-sudo apt install npm neovim tmux zip cargo btop
+sudo apt install npm tmux zip cargo btop software-properties-common
+```
+
+Install `neovim`:
+
+```bash
+sudo add-apt-repository ppa:neovim-ppa/unstable
+sudo apt update && sudo apt upgrade
+sudo apt install neovim
 ```
 
 Install `starship`:
