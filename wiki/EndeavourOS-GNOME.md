@@ -36,6 +36,8 @@ source ~/.bashrc
 
 ## Setting up
 
+- Install the repository: `git clone https://github.com/haruki-nguyen/.dotfiles.git ~/.dotfiles`.
+
 - First, install a Nerd font on <https://www.nerdfonts.com/font-downloads> to `/usr/share/fonts/` and set it up for the terminal emulator. For example: Iosevka.
 
 - GNOME Terminal.
