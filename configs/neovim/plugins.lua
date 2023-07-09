@@ -36,11 +36,11 @@ local plugins = {
 
 	-- Editing and moving
 	{
-		"ellisonleao/glow.nvim",
-		ft = "markdown",
-		config = function()
-			require("custom.configs.glow")
+		"iamcco/markdown-preview.nvim",
+		build = function()
+			vim.fn["mkdp#util#install"]()
 		end,
+		ft = "markdown",
 	},
 	{
 		"rmagatti/auto-session",
