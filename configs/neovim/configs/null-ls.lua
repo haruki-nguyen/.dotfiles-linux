@@ -9,7 +9,6 @@ local b = null_ls.builtins
 
 local sources = {
 	b.code_actions.eslint_d,
-	b.completion.luasnip,
 	b.diagnostics.eslint_d,
 	b.formatting.prettier,
 	b.formatting.stylua,
