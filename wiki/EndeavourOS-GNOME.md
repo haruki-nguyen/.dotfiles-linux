@@ -11,6 +11,7 @@ First, update the GNOME's settings.
 - `neovim`, with dependencies:
   - `ripgrep`.
   - `fd`:
+- `visual-studio-code-bin`.
 - `tmux`.
 - `zip`.
 - `starship`.
@@ -22,11 +23,16 @@ First, update the GNOME's settings.
 - `xorg-xcursorgen`: for installing Materail Cursors.
 - `btop`.
 - `syncthing`.
+- `ibus-unikey`: add Telex input method.
 
 ## Installation
 
 ```bash
-sudo pacman -S nodejs npm neovim tmux zip starship gitui gnome-browser-connector sassc make inkscape xorg-xcursorgen gnome-terminal btop syncthing
+sudo pacman -S nodejs npm neovim tmux zip starship gitui gnome-browser-connector sassc make inkscape xorg-xcursorgen gnome-terminal btop syncthing ibus-unikey
+```
+
+```bash
+yay -S visual-studio-code-bin
 ```
 
 Install `pnpm`:
@@ -174,3 +180,16 @@ source ~/.bashrc
   rm ~/.config/btop
   ln -s ~/.dotfiles/configs/btop ~/.config
   ```
+
+- Telex input method.
+
+  - First, add these line into `/etc/environment`:
+
+    ```txt
+    # ENVs for Ibus to work
+    GTK_IM_MODULE=ibus
+    QT_IM_MODULE=ibus
+    XMODIFIERS=@im=ibus
+    ```
+
+  - Then set the Telex input method in the setting after re-login.
