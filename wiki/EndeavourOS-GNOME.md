@@ -12,6 +12,7 @@ First, update the GNOME's settings.
 - `neovim`, with dependencies:
   - `ripgrep`.
   - `fd`:
+  - `xclip`: enable the usage of system clipboard.
 - `visual-studio-code-bin`.
 - `tmux`.
 - `zip`.
@@ -29,7 +30,7 @@ First, update the GNOME's settings.
 ## Installation
 
 ```bash
-sudo pacman -S nodejs npm neovim tmux zip starship gitui gnome-browser-connector sassc make inkscape xorg-xcursorgen gnome-terminal btop syncthing ibus-unikey
+sudo pacman -S nodejs npm neovim tmux zip starship gitui gnome-browser-connector sassc make inkscape xorg-xcursorgen gnome-terminal btop syncthing ibus-unikey xclip
 ```
 
 ```bash
