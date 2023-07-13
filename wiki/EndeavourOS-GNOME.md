@@ -8,6 +8,7 @@ First, update the GNOME's settings.
 - `nodejs`.
 - `npm`.
 - `pnpm`.
+- `yarn`.
 - `neovim`, with dependencies:
   - `ripgrep`.
   - `fd`:
@@ -41,6 +42,13 @@ Install `pnpm`:
 sudo npm i -g pnpm
 pnpm setup
 source ~/.bashrc
+```
+
+Install `yarn`:
+
+```bash
+corepack enable
+corepack prepare yarn@stable --activate
 ```
 
 ## Setting up
