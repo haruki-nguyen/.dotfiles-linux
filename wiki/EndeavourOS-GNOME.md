@@ -151,6 +151,7 @@ corepack prepare yarn@stable --activate
     - [`user-themes`](https://extensions.gnome.org/extension/19/user-themes/).
     - [`dash-to-dock`](https://extensions.gnome.org/extension/307/dash-to-dock/).
     - [`blur-my-shell`](https://extensions.gnome.org/extension/3193/blur-my-shell/).
+    - [`rounded-window-cornors`](https://extensions.gnome.org/extension/5237/rounded-window-corners/).
   - Setting up:
 
     - Setting up window, GDM, and Firefox themes:
