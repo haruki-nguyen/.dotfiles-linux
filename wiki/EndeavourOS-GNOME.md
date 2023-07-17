@@ -48,7 +48,7 @@ source ~/.bashrc
 Install `yarn`:
 
 ```bash
-corepack enable
+sudo corepack enable
 corepack prepare yarn@stable --activate
 ```
 
