@@ -20,9 +20,7 @@ First, update the GNOME's settings.
 - `gitui`.
 - `gnome-browser-connector`: for installing GNOME Shell extensions.
 - `sassc`: for installing WhiteSur GTK theme.
-- `make`: for installing Materail Cursors.
-- `inkscape`: for installing Materail Cursors.
-- `xorg-xcursorgen`: for installing Materail Cursors.
+- `bibata-cursor-theme`: a cursor theme.
 - `btop`.
 - `syncthing`.
 - `ibus-unikey`: add Telex input method.
@@ -34,7 +32,7 @@ sudo pacman -S nodejs npm neovim tmux zip starship gitui gnome-browser-connector
 ```
 
 ```bash
-yay -S visual-studio-code-bin
+yay -S visual-studio-code-bin bibata-cursor-theme
 ```
 
 Install `pnpm`:
@@ -172,14 +170,6 @@ corepack prepare yarn@stable --activate
     cd WhiteSur-icon-theme/
     ./install.sh -b
     cd .. && rm -rf WhiteSur-icon-theme
-    ```
-
-    - Setting cursor themes:
-
-    ```bash
-    cd ~/Downloads/ && git clone https://github.com/varlesh/material-cursors
-    cd material-cursors && make build && sudo make install
-    cd .. && rm -rf material-cursors
     ```
 
     - Then update all themes and fonts in GNOME Tweaks tool.
