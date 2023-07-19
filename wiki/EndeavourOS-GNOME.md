@@ -24,6 +24,7 @@ First, update the GNOME's settings.
 - `btop`.
 - `syncthing`.
 - `ibus-unikey`: add Telex input method.
+- `live-server`.
 
 ## Installation
 
@@ -41,6 +42,10 @@ Install `pnpm`:
 sudo npm i -g pnpm
 pnpm setup
 source ~/.bashrc
+```
+
+```bash
+pnpm install -g live-server
 ```
 
 Install `yarn`:
