@@ -25,6 +25,7 @@ First, update the GNOME's settings.
 - `syncthing`.
 - `ibus-unikey`: add Telex input method.
 - `live-server`.
+- `inkscape`: vector graphic editor.
 
 ## Installation
 
