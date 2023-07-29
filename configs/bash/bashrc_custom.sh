@@ -3,7 +3,7 @@
 # Check if the OS is Ubuntu or Arch Linux
 if type "pacman" >/dev/null 2>&1; then
   function new-date() {
-    echo "Updating system with pacman..."
+    echo "Updating system with yay..."
     yay -Syu --noconfirm
 
     echo "Removing unused packages..."
