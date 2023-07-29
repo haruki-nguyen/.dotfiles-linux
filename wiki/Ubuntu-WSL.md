@@ -75,6 +75,10 @@ pnpm setup
 source ~/.bashrc
 ```
 
+```bash
+pnpm install -g live-server
+```
+
 ## Setting Up
 
 Follow the steps below to set up the Ubuntu machine:
