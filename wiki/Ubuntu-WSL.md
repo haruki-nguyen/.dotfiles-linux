@@ -21,6 +21,7 @@ The following dependencies are required for the setup:
 - `gitui`
 - `btop`
 - `software-properties-common`: enable `add-apt-repository` command.
+- `live-server`.
 
 ## Installation
 
