@@ -17,7 +17,7 @@ if type "pacman" >/dev/null 2>&1; then
     pnpm update -g
   }
 elif type "apt" >/dev/null 2>&1 || type "apt-get" >/dev/null 2>&1; then
-  function update_and_cleanup_system() {
+  function new-date() {
     echo "Updating system with apt..."
     sudo apt update && sudo apt upgrade -y
 
@@ -27,7 +27,8 @@ elif type "apt" >/dev/null 2>&1 || type "apt-get" >/dev/null 2>&1; then
     echo "System update and cleanup complete!"
 
     echo "Updating packages of npm..."
-    sudo npm update -g
+    # Not use `sudo npm` because we use `npm` installed by `nvm`
+    npm update -g 
 
     echo "Updating packages of pnpm..."
     pnpm update -g
