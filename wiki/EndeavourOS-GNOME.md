@@ -22,11 +22,12 @@ First, update the GNOME's settings.
 - `ibus-unikey`: add Telex input method.
 - `inkscape`: vector graphic editor.
 - `libreoffice-fresh`.
+- `nodejs` and `npm` (for installing `prettier` in `mason` in `neovim`).
 
 ## Installation
 
 ```bash
-sudo pacman -S neovim tmux zip starship gitui gnome-browser-connector sassc inkscape gnome-terminal btop syncthing ibus-unikey xclip libreoffice-fresh
+sudo pacman -S neovim tmux zip starship gitui gnome-browser-connector sassc inkscape gnome-terminal btop syncthing ibus-unikey xclip libreoffice-fresh nodejs npm
 ```
 
 ```bash
