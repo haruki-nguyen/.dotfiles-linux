@@ -5,10 +5,6 @@ First, update the GNOME's settings.
 ## Dependencies
 
 - `gnome-terminal`
-- `nodejs`.
-- `npm`.
-- `pnpm`.
-- `yarn`.
 - `neovim`, with dependencies:
   - `ripgrep`.
   - `fd`:
@@ -24,37 +20,17 @@ First, update the GNOME's settings.
 - `btop`.
 - `syncthing`.
 - `ibus-unikey`: add Telex input method.
-- `live-server`.
 - `inkscape`: vector graphic editor.
 - `libreoffice-fresh`.
 
 ## Installation
 
 ```bash
-sudo pacman -S nodejs npm neovim tmux zip starship gitui gnome-browser-connector sassc inkscape gnome-terminal btop syncthing ibus-unikey xclip libreoffice-fresh
+sudo pacman -S neovim tmux zip starship gitui gnome-browser-connector sassc inkscape gnome-terminal btop syncthing ibus-unikey xclip libreoffice-fresh
 ```
 
 ```bash
 yay -S visual-studio-code-bin bibata-cursor-theme
-```
-
-Install `pnpm`:
-
-```bash
-sudo npm i -g pnpm
-pnpm setup
-source ~/.bashrc
-```
-
-```bash
-pnpm install -g live-server
-```
-
-Install `yarn`:
-
-```bash
-sudo corepack enable
-corepack prepare yarn@stable --activate
 ```
 
 ## Setting up
