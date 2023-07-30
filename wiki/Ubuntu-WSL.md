@@ -10,7 +10,6 @@ The following dependencies are required for the setup:
 - `nvm`.
 - `nodejs`
 - `npm`
-- `pnpm`
 - `neovim`, with dependencies:
   - `ripgrep`.
   - `fd-find`: it is `fd`.
@@ -21,7 +20,6 @@ The following dependencies are required for the setup:
 - `gitui`
 - `btop`
 - `software-properties-common`: enable `add-apt-repository` command.
-- `live-server`.
 
 ## Installation
 
@@ -44,7 +42,7 @@ nvm install node # Install the latest version of NodeJS
 
 ```bash
 sudo apt-get update
-sudo apt install npm tmux zip cargo btop software-properties-common ripgrep fd-find
+sudo apt install tmux zip cargo btop software-properties-common ripgrep fd-find
 ```
 
 Install `neovim`:
@@ -65,18 +63,6 @@ Install `gitui`:
 
 ```bash
 cargo install gitui
-```
-
-Install `pnpm`:
-
-```bash
-sudo npm i -g pnpm
-pnpm setup
-source ~/.bashrc
-```
-
-```bash
-pnpm install -g live-server
 ```
 
 ## Setting Up
