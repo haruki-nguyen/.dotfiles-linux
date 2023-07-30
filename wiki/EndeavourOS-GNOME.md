@@ -24,6 +24,7 @@ First, update the GNOME's settings.
 - `gimp`: GNU Image Manipulation Program.
 - `libreoffice-fresh`.
 - `nodejs` and `npm` (for installing `prettier` in `mason` in `neovim`).
+- `foliate`: ebooks reader.
 
 ## Installation
 
@@ -178,3 +179,9 @@ yay -S visual-studio-code-bin bibata-cursor-theme
     ```
 
   - Then set the Telex input method in the setting after re-login.
+
+- Foliate.
+
+  ```bash
+  ln -s ~/.dotfiles/configs/foliate ~/.config/com.github.johnfactotum.Foliate
+  ```
