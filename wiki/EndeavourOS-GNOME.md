@@ -26,11 +26,12 @@ First, update the GNOME's settings.
 - `ibus-unikey`: add Telex input method.
 - `live-server`.
 - `inkscape`: vector graphic editor.
+- `libreoffice-fresh`.
 
 ## Installation
 
 ```bash
-sudo pacman -S nodejs npm neovim tmux zip starship gitui gnome-browser-connector sassc inkscape gnome-terminal btop syncthing ibus-unikey xclip
+sudo pacman -S nodejs npm neovim tmux zip starship gitui gnome-browser-connector sassc inkscape gnome-terminal btop syncthing ibus-unikey xclip libreoffice-fresh
 ```
 
 ```bash
