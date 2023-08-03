@@ -145,7 +145,7 @@ yay -S visual-studio-code-bin bibata-cursor-theme
     cd WhiteSur-gtk-theme/
     ./install.sh -c 'Dark' -i 'arch' -b ~/'.dotfiles/configs/wallpapers/waves-dark.jpg' -m -l --nord
     sudo ./tweaks.sh -g -N -b ~/'.dotfiles/configs/wallpapers/waves-dark.jpg'
-    ./tweaks.sh -f 'alt'
+    ./tweaks.sh -f
     cd .. && rm -rf WhiteSur-gtk-theme
     ```
 
