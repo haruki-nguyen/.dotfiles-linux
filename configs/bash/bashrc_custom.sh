@@ -44,6 +44,18 @@ eval "$(starship init bash)"
 source ~/.dotfiles/configs/bash/z.sh
 
 # Alias
+alias md="mkdir -p"
+alias t="touch"
+
+alias g="git"
+alias gs="git status"
+alias gl="git log --graph --oneline --decorate"
+alias gaa="git add ."
+alias ga="git add"
+alias gc="git commit -m"
+alias gpl="git pull"
+alias gps="git push"
+
 alias gitui="gitui -t mocha.ron"
 
 # Add PATH
