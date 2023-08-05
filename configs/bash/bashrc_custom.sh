@@ -1,4 +1,18 @@
 #!/bin/bash
+ 
+# Functions
+project_paths=(/home/haruki/.dotfiles)
+function git_pull_all () {
+  for i in "${project_paths[@]}"; do
+    echo "Going to $i"
+    cd $i
+    echo "Pulling..."
+    git pull
+    echo "Done!"
+    echo "Going back..."
+    cd -
+  done
+}
 
 # Check if the OS is Ubuntu or Arch Linux
 if type "pacman" >/dev/null 2>&1; then
@@ -15,6 +29,10 @@ if type "pacman" >/dev/null 2>&1; then
     sudo npm update -g
     echo "Updating packages of pnpm..."
     pnpm update -g
+
+    echo "Pulling updates from the repositories"
+    git_pull_all
+    echo "Done!"
   }
 elif type "apt" >/dev/null 2>&1 || type "apt-get" >/dev/null 2>&1; then
   function new-date() {
@@ -32,6 +50,10 @@ elif type "apt" >/dev/null 2>&1 || type "apt-get" >/dev/null 2>&1; then
 
     echo "Updating packages of pnpm..."
     pnpm update -g
+
+    echo "Pulling updates from the repositories"
+    git_pull_all
+    echo "Done!"
   }
 else
   echo "Unknown OS"
