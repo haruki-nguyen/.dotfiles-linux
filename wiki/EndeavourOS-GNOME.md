@@ -29,7 +29,7 @@ First, update the GNOME's settings.
 ## Installation
 
 ```bash
-sudo pacman -S neovim tmux zip starship gitui gnome-browser-connector sassc inkscape gimp gnome-terminal btop syncthing ibus-unikey xclip libreoffice-fresh nodejs npm
+sudo pacman -S neovim tmux zip starship gitui gnome-browser-connector sassc inkscape gimp gnome-terminal btop syncthing ibus-unikey xclip libreoffice-fresh nodejs npm ripgrep
 ```
 
 ```bash
