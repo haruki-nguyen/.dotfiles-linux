@@ -143,7 +143,7 @@ yay -S visual-studio-code-bin bibata-cursor-theme
     ```bash
     cd ~/Downloads/ && git clone https://github.com/vinceliuice/WhiteSur-gtk-theme.git --depth=1
     cd WhiteSur-gtk-theme/
-    ./install.sh -c 'Dark' -i 'arch' -b ~/'.dotfiles/configs/wallpapers/waves-dark.jpg' -m -l --nord
+    ./install.sh -c 'Dark' -i 'arch' -b ~/'.dotfiles/configs/wallpapers/waves-dark.jpg' -m -l
     sudo ./tweaks.sh -g -N -b ~/'.dotfiles/configs/wallpapers/waves-dark.jpg'
     ./tweaks.sh -f
     cd .. && rm -rf WhiteSur-gtk-theme
