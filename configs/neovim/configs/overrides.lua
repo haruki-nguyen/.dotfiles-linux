@@ -18,8 +18,10 @@ M.mason = {
 		"lua-language-server",
 		"stylua",
 
-		-- Formatter
+		-- Others
 		"prettier",
+		"eslint_d",
+		"typescript-language-server",
 	},
 }
 
