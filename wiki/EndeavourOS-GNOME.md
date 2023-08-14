@@ -7,7 +7,7 @@ First, update the GNOME's settings.
 - `gnome-terminal`
 - `neovim`, with dependencies:
   - `ripgrep`.
-  - `fd`:
+  - `fd`.
   - `xclip`: enable the usage of system clipboard.
 - `visual-studio-code-bin`.
 - `tmux`.
