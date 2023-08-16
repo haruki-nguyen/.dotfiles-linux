@@ -25,6 +25,9 @@ First, update the GNOME's settings.
 - `libreoffice-fresh`.
 - `nodejs` and `npm` (for installing `prettier` in `mason` in `neovim`).
 - `foliate`: ebooks reader.
+- `wine`: for running Windows application.
+- MetaTraders 5.
+- TradingView.
 
 ## Installation
 
@@ -33,7 +36,7 @@ sudo pacman -S neovim tmux zip starship gitui gnome-browser-connector sassc inks
 ```
 
 ```bash
-yay -S visual-studio-code-bin bibata-cursor-theme
+yay -S visual-studio-code-bin bibata-cursor-theme tradingview
 ```
 
 ## Setting up
@@ -185,3 +188,12 @@ yay -S visual-studio-code-bin bibata-cursor-theme
   ```bash
   ln -s ~/.dotfiles/configs/foliate ~/.config/com.github.johnfactotum.Foliate
   ```
+
+- MetaTraders.
+
+  ```bash
+  cd ~/Downloads && wget "https://download.mql5.com/cdn/web/metaquotes.software.corp/mt5/mt5setup.exe?utm_source=web.installer&utm_campaign=mql5.welcome.open" -O mt5setup.exe
+  wine mt5setup.exe
+  ```
+
+  After that, remove the setup file.
