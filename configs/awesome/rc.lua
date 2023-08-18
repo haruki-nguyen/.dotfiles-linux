@@ -1,3 +1,7 @@
+---@diagnostic disable: param-type-mismatch
+local gtimer = require("gears.timer")
+local collectgarbage = collectgarbage
+
 pcall(require, "luarocks.loader")
 
 local awful = require("awful")
@@ -34,6 +38,19 @@ do
 		in_error = false
 	end)
 end
+
+-- GARBAGE COLLECTION
+collectgarbage("setpause", 110)
+collectgarbage("setstepmul", 1000)
+
+gtimer({
+	timeout = 5,
+	autostart = true,
+	call_now = true,
+	callback = function()
+		collectgarbage("collect")
+	end,
+})
 
 -- VARIABLE DEFINITIONS
 beautiful.init("~/.config/awesome/theme.lua")
