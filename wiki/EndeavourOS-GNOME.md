@@ -28,11 +28,12 @@ First, update the GNOME's settings.
 - `wine`: for running Windows application.
 - MetaTraders 5.
 - TradingView.
+- `noto-fonts-emoji`.
 
 ## Installation
 
 ```bash
-sudo pacman -S neovim tmux zip starship gitui gnome-browser-connector sassc inkscape gimp gnome-terminal btop syncthing ibus-unikey xclip libreoffice-fresh nodejs npm ripgrep
+sudo pacman -S neovim tmux zip starship gitui gnome-browser-connector sassc inkscape gimp gnome-terminal btop syncthing ibus-unikey xclip libreoffice-fresh nodejs npm ripgrep noto-fonts-emoji
 ```
 
 ```bash
@@ -44,6 +45,8 @@ yay -S visual-studio-code-bin bibata-cursor-theme tradingview
 - Install the repository: `git clone https://github.com/haruki-nguyen/.dotfiles.git ~/.dotfiles`.
 
 - First, install a Nerd font on <https://www.nerdfonts.com/font-downloads> to `/usr/share/fonts/` and set it up for the terminal emulator. For example: Iosevka.
+
+- Then, setting up emoji font: `fc-cache -fv`, this command will rebuild the font cache.
 
 - GNOME Terminal.
 
