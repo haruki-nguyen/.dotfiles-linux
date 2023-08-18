@@ -1,0 +1,16 @@
+{
+  "diagnostics.globals": [
+    "vim",
+    "awesome",
+    "terminal",
+    "editor",
+    "editor_cmd",
+    "modkey",
+    "mymainmenu",
+    "mykeyboardlayout",
+    "globalkeys",
+    "root",
+    "mytextclock",
+    "client"
+  ]
+}
