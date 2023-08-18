@@ -33,7 +33,7 @@ First, update the GNOME's settings.
 ## Installation
 
 ```bash
-sudo pacman -S neovim tmux zip starship gitui gnome-browser-connector sassc inkscape gimp gnome-terminal btop syncthing ibus-unikey xclip libreoffice-fresh nodejs npm ripgrep noto-fonts-emoji
+sudo pacman -S neovim tmux zip starship gitui gnome-browser-connector sassc inkscape gimp gnome-terminal btop syncthing ibus-unikey xclip fd libreoffice-fresh nodejs npm ripgrep noto-fonts-emoji foliate wine
 ```
 
 ```bash
@@ -90,10 +90,8 @@ yay -S visual-studio-code-bin bibata-cursor-theme tradingview
 
   - Login to sync Bookmarks, Settings, and Add-ons.
   - Setting up add-ons:
-    - Dark Reader.
     - Simple Translate.
     - DuckDuckGo Privacy Essentials.
-    - React Developer Tools.
     - GNOME Shell integration: for installing GNOME Shell extensions.
 
 - Starship
