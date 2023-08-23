@@ -4,7 +4,9 @@ First, update the GNOME's settings.
 
 ## Dependencies
 
-- Installed by default: `firefox`.
+- Installed by default:
+  - `firefox`.
+  - `git`.
 - `gnome-terminal`
 - `neovim`, with dependencies:
   - `ripgrep`.

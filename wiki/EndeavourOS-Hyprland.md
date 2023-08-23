@@ -2,7 +2,9 @@
 
 ## Dependencies
 
-- Installed by default: `firefox`.
+- Installed by default:
+  - `firefox`.
+  - `git`.
 - `hyprland`.
 - `kitty`.
 - `neovim`, with dependencies:

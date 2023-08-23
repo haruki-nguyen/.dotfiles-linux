@@ -4,6 +4,7 @@
 
 The following dependencies are required for the setup:
 
+- Installed by default: `git`.
 - Windows Terminal
 - LibreWolf
 - `ntpdate`.
