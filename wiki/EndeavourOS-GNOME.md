@@ -4,6 +4,7 @@ First, update the GNOME's settings.
 
 ## Dependencies
 
+- Installed by default: `firefox`.
 - `gnome-terminal`
 - `neovim`, with dependencies:
   - `ripgrep`.
@@ -86,7 +87,7 @@ yay -S visual-studio-code-bin bibata-cursor-theme tradingview
     ln -s ~/.dotfiles/configs/neovim ~/.config/nvim/lua/custom
     ```
 
-- Firefox (installed by default)
+- Firefox:
 
   - Login to sync Bookmarks, Settings, and Add-ons.
   - Setting up add-ons:
