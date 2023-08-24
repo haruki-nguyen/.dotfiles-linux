@@ -125,7 +125,6 @@ yay -S visual-studio-code-bin tradingview
 - Btop.
 
   ```bash
-  rm ~/.config/btop
   ln -s ~/.dotfiles/configs/btop ~/.config
   ```
 
