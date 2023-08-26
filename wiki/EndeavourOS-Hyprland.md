@@ -44,6 +44,12 @@ yay -S visual-studio-code-bin tradingview
 
 - First, install a Nerd font on <https://www.nerdfonts.com/font-downloads> to `/usr/share/fonts/` and set it up for the terminal emulator. For example: Iosevka.
 
+  ```bash
+  cd ~/Downloads && wget "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/Iosevka.zip" -O Iosevka.zip
+  sudo unzip Iosevka.zip -d /usr/share/fonts/Iosevka
+  rm Iosevka.zip && cd -
+  ```
+
 - Then, setting up emoji font: `fc-cache -fv`, this command will rebuild the font cache.
 
 - Tmux.
