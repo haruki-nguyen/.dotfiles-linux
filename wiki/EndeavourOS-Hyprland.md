@@ -52,6 +52,13 @@ yay -S visual-studio-code-bin tradingview
 
 - Then, setting up emoji font: `fc-cache -fv`, this command will rebuild the font cache.
 
+- Hyprland
+
+  ```bash
+  rm -rf ~/.config/hypr/
+  ln -s ~/.dotfiles/configs/hypr/ ~/.config/
+  ```
+
 - Tmux.
 
   - Install Tmux Plugin Manager:
