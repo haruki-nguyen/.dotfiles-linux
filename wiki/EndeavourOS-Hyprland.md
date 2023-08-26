@@ -6,6 +6,10 @@
   - `firefox`.
   - `git`.
 - `hyprland`.
+- `sddm` and its dependencies:
+  - `qt5-quickcontrols2`.
+  - `qt5-svg`.
+  - `qt5-graphicaleffects`.
 - `kitty`.
 - `neovim`, with dependencies:
   - `ripgrep`.
@@ -31,7 +35,7 @@
 ## Installation
 
 ```bash
-sudo pacman -S hyprland kitty neovim ripgrep fd xclip tmux zip starship gitui btop syncthing inkscape gimp libreoffice-fresh nodejs npm foliate wine noto-fonts-emoji
+sudo pacman -S hyprland sddm qt5-quickcontrols2 qt5-svg qt5-graphicaleffects kitty neovim ripgrep fd xclip tmux zip starship gitui btop syncthing inkscape gimp libreoffice-fresh nodejs npm foliate wine noto-fonts-emoji
 ```
 
 ```bash
@@ -57,6 +61,16 @@ yay -S visual-studio-code-bin tradingview
   ```bash
   rm -rf ~/.config/hypr/
   ln -s ~/.dotfiles/configs/hypr/ ~/.config/
+  ```
+
+- SDDM
+
+  Download the `sugar-dark` theme file from <https://www.opendesktop.org/p/1272122> to `~/Downloads/`.
+
+  ```bash
+  sudo systemctl enable sddm.service
+  sudo tar -xzvf ~/Downloads/sugar-dark.tar.tar -C /usr/share/sddm/themes
+  sudo mkdir /etc/sddm.conf.d && cp ~/.dotfiles/configs/sddm.conf /etc/sddm.conf.d/sddm.conf
   ```
 
 - Tmux.
