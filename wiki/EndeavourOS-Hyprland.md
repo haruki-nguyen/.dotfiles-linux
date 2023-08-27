@@ -71,7 +71,8 @@ yay -S visual-studio-code-bin tradingview
   ```bash
   sudo systemctl enable sddm.service
   sudo tar -xzvf ~/Downloads/sugar-dark.tar.tar -C /usr/share/sddm/themes
-  sudo mkdir /etc/sddm.conf.d && cp ~/.dotfiles/configs/sddm.conf /etc/sddm.conf.d/sddm.conf
+  sudo mkdir /etc/sddm.conf.d
+  sudo cp ~/.dotfiles/configs/sddm/sddm.conf /etc/sddm.conf.d/
   rm ~/Downloads/sugar-dark.tar.tar
   ```
 
