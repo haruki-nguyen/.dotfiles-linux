@@ -83,3 +83,6 @@ alias gitui="gitui -t mocha.ron"
 
 # Add PATH
 export PATH="/home/haruki/.cargo/bin:$PATH"
+
+# Add search and replace script
+source ~/.dotfiles/configs/bash/search-replace.sh
