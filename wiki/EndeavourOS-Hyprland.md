@@ -11,6 +11,7 @@
   - `qt5-svg`.
   - `qt5-graphicaleffects`.
 - `kitty`.
+- `ranger`.
 - `neovim`, with dependencies:
   - `ripgrep`.
   - `fd`.
@@ -35,7 +36,7 @@
 ## Installation
 
 ```bash
-sudo pacman -S hyprland sddm qt5-quickcontrols2 qt5-svg qt5-graphicaleffects kitty neovim ripgrep fd xclip tmux zip starship gitui btop syncthing inkscape gimp libreoffice-fresh nodejs npm foliate wine noto-fonts-emoji
+sudo pacman -S hyprland sddm qt5-quickcontrols2 qt5-svg qt5-graphicaleffects kitty ranger neovim ripgrep fd xclip tmux zip starship gitui btop syncthing inkscape gimp libreoffice-fresh nodejs npm foliate wine noto-fonts-emoji
 ```
 
 ```bash
@@ -71,6 +72,13 @@ yay -S visual-studio-code-bin tradingview
   sudo systemctl enable sddm.service
   sudo tar -xzvf ~/Downloads/sugar-dark.tar.tar -C /usr/share/sddm/themes
   sudo mkdir /etc/sddm.conf.d && cp ~/.dotfiles/configs/sddm.conf /etc/sddm.conf.d/sddm.conf
+  ```
+
+- Ranger
+
+  ```bash
+  rm -rf ~/.config/ranger
+  ln -s ~/.dotfiles/configs/ranger/ ~/.config/
   ```
 
 - Tmux.
