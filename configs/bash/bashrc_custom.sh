@@ -68,6 +68,7 @@ source ~/.dotfiles/configs/bash/z.sh
 # Alias
 alias md="mkdir -p"
 alias t="touch"
+alias bashs="source ~/.bashrc"
 
 alias g="git"
 alias gs="git status"
