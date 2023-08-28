@@ -57,6 +57,13 @@ yay -S visual-studio-code-bin tradingview
 
 - Then, setting up emoji font: `fc-cache -fv`, this command will rebuild the font cache.
 
+- Kitty
+
+  ```bash
+  rm -rf ~/.config/kitty/
+  ln -s ~/.dotfiles/configs/kitty/ ~/.config/
+  ```
+
 - Hyprland
 
   ```bash
