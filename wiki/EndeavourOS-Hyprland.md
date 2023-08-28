@@ -5,6 +5,7 @@
 - Installed by default:
   - `firefox`.
   - `git`.
+  - `grub`.
 - `hyprland`.
 - `sddm` and its dependencies:
   - `qt5-quickcontrols2`.
@@ -81,6 +82,24 @@ yay -S visual-studio-code-bin tradingview
   sudo mkdir /etc/sddm.conf.d
   sudo cp ~/.dotfiles/configs/sddm/sddm.conf /etc/sddm.conf.d/
   rm ~/Downloads/sugar-dark.tar.tar
+  ```
+
+- GRUB.
+
+  ```bash
+  sudo cp -r ~/.dotfiles/configs/grub/catppuccin-mocha-grub-theme/ /usr/share/grub/themes/
+  ```
+
+  Uncomment and edit following line in `/etc/default/grub` to selected theme:
+
+  ```bash
+  GRUB_THEME="/usr/share/grub/themes/catppuccin-mocha-grub-theme/theme.txt"
+  ```
+
+  Update GRUB:
+
+  ```bash
+  sudo grub-mkconfig -o /boot/grub/grub.cfg
   ```
 
 - Ranger
