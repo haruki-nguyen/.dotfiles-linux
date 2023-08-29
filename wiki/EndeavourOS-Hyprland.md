@@ -11,7 +11,6 @@
   - `qt5-quickcontrols2`.
   - `qt5-svg`.
   - `qt5-graphicaleffects`.
-- `plymouth`.
 - `kitty`.
 - `ranger`.
 - `neovim`, with dependencies:
@@ -34,11 +33,12 @@
 - MetaTraders 5.
 - TradingView.
 - `noto-fonts-emoji`.
+- `plymouth` (disabled, not install).
 
 ## Installation
 
 ```bash
-sudo pacman -S hyprland sddm plymouth qt5-quickcontrols2 qt5-svg qt5-graphicaleffects kitty ranger neovim ripgrep fd xclip tmux zip starship gitui btop syncthing inkscape gimp libreoffice-fresh nodejs npm foliate wine noto-fonts-emoji
+sudo pacman -S hyprland sddm qt5-quickcontrols2 qt5-svg qt5-graphicaleffects kitty ranger neovim ripgrep fd xclip tmux zip starship gitui btop syncthing inkscape gimp libreoffice-fresh nodejs npm foliate wine noto-fonts-emoji
 ```
 
 ```bash
@@ -103,21 +103,21 @@ yay -S visual-studio-code-bin tradingview
   sudo grub-mkconfig -o /boot/grub/grub.cfg
   ```
 
-- Plymouth.
+- Plymouth (disabled).
 
   Edit `/etc/default/grub` and append the kernel options between the quotes in the `GRUB_CMDLINE_LINUX_DEFAULT` line:
 
   ```txt
-  GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
+  GRUB_CMDLINE_LINUX_DEFAULT="... quiet splash"
   ```
 
   And then automatically re-generate the grub.cfg file with:
 
   ```txt
-  grub-mkconfig -o /boot/grub/grub.cfg
+  sudo grub-mkconfig -o /boot/grub/grub.cfg
   ```
 
-  Force dracut to include Plymouth by adding the following line to the dracut configuration at `/etc/dracut.conf.d/myflags.conf`:
+  Force dracut to include Plymouth by adding the following line to the dracut configuration at `/etc/dracut.conf.d/example.conf`:
 
   ```conf
   add_dracutmodules+=" plymouth "
