@@ -11,6 +11,7 @@
   - `qt5-quickcontrols2`.
   - `qt5-svg`.
   - `qt5-graphicaleffects`.
+- `plymouth`.
 - `kitty`.
 - `ranger`.
 - `neovim`, with dependencies:
@@ -37,7 +38,7 @@
 ## Installation
 
 ```bash
-sudo pacman -S hyprland sddm qt5-quickcontrols2 qt5-svg qt5-graphicaleffects kitty ranger neovim ripgrep fd xclip tmux zip starship gitui btop syncthing inkscape gimp libreoffice-fresh nodejs npm foliate wine noto-fonts-emoji
+sudo pacman -S hyprland sddm plymouth qt5-quickcontrols2 qt5-svg qt5-graphicaleffects kitty ranger neovim ripgrep fd xclip tmux zip starship gitui btop syncthing inkscape gimp libreoffice-fresh nodejs npm foliate wine noto-fonts-emoji
 ```
 
 ```bash
@@ -100,6 +101,31 @@ yay -S visual-studio-code-bin tradingview
 
   ```bash
   sudo grub-mkconfig -o /boot/grub/grub.cfg
+  ```
+
+- Plymouth.
+
+  Edit `/etc/default/grub` and append the kernel options between the quotes in the `GRUB_CMDLINE_LINUX_DEFAULT` line:
+
+  ```txt
+  GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
+  ```
+
+  And then automatically re-generate the grub.cfg file with:
+
+  ```txt
+  grub-mkconfig -o /boot/grub/grub.cfg
+  ```
+
+  Force dracut to include Plymouth by adding the following line to the dracut configuration at `/etc/dracut.conf.d/myflags.conf`:
+
+  ```conf
+  add_dracutmodules+=" plymouth "
+  ```
+
+  ```bash
+  sudo cp -r ~/.dotfiles/configs/plymouth/catppuccin-mocha/ /usr/share/plymouth/themes/
+  sudo plymouth-set-default-theme -R catppuccin-mocha
   ```
 
 - Ranger
