@@ -11,6 +11,7 @@
   - `qt5-quickcontrols2`.
   - `qt5-svg`.
   - `qt5-graphicaleffects`.
+- `dunst`: a notification daemon.
 - `kitty`.
 - `ranger`.
 - `neovim`, with dependencies:
@@ -38,7 +39,7 @@
 ## Installation
 
 ```bash
-sudo pacman -S hyprland sddm qt5-quickcontrols2 qt5-svg qt5-graphicaleffects kitty ranger neovim ripgrep fd xclip tmux zip starship gitui btop syncthing inkscape gimp libreoffice-fresh nodejs npm foliate wine noto-fonts-emoji
+sudo pacman -S hyprland sddm qt5-quickcontrols2 qt5-svg qt5-graphicaleffects dunst kitty ranger neovim ripgrep fd xclip tmux zip starship gitui btop syncthing inkscape gimp libreoffice-fresh nodejs npm foliate wine noto-fonts-emoji
 ```
 
 ```bash
