@@ -48,6 +48,8 @@ yay -S visual-studio-code-bin tradingview
 
 ## Setting up
 
+- Run `eos-welcome` and do after install steps.
+
 - Install the repository: `git clone https://github.com/haruki-nguyen/.dotfiles.git ~/.dotfiles`.
 
 - First, install a Nerd font on <https://www.nerdfonts.com/font-downloads> to `/usr/share/fonts/` and set it up for the terminal emulator. For example: Iosevka.
@@ -104,29 +106,10 @@ yay -S visual-studio-code-bin tradingview
   sudo grub-mkconfig -o /boot/grub/grub.cfg
   ```
 
-- Plymouth (disabled).
-
-  Edit `/etc/default/grub` and append the kernel options between the quotes in the `GRUB_CMDLINE_LINUX_DEFAULT` line:
-
-  ```txt
-  GRUB_CMDLINE_LINUX_DEFAULT="... quiet splash"
-  ```
-
-  And then automatically re-generate the grub.cfg file with:
-
-  ```txt
-  sudo grub-mkconfig -o /boot/grub/grub.cfg
-  ```
-
-  Force dracut to include Plymouth by adding the following line to the dracut configuration at `/etc/dracut.conf.d/example.conf`:
-
-  ```conf
-  add_dracutmodules+=" plymouth "
-  ```
+- Dunst.
 
   ```bash
-  sudo cp -r ~/.dotfiles/configs/plymouth/catppuccin-mocha/ /usr/share/plymouth/themes/
-  sudo plymouth-set-default-theme -R catppuccin-mocha
+  ln -s ~/.dotfiles/configs/dunst/ ~/.config/
   ```
 
 - Ranger
@@ -232,3 +215,30 @@ yay -S visual-studio-code-bin tradingview
   ```
 
   After that, remove the setup file.
+
+## Disabled
+
+- Plymouth (disabled).
+
+  Edit `/etc/default/grub` and append the kernel options between the quotes in the `GRUB_CMDLINE_LINUX_DEFAULT` line:
+
+  ```txt
+  GRUB_CMDLINE_LINUX_DEFAULT="... quiet splash"
+  ```
+
+  And then automatically re-generate the grub.cfg file with:
+
+  ```txt
+  sudo grub-mkconfig -o /boot/grub/grub.cfg
+  ```
+
+  Force dracut to include Plymouth by adding the following line to the dracut configuration at `/etc/dracut.conf.d/example.conf`:
+
+  ```conf
+  add_dracutmodules+=" plymouth "
+  ```
+
+  ```bash
+  sudo cp -r ~/.dotfiles/configs/plymouth/catppuccin-mocha/ /usr/share/plymouth/themes/
+  sudo plymouth-set-default-theme -R catppuccin-mocha
+  ```
