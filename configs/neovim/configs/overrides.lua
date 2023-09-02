@@ -22,6 +22,7 @@ M.mason = {
 		"prettier",
 		"eslint_d",
 		"typescript-language-server",
+		"css-lsp",
 	},
 }
 
