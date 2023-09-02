@@ -6,12 +6,17 @@
   - `firefox`.
   - `git`.
   - `grub`.
+  - `pipwire` and `wireplumber`.
 - `hyprland`.
 - `sddm` and its dependencies:
   - `qt5-quickcontrols2`.
   - `qt5-svg`.
   - `qt5-graphicaleffects`.
 - `dunst`: a notification daemon.
+- `xdg-desktop-portal-hyprland` and `xdg-desktop-portal-gtk`: XDG Desktop Portal.
+- `polkit-kde-agent`: Authentication popup UI.
+- `qt6-wayland` and `qt5-wayland`: QT Wayland support.
+- `waybar-hyprland`: a status bar.
 - `kitty`.
 - `ranger`.
 - `neovim`, with dependencies:
@@ -39,11 +44,11 @@
 ## Installation
 
 ```bash
-sudo pacman -S hyprland sddm qt5-quickcontrols2 qt5-svg qt5-graphicaleffects dunst kitty ranger neovim ripgrep fd xclip tmux zip starship gitui btop syncthing inkscape gimp libreoffice-fresh nodejs npm foliate wine noto-fonts-emoji
+sudo pacman -S hyprland sddm qt5-quickcontrols2 qt5-svg qt5-graphicaleffects dunst xdg-desktop-portal-hyprland xdg-desktop-portal-gtk polkit-kde-agent qt6-wayland qt5-wayland kitty ranger neovim ripgrep fd xclip tmux zip starship gitui btop syncthing inkscape gimp libreoffice-fresh nodejs npm foliate wine noto-fonts-emoji
 ```
 
 ```bash
-yay -S visual-studio-code-bin tradingview
+yay -S visual-studio-code-bin tradingview waybar-hyprland
 ```
 
 ## Setting up
@@ -110,6 +115,12 @@ yay -S visual-studio-code-bin tradingview
 
   ```bash
   ln -s ~/.dotfiles/configs/dunst/ ~/.config/
+  ```
+
+- Waybar
+
+  ```bash
+  ln -s ~/.dotfiles/configs/waybar/ ~/.config/
   ```
 
 - Ranger
