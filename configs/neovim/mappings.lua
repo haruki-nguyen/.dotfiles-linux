@@ -7,6 +7,8 @@ M.general = {
 		["<C-l>"] = { "<cmd> TmuxNavigateRight <CR>", "Window left" },
 		["<C-j>"] = { "<cmd> TmuxNavigateDown <CR>", "Window left" },
 		["<C-k>"] = { "<cmd> TmuxNavigateUp <CR>", "Window left" },
+		-- Buffers
+		["<leader>cb"] = { ":%bd<CR><C-o>", "Close all buffers except current" },
 	},
 }
 
