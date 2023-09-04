@@ -7,6 +7,7 @@ First, update the GNOME's settings.
 - Installed by default:
   - `firefox`.
   - `git`.
+  - `grub`.
 - `gnome-terminal`
 - `neovim`, with dependencies:
   - `ripgrep`.
@@ -45,9 +46,17 @@ yay -S visual-studio-code-bin bibata-cursor-theme tradingview
 
 ## Setting up
 
+- Run `eos-welcome` and do after install steps.
+
 - Install the repository: `git clone https://github.com/haruki-nguyen/.dotfiles.git ~/.dotfiles`.
 
 - First, install a Nerd font on <https://www.nerdfonts.com/font-downloads> to `/usr/share/fonts/` and set it up for the terminal emulator. For example: Iosevka.
+
+  ```bash
+  cd ~/Downloads && wget "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/Iosevka.zip" -O Iosevka.zip
+  sudo unzip Iosevka.zip -d /usr/share/fonts/Iosevka
+  rm Iosevka.zip && cd -
+  ```
 
 - Then, setting up emoji font: `fc-cache -fv`, this command will rebuild the font cache.
 
@@ -58,6 +67,21 @@ yay -S visual-studio-code-bin bibata-cursor-theme tradingview
   ```bash
   curl -L https://raw.githubusercontent.com/catppuccin/gnome-terminal/v0.2.0/install.py | python3 -
   ```
+
+- Neovim.
+
+  - Install NvChad.
+
+    ```bash
+    git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim
+    ```
+
+  - Setup my custom NvChad configs:
+
+    ```bash
+    rm -rf ~/.config/nvim/lua/custom/
+    ln -s ~/.dotfiles/configs/neovim ~/.config/nvim/lua/custom
+    ```
 
 - Tmux.
 
@@ -74,20 +98,23 @@ yay -S visual-studio-code-bin bibata-cursor-theme tradingview
 
   - Then reload Tmux with `tmux source ~/.config/tmux/tmux.conf` and install the plugins with `<prefix> + I`.
 
-- Neovim.
+- GRUB.
 
-  - Install NvChad.
+  ```bash
+  sudo cp -r ~/.dotfiles/configs/grub/catppuccin-mocha-grub-theme/ /usr/share/grub/themes/
+  ```
 
-    ```bash
-    git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim
-    ```
+  Uncomment and edit following line in `/etc/default/grub` to selected theme:
 
-  - Setup my custom NvChad configs:
+  ```bash
+  GRUB_THEME="/usr/share/grub/themes/catppuccin-mocha-grub-theme/theme.txt"
+  ```
 
-    ```bash
-    rm -rf ~/.config/nvim/lua/custom/
-    ln -s ~/.dotfiles/configs/neovim ~/.config/nvim/lua/custom
-    ```
+  Update GRUB:
+
+  ```bash
+  sudo grub-mkconfig -o /boot/grub/grub.cfg
+  ```
 
 - Firefox:
 

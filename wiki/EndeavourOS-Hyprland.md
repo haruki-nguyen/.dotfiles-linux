@@ -1,5 +1,7 @@
 # EndeavourOS with Hyprland.
 
+> :warning: This document is not completed.
+
 ## Dependencies
 
 - Installed by default:
@@ -74,6 +76,36 @@ yay -S visual-studio-code-bin tradingview waybar-hyprland
   ln -s ~/.dotfiles/configs/kitty/ ~/.config/
   ```
 
+- Neovim.
+
+  - Install NvChad.
+
+    ```bash
+    git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim
+    ```
+
+  - Setup my custom NvChad configs:
+
+    ```bash
+    rm -rf ~/.config/nvim/lua/custom/
+    ln -s ~/.dotfiles/configs/neovim ~/.config/nvim/lua/custom
+    ```
+
+- Tmux.
+
+  - Install Tmux Plugin Manager:
+
+    ```bash
+    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+    ```
+
+    ```bash
+    mkdir ~/.config/tmux
+    ln -s ~/.dotfiles/configs/tmux.conf ~/.config/tmux
+    ```
+
+  - Then reload Tmux with `tmux source ~/.config/tmux/tmux.conf` and install the plugins with `<prefix> + I`.
+
 - Hyprland
 
   ```bash
@@ -130,42 +162,13 @@ yay -S visual-studio-code-bin tradingview waybar-hyprland
   ln -s ~/.dotfiles/configs/ranger/ ~/.config/
   ```
 
-- Tmux.
-
-  - Install Tmux Plugin Manager:
-
-    ```bash
-    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-    ```
-
-    ```bash
-    mkdir ~/.config/tmux
-    ln -s ~/.dotfiles/configs/tmux.conf ~/.config/tmux
-    ```
-
-  - Then reload Tmux with `tmux source ~/.config/tmux/tmux.conf` and install the plugins with `<prefix> + I`.
-
-- Neovim.
-
-  - Install NvChad.
-
-    ```bash
-    git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim
-    ```
-
-  - Setup my custom NvChad configs:
-
-    ```bash
-    rm -rf ~/.config/nvim/lua/custom/
-    ln -s ~/.dotfiles/configs/neovim ~/.config/nvim/lua/custom
-    ```
-
 - Firefox:
 
   - Login to sync Bookmarks, Settings, and Add-ons.
   - Setting up add-ons:
     - Simple Translate.
     - DuckDuckGo Privacy Essentials.
+    - <https://github.com/catppuccin/firefox>.
 
 - Starship
 
