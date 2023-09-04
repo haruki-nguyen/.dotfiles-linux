@@ -101,7 +101,7 @@ yay -S visual-studio-code-bin tradingview waybar-hyprland
 
     ```bash
     mkdir ~/.config/tmux
-    ln -s ~/.dotfiles/configs/tmux.conf ~/.config/tmux
+    ln -s ~/.dotfiles/configs/tmux/tmux.conf ~/.config/tmux
     ```
 
   - Then reload Tmux with `tmux source ~/.config/tmux/tmux.conf` and install the plugins with `<prefix> + I`.
@@ -173,7 +173,7 @@ yay -S visual-studio-code-bin tradingview waybar-hyprland
 - Starship
 
   ```bash
-  ln -s ~/.dotfiles/configs/starship.toml ~/.config
+  ln -s ~/.dotfiles/configs/starship/starship.toml ~/.config
   ```
 
 - Bash.
@@ -186,7 +186,7 @@ yay -S visual-studio-code-bin tradingview waybar-hyprland
 - Git.
 
   ```bash
-  ln -s ~/.dotfiles/configs/.gitconfig ~/
+  ln -s ~/.dotfiles/configs/git/.gitconfig ~/
   ```
 
 - GitUI.

@@ -93,7 +93,7 @@ yay -S visual-studio-code-bin bibata-cursor-theme tradingview
 
     ```bash
     mkdir ~/.config/tmux
-    ln -s ~/.dotfiles/configs/tmux.conf ~/.config/tmux
+    ln -s ~/.dotfiles/configs/tmux/tmux.conf ~/.config/tmux
     ```
 
   - Then reload Tmux with `tmux source ~/.config/tmux/tmux.conf` and install the plugins with `<prefix> + I`.
@@ -127,7 +127,7 @@ yay -S visual-studio-code-bin bibata-cursor-theme tradingview
 - Starship
 
   ```bash
-  ln -s ~/.dotfiles/configs/starship.toml ~/.config
+  ln -s ~/.dotfiles/configs/starship/starship.toml ~/.config
   ```
 
 - Bash.
@@ -140,7 +140,7 @@ yay -S visual-studio-code-bin bibata-cursor-theme tradingview
 - Git.
 
   ```bash
-  ln -s ~/.dotfiles/configs/.gitconfig ~/
+  ln -s ~/.dotfiles/configs/git/.gitconfig ~/
   ```
 
 - GitUI.
