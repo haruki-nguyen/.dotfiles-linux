@@ -16,10 +16,16 @@
 ## Installation
 
 ```bash
-sudo apt update && sudo apt upgrade neovim tmux zip starship gitui ranger fd ripgrep nodejs npm
+# update the repo for neovim latest version
+sudo add-apt-repository ppa:neovim-ppa/unstable
+
+# install packages
+sudo apt update && sudo apt upgrade && sudo apt install neovim tmux zip ranger ripgrep nodejs npm
 ```
 
 ## Setting up
+
+- Install a Nerd font on Windows and set it as default font for the terminal: <https://www.nerdfonts.com/font-downloads>.
 
 - GitHub SSH.
 
