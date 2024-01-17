@@ -27,6 +27,8 @@ sudo apt update && sudo apt upgrade && sudo apt install neovim tmux zip ranger r
 
 - Install a Nerd font on Windows and set it as default font for the terminal: <https://www.nerdfonts.com/font-downloads>.
 
+- Windows Terminal: copy the [Windows Terminal configs](../configs/windows-terminal/windows-terminal-settings.json) to Windows Terminal configs file.
+
 - GitHub SSH.
 
   - Setting up SSH key on your device.
