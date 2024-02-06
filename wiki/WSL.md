@@ -9,7 +9,7 @@
 - `tmux`.
 - `zip`.
 - `starship`.
-- `gitui`.
+- `gitui` with dependency is `cargo`.
 - `ranger`.
 - `nodejs` and `npm` (for installing `prettier` in `mason` in `neovim`).
 
@@ -101,9 +101,3 @@ curl -sS https://starship.rs/install.sh | sh
   ln -s ~/.dotfiles/configs/gitui ~/.config
   ```
 
-- Btop.
-
-  ```bash
-  rm ~/.config/btop
-  ln -s ~/.dotfiles/configs/btop ~/.config
-  ```
