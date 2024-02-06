@@ -23,6 +23,11 @@ sudo add-apt-repository ppa:neovim-ppa/unstable
 sudo apt update && sudo apt upgrade && sudo apt install neovim tmux zip ranger ripgrep nodejs npm
 ```
 
+```bash
+# install starship
+curl -sS https://starship.rs/install.sh | sh
+```
+
 ## Setting up
 
 - Install a Nerd font on Windows and set it as default font for the terminal: <https://www.nerdfonts.com/font-downloads>.
@@ -45,6 +50,13 @@ sudo apt update && sudo apt upgrade && sudo apt install neovim tmux zip ranger r
 - Install the repository: `git clone git@github.com:haruki-nguyen/.dotfiles.git`.
 
 - Git: `ln -s ~/.dotfiles/configs/git/.gitconfig ~/`.
+
+- Bash.
+
+  ```bash
+  echo -e "\nsource ~/.dotfiles/configs/bash/bashrc_custom.sh" >> ~/.bashrc
+  source ~/.bashrc
+  ```
 
 - Neovim.
 
@@ -80,13 +92,6 @@ sudo apt update && sudo apt upgrade && sudo apt install neovim tmux zip ranger r
 
   ```bash
   ln -s ~/.dotfiles/configs/starship/starship.toml ~/.config
-  ```
-
-- Bash.
-
-  ```bash
-  echo -e "\nsource ~/.dotfiles/configs/bash/bashrc_custom.sh" >> ~/.bashrc
-  source ~/.bashrc
   ```
 
 - GitUI.
