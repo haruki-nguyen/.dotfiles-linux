@@ -18,11 +18,12 @@ M.mason = {
     "lua-language-server",
     "stylua",
 
+    -- For C/C++ programming
+    "clangd",
+    "clang-format",
+
     -- Others
     "prettier",
-    "eslint_d",
-    "typescript-language-server",
-    "css-lsp",
   },
 }
 
