@@ -6,6 +6,7 @@
 - `neovim`, with dependencies:
   - `ripgrep`.
   - `fd`.
+  - `python3.10-venv`.
 - `tmux`.
 - `zip`.
 - `starship`.
