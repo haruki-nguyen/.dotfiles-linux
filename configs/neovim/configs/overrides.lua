@@ -21,6 +21,7 @@ M.mason = {
     -- For C/C++ programming
     "clangd",
     "clang-format",
+    "codelldb",
 
     -- Others
     "prettier",

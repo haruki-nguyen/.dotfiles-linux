@@ -6,6 +6,7 @@ local plugins = {
     "williamboman/mason.nvim",
     opts = overrides.mason,
   },
+
   -- LSP, syntax highlighting, etc.
   {
     "neovim/nvim-lspconfig",
@@ -27,6 +28,36 @@ local plugins = {
   {
     "nvim-treesitter/nvim-treesitter",
     opts = overrides.treesitter,
+  },
+
+  -- Debugger
+  {
+    "mfussenegger/nvim-dap",
+    init = function()
+      require("core.utils").load_mappings("dap")
+    end,
+  },
+  {
+    "jay-babu/mason-nvim-dap.nvim",
+    event = "VeryLazy",
+    dependencies = {
+      "williamboman/mason.nvim",
+      "mfussenegger/nvim-dap",
+    },
+    opts = {
+      handlers = {},
+    },
+  },
+  {
+    "rcarriga/nvim-dap-ui",
+    event = "VeryLazy",
+    dependencies = {
+      "mfussenegger/nvim-dap",
+      "nvim-neotest/nvim-nio",
+    },
+    config = function()
+      require("custom.configs.nvim-dap-ui")
+    end,
   },
 
   -- UI
