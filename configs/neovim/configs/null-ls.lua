@@ -10,6 +10,7 @@ local b = null_ls.builtins
 local sources = {
   b.formatting.prettier,
   b.formatting.stylua,
+  b.formatting.taplo,
   b.formatting.clang_format,
   b.hover.dictionary,
 }

@@ -25,6 +25,7 @@ M.mason = {
 
     -- Others
     "prettier",
+    "taplo",
   },
 }
 
