@@ -1,0 +1,28 @@
+theme = "catppuccin_mocha"
+
+[editor]
+scrolloff = 10
+mouse = true
+line-number = "relative"
+gutters = ["diagnostics", "spacer", "line-numbers", "spacer", "diff"]
+auto-save = true
+true-color = true
+bufferline = "multiple"
+default-line-ending = "lf"
+
+[editor.statusline]
+left = ["mode", "spinner", "file-name"]
+center = ["diagnostics", "version-control", "read-only-indicator"]
+right = ["file-modification-indicator", "position", "position-percentage"]
+separator = "│"
+mode.normal = "N"
+mode.insert = "I"
+mode.select = "S"
+
+[editor.lsp]
+enable = true
+snippets = true
+goto-reference-include-declaration = true
+
+[editor.cursor-shape]
+insert = "bar"
