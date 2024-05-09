@@ -34,6 +34,7 @@ return {
 				"vim",
 				"lua",
 				"vimdoc",
+				"markdown", -- for using `->` operator in programming languages
 			},
 		},
 	},
