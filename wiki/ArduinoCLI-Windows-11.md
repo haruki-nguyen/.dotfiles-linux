@@ -8,8 +8,12 @@ First, install Chocolatey package manager for Windows:
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 ```
 
-Secondly, install `arduino-cli` and `neovim` with Chocolatey:
+Secondly, install these packages with Chocolatey:
+
+- `arduino-cli`.
+- `neovim`.
+- `git`.
 
 ```powershell
-choco install arduino-cli && choco install neovim --pre
+choco install arduino-cli neovim --pre git
 ```
