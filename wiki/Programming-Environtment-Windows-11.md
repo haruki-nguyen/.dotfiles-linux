@@ -1,4 +1,4 @@
-# Setting Up ArduinoCLI on Windows 11
+# Setting Up Programming Environments on Windows 11
 
 > Note that Powershell must be run in Administrator mode.
 
@@ -13,7 +13,8 @@ Secondly, install these packages with Chocolatey:
 - `arduino-cli`.
 - `neovim`.
 - `git`.
+- `pandoc`: for using with Obsidian.
 
 ```powershell
-choco install arduino-cli neovim --pre git
+choco install arduino-cli neovim --pre git pandoc
 ```
