@@ -13,6 +13,7 @@
 - `gitui` with dependency is `cargo`.
 - `ranger`.
 - `nodejs` and `npm` (for installing `prettier` in `mason` in `neovim`).
+- `poppler-utils`: for using `pdftotext` tool.
 
 ## Installation
 
@@ -21,7 +22,7 @@
 sudo add-apt-repository ppa:neovim-ppa/unstable
 
 # install packages
-sudo apt update && sudo apt upgrade && sudo apt install neovim tmux zip ranger ripgrep nodejs npm
+sudo apt update && sudo apt upgrade && sudo apt install neovim tmux zip ranger ripgrep nodejs npm poppler-utils
 ```
 
 ```bash
