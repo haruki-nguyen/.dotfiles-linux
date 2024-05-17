@@ -11,10 +11,10 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 Secondly, install these packages with Chocolatey:
 
 - `arduino-cli`.
-- `neovim`.
+- `notepadplusplus`.
 - `git`.
 - `pandoc`: for using with Obsidian.
 
 ```powershell
-choco install arduino-cli neovim --pre git pandoc
+choco install arduino-cli notepadplusplus git pandoc
 ```
