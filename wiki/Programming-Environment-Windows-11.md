@@ -11,7 +11,7 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 Secondly, install these packages with Chocolatey:
 
 - `arduino-cli`.
-- `notepadplusplus`.
+- `notepadplusplus` with `Explorer` plugins.
 - `git`.
 - `pandoc`: for using with Obsidian.
 
