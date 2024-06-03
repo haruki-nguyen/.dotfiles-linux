@@ -14,7 +14,8 @@ Secondly, install these packages with Chocolatey:
 - `kate`: a text editor. 
 - `git`.
 - `pandoc`: for using with Obsidian.
+- `python`: for using some scripts with Python on Windows.
 
 ```powershell
-choco install arduino-cli kate git pandoc
+choco install arduino-cli kate git pandoc python --pre
 ```
