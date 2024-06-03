@@ -48,9 +48,9 @@ curl -sS https://starship.rs/install.sh | sh
 
   - Then add the SSH key to your GitHub account: <https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account>. I can use this command on WSL:
 
-  ```bash
-  clip.exe < ~/.ssh/id_ed25519.pub
-  ```
+    ```bash
+    clip.exe < ~/.ssh/id_ed25519.pub
+    ```
 
   - Update remove URL: `git remote set-url origin <URL>`.
 
