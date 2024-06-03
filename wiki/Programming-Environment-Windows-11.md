@@ -37,3 +37,5 @@ ssh-add c:/Users/YOU/.ssh/id_ed25519
 ```
 
 Then add the SSH key into your GitHub account: <https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account?platform=windows>.
+
+Finally, update the remote URL: `git remote set-url origin <URL>`.
