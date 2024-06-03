@@ -46,7 +46,12 @@ curl -sS https://starship.rs/install.sh | sh
     ssh-add ~/.ssh/id_ed25519
     ```
 
-  - Then on your GitHub account: <https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account>.
+  - Then add the SSH key to your GitHub account: <https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account>. I can use this command on WSL:
+
+  ```bash
+  clip.exe < ~/.ssh/id_ed25519.pub
+  ```
+
   - Update remove URL: `git remote set-url origin <URL>`.
 
 - Install the repository: `git clone git@github.com:haruki-nguyen/.dotfiles.git`.
