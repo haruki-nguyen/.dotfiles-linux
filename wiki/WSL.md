@@ -47,7 +47,7 @@ curl -sS https://starship.rs/install.sh | sh
     ```
 
   - Then add the SSH key to your GitHub account: <https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account?platform=linux>.
-  - Update remove URL: `git remote set-url origin <URL>`.
+  - Update the remote URL: `git remote set-url origin <URL>`.
 
 - Install the repository: `git clone git@github.com:haruki-nguyen/.dotfiles.git`.
 
@@ -108,4 +108,3 @@ curl -sS https://starship.rs/install.sh | sh
   rm -rf ~/.config/gitui
   ln -s ~/.dotfiles/configs/gitui ~/.config
   ```
-
