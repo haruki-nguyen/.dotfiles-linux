@@ -1,5 +1,6 @@
 # Setting Up Programming Environments on Windows 11
 
+> Install Powershell on [https://github.com/PowerShell/PowerShell/releases/](https://github.com/PowerShell/PowerShell/releases/).
 > Note that Powershell must be run in Administrator mode.
 
 ## Installations
