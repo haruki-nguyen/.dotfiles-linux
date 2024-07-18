@@ -18,6 +18,7 @@
 - `starship`.
 - `gitui` with dependency is `cargo`.
 - `signal`.
+- `ibus` and `ibus-unikey` for Telex typing method.
 - StayFree Desktop.
 - Install with Manjaro Hello:
     - LibreOffice.
@@ -58,8 +59,7 @@ sudo pacman -S --needed git base-devel yay
 Then use `yay` to install other packages:
 
 ```bash
-yay -S google-chrome obsidian syncthing moneymanagerex neovim ripgrep fd python3.10-venv tmux zip unzip nodejs npm signal
-
+yay -S google-chrome obsidian syncthing moneymanagerex neovim ripgrep fd python3.10-venv tmux zip unzip nodejs npm signal ibus ibus-unikey
 ```
 
 - Install Starship.
@@ -174,4 +174,13 @@ Categories=Utility;" | tee ~/.local/share/applications/stayfree.desktop
 
 echo "Installation complete. You can now run StayFree by typing 'stayfree' in the terminal or from the application menu."
 ```
+
+- Ibus
+
+1. Restart your system after installing `ibus` and `ibus-unikey`, this will ensure that ibus starts with the system.
+2. Open IBus Preferences: You can do this by running the following command in your terminal:
+
+   ```bash
+   ibus-setup
+   ```
 

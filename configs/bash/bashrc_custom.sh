@@ -30,3 +30,9 @@ alias gps="git push"
 # Add PATH
 export PATH="/home/haruki/.cargo/bin:$PATH"
 
+# Auto start
+export GTK_IM_MODULE=ibus
+export QT_IM_MODULE=ibus
+export XMODIFIERS=@im=ibus
+ibus-daemon -drx
+
