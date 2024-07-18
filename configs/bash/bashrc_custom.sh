@@ -25,7 +25,7 @@ alias ga="git add"
 alias gcm="git commit -m"
 alias gc="git commit"
 alias gpl="git pull"
-alias gps="git push"
+alias gps="git pull & git push"
 
 # Add PATH
 export PATH="/home/haruki/.cargo/bin:$PATH"
