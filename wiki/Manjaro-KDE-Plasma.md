@@ -23,6 +23,8 @@
 - Install with Manjaro Hello:
     - LibreOffice.
     - `fcitx`
+- `dos2unix`.
+- `btop`.
 
 ## Basic System Setup
 
@@ -59,7 +61,7 @@ sudo pacman -S --needed git base-devel yay
 Then use `yay` to install other packages:
 
 ```bash
-yay -S google-chrome obsidian syncthing moneymanagerex neovim ripgrep fd python3.10-venv tmux zip unzip nodejs npm signal ibus ibus-unikey
+yay -S google-chrome obsidian syncthing moneymanagerex neovim ripgrep fd python3.10-venv tmux zip unzip nodejs npm signal ibus ibus-unikey dos2unix btop
 ```
 
 - Install Starship.
@@ -183,4 +185,12 @@ echo "Installation complete. You can now run StayFree by typing 'stayfree' in th
    ```bash
    ibus-setup
    ```
+ 
+- BTOP
+
+```bash
+ln -s ~/.dotfiles/configs/btop/catppuccin-mocha.theme ~/.config/btop/themes
+```
+
+Then change the BTOP's configs in the UI.
 

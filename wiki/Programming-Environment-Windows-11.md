@@ -18,9 +18,10 @@ Secondly, install these packages with Chocolatey:
 - `git`.
 - `pandoc`: for using with Obsidian.
 - `python`: for using some scripts with Python on Windows.
+- `dos2unix`.
 
 ```powershell
-choco install arduino-cli kate git pandoc python --pre
+choco install arduino-cli kate git pandoc python --pre dos2unix
 ```
 
 ## Set Up SSH Key for Using GitHub
