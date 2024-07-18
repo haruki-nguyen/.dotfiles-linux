@@ -27,8 +27,6 @@ alias gc="git commit"
 alias gpl="git pull"
 alias gps="git push"
 
-alias gitui="gitui -t mocha.ron"
-
 # Add PATH
 export PATH="/home/haruki/.cargo/bin:$PATH"
 
