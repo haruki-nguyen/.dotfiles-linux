@@ -19,7 +19,6 @@
 - `gitui` with dependency is `cargo`.
 - `signal`.
 - `ibus` and `ibus-unikey` for Telex typing method.
-- StayFree Desktop.
 - Install with Manjaro Hello:
     - LibreOffice.
     - `fcitx`
@@ -145,37 +144,6 @@ ln -s ~/.dotfiles/configs/terminals/kitty/ ~/.config/
   rm -rf ~/.config/gitui
   ln -s ~/.dotfiles/configs/gitui ~/.config
   ```
-
-- StayFree Desktop.
-
-```bash
-#!/bin/bash
-
-# Download StayFree AppImage
-wget -O ~/Downloads/stayfree-linux-x86_64.AppImage https://github.com/stayfree-app/desktop-releases/releases/latest/download/stayfree-linux-x86_64.AppImage
-
-# Make the AppImage executable
-chmod +x ~/Downloads/stayfree-linux-x86_64.AppImage
-
-# Create a directory for AppImages
-mkdir -p ~/AppImages
-
-# Move the AppImage to the AppImages directory
-mv ~/Downloads/stayfree-linux-x86_64.AppImage ~/AppImages/
-
-# Create a symbolic link to the AppImage in /usr/local/bin
-sudo ln -s ~/AppImages/stayfree-linux-x86_64.AppImage /usr/local/bin/stayfree
-
-# Optionally, create a desktop entry for easy access from the application menu
-echo "[Desktop Entry]
-Name=StayFree
-Exec=/usr/local/bin/stayfree
-Icon=utilities-terminal
-Type=Application
-Categories=Utility;" | tee ~/.local/share/applications/stayfree.desktop
-
-echo "Installation complete. You can now run StayFree by typing 'stayfree' in the terminal or from the application menu."
-```
 
 - Ibus
 
