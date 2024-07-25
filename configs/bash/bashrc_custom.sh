@@ -28,7 +28,7 @@ alias gpl="git pull"
 alias gps="git pull & git push"
 
 # Add PATH
-export PATH="/home/haruki/.cargo/bin:$PATH"
+export PATH="/home/haruki/.cargo/bin:/home/haruki/.local/bin:$PATH"
 
 # Auto start
 export GTK_IM_MODULE=ibus
