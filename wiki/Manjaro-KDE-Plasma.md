@@ -35,39 +35,39 @@
 
 - Install a Nerd Font from <https://github.com/ryanoasis/nerd-fonts/releases>.
 
-```bash
-# Download the font archive
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/[vX.X.X]/JetBrainsMono.zip
-
-# Unzip the archive
-unzip JetBrainsMono.zip -d JetBrainsMono
-
-# Move the font files to your fonts directory
-mkdir ~/.local/share/fonts/
-mkdir ~/.local/share/fonts/JetBrainsMono
-mv JetBrainsMono/*.ttf ~/.local/share/fonts/JetBrainsMono
-
-# Rebuild the font cache
-fc-cache -fv
-```
+  ```bash
+  # Download the font archive
+  wget https://github.com/ryanoasis/nerd-fonts/releases/download/[vX.X.X]/JetBrainsMono.zip
+  
+  # Unzip the archive
+  unzip JetBrainsMono.zip -d JetBrainsMono
+  
+  # Move the font files to your fonts directory
+  mkdir ~/.local/share/fonts/
+  mkdir ~/.local/share/fonts/JetBrainsMono
+  mv JetBrainsMono/*.ttf ~/.local/share/fonts/JetBrainsMono
+  
+  # Rebuild the font cache
+  fc-cache -fv
+  ```
 
 - YAY.
 
-```bash
-sudo pacman -S --needed git base-devel yay
-```
+  ```bash
+  sudo pacman -S --needed git base-devel yay
+  ```
 
-Then use `yay` to install other packages:
+  Then use `yay` to install other packages:
 
-```bash
-yay -S google-chrome obsidian syncthing moneymanagerex neovim ripgrep fd python3.10-venv tmux zip unzip nodejs npm signal ibus ibus-unikey dos2unix btop
-```
+  ```bash
+  yay -S google-chrome obsidian syncthing moneymanagerex neovim ripgrep fd python3.10-venv tmux zip unzip nodejs npm signal ibus ibus-unikey dos2unix btop
+  ```
 
 - Install Starship.
 
-```bash
-curl -sS https://starship.rs/install.sh | sh
-```
+  ```bash
+  curl -sS https://starship.rs/install.sh | sh
+  ```
 
 ## Setup
 
@@ -83,7 +83,7 @@ curl -sS https://starship.rs/install.sh | sh
 
   - Then add the SSH key to your GitHub account: <https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account?platform=linux>.
 
-- Install the repository: `git clone git@github.com:haruki-nguyen/.dotfiles.git`.
+  - Install the repository: `git clone git@github.com:haruki-nguyen/.dotfiles.git`.
 
 - Git: `ln -s ~/.dotfiles/configs/git/.gitconfig ~/`.
 
@@ -96,10 +96,10 @@ curl -sS https://starship.rs/install.sh | sh
 
 - Kitty
 
-```bash
-rm -r ~/.config/kitty
-ln -s ~/.dotfiles/configs/terminals/kitty/ ~/.config/
-```
+  ```bash
+  rm -r ~/.config/kitty
+  ln -s ~/.dotfiles/configs/terminals/kitty/ ~/.config/
+  ```
 
 - Neovim.
 
@@ -155,9 +155,9 @@ ln -s ~/.dotfiles/configs/terminals/kitty/ ~/.config/
  
 - BTOP
 
-```bash
-ln -s ~/.dotfiles/configs/btop/catppuccin-mocha.theme ~/.config/btop/themes
-```
+  ```bash
+  ln -s ~/.dotfiles/configs/btop/catppuccin-mocha.theme ~/.config/btop/themes
+  ```
 
-Then change the BTOP's configs in the UI.
+  Then change the BTOP's configs in the UI.
 
