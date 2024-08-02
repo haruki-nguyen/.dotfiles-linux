@@ -65,7 +65,7 @@ curl -sS https://starship.rs/install.sh | sh
   - Install NvChad.
 
     ```bash
-    git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim
+    git clone https://github.com/NvChad/starter ~/.config/nvim && nvim
     ```
 
     Run `:MasonInstallAll` and `:Lazy sync`, then run:
