@@ -37,7 +37,7 @@
 
   ```bash
   # Download the font archive
-  wget https://github.com/ryanoasis/nerd-fonts/releases/download/[vX.X.X]/JetBrainsMono.zip
+  wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/JetBrainsMono.zip
   
   # Unzip the archive
   unzip JetBrainsMono.zip -d JetBrainsMono
