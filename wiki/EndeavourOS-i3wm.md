@@ -45,7 +45,7 @@ Update the system as needed for your workflow using `eos-welcome` command.
   fc-cache -fv
   ```
 
-- YAY:
+- Install `yay` if it isn't installed:
 
   ```bash
   sudo pacman -S --needed git base-devel yay
