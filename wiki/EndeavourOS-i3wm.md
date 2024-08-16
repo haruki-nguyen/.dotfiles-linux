@@ -6,7 +6,6 @@
 - `google-chrome`.
 - `obsidian`.
 - `syncthing`.
-- `moneymanagerex`.
 - `neovim`, with dependencies:
   - `ripgrep`.
   - `fd`.
