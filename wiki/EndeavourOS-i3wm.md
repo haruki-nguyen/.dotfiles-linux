@@ -24,9 +24,7 @@
 
 ## Basic System Setup
 
-- Update i3 config as needed for your workflow.
-- Adjust your preferred touchpad settings, such as "Natural scrolling" using the appropriate tool (`libinput`).
-- Night Light can be configured via `redshift` or other tools.
+Update the system as needed for your workflow using `eos-welcome` command.
 
 ## Installation
 
