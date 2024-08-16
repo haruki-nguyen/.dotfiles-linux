@@ -53,7 +53,7 @@ Update the system as needed for your workflow using `eos-welcome` command.
   Then use `yay` to install other packages:
 
   ```bash
-  yay -S google-chrome obsidian syncthing moneymanagerex neovim ripgrep fd python3.10-venv tmux zip unzip nodejs npm signal ibus ibus-unikey dos2unix btop
+  yay -S google-chrome obsidian syncthing neovim ripgrep fd python3.10-venv tmux zip unzip kitty nodejs npm signal ibus ibus-unikey dos2unix btop
   ```
 
 - Install Starship:
