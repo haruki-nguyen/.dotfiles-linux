@@ -37,8 +37,8 @@ Update the system as needed for your workflow using `eos-welcome` command.
   unzip JetBrainsMono.zip -d JetBrainsMono
   
   # Move the font files to your fonts directory
-  mkdir -p ~/.local/share/fonts/JetBrainsMono
-  mv JetBrainsMono/*.ttf ~/.local/share/fonts/JetBrainsMono
+  mkdir -p /usr/share/fonts/JetBrainsMono/
+  mv JetBrainsMono/*.ttf /usr/share/fonts/JetBrainsMono/
   
   # Rebuild the font cache
   fc-cache -fv
