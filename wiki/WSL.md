@@ -12,6 +12,7 @@
 - `starship`.
 - `gitui` with dependency is `cargo`.
 - `nodejs` and `npm` (for installing `prettier` in `mason` in `neovim`).
+- `nvm`: node version manager.
 - `poppler-utils`: for using `pdftotext` tool.
 - `gdb`: for C debugging.
 
