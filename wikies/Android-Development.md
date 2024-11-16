@@ -81,3 +81,9 @@
      npx expo start --tunnel
      ```
 
+9. Install Yarn:
+
+```bash
+npm install -g yarn
+```
+
