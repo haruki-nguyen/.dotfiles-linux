@@ -14,14 +14,14 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 Secondly, install these packages with Chocolatey:
 
 - `arduino-cli`.
-- `kate`: a text editor. 
 - `git`.
 - `pandoc`: for using with Obsidian.
 - `python`: for using some scripts with Python on Windows.
 - `dos2unix`.
+- `alacritty`.
 
 ```powershell
-choco install arduino-cli kate git pandoc python --pre dos2unix
+choco install arduino-cli git pandoc python --pre dos2unix alacritty
 ```
 
 ## Set Up SSH Key for Using GitHub
