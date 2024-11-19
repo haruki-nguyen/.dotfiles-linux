@@ -15,6 +15,7 @@
 - `poppler-utils`: for using `pdftotext` tool.
 - `gdb`: for C debugging.
 - `gitui`.
+- `cz-git` and `commitizen`: for conventional commit messages.
 
 ## Installation
 
@@ -24,14 +25,13 @@ sudo add-apt-repository ppa:neovim-ppa/unstable
 
 # install packages
 sudo apt update && sudo apt upgrade && sudo apt install neovim tmux zip ripgrep nodejs npm poppler-utils gdb
-```
 
-```bash
 # install gitui
 sudo apt install cargo && cargo install gitui --locked
-```
 
-```bash
+# install cz-git and commitizen
+npm i -g cz-git commitizen
+
 # install starship
 curl -sS https://starship.rs/install.sh | sh
 ```
@@ -111,4 +111,10 @@ curl -sS https://starship.rs/install.sh | sh
 
   ```bash
   ln -s ~/.dotfiles/configs/gitui/ ~/.config/
+  ```
+
+- cz-git:
+
+  ```bash
+  ln -s ~/.dotfiles/configs/cz-git/.czrc ~/
   ```
