@@ -14,6 +14,7 @@
 - `nvm`: node version manager.
 - `poppler-utils`: for using `pdftotext` tool.
 - `gdb`: for C debugging.
+- `gitui`.
 
 ## Installation
 
@@ -23,6 +24,11 @@ sudo add-apt-repository ppa:neovim-ppa/unstable
 
 # install packages
 sudo apt update && sudo apt upgrade && sudo apt install neovim tmux zip ripgrep nodejs npm poppler-utils gdb
+```
+
+```bash
+# install gitui
+sudo apt install cargo && cargo install gitui --locked
 ```
 
 ```bash
@@ -101,3 +107,8 @@ curl -sS https://starship.rs/install.sh | sh
   ```bash
   ln -s ~/.dotfiles/configs/starship/starship.toml ~/.config
 
+- GitUI
+
+  ```bash
+  ln -s ~/.dotfiles/configs/gitui/ ~/.config/
+  ```
