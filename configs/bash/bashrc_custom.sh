@@ -27,6 +27,8 @@ alias gc="git commit"
 alias gpl="git pull --rebase"
 alias gps="git pull --rebase & git push"
 
+alias gitui="gitui -t catppuccin_mocha.ron"
+
 # Add PATH
 export PATH="/home/haruki/.cargo/bin:/home/haruki/.local/bin:$PATH"
 
