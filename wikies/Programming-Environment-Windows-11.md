@@ -14,8 +14,10 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 Secondly, install these packages with Chocolatey:
 
 - `alacritty`.
+- `git`.
+- `neovim`.
 
 ```powershell
-choco install alacritty
+choco install alacritty git neovim
 ```
 
