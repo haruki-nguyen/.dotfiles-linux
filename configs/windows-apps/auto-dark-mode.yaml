@@ -1,0 +1,121 @@
+AutoThemeSwitchingEnabled: true
+Governor: Default
+Autostart:
+  Validate: true
+WindowsThemeMode:
+  Enabled: true
+  DarkThemePath: C:\Windows\Resources\Themes\dark.theme
+  LightThemePath: C:\Windows\Resources\Themes\aero.theme
+  MonitorActiveTheme: true
+  ApplyFlags: []
+AppsSwitch:
+  Enabled: true
+  Component:
+    Mode: Switch
+SystemSwitch:
+  Enabled: true
+  Component:
+    Mode: Switch
+    TaskbarSwitchDelay: 1200
+    TaskbarColorOnAdaptive: false
+    TaskbarColorWhenNonAdaptive: Light
+    DWMPrevalenceSwitch: false
+    DWMPrevalenceEnableTheme: Light
+TouchKeyboardSwitch:
+  Enabled: false
+  Component: {}
+ColorizationSwitch:
+  Enabled: false
+  Component:
+    LightHex: ''
+    DarkHex: ''
+    LightAutoColorization: false
+    DarkAutoColorization: false
+ColorFilterSwitch:
+  Enabled: false
+  Component: {}
+OfficeSwitch:
+  Enabled: false
+  Component:
+    Mode: Switch
+    LightTheme: 0
+    DarkTheme: 4
+CursorSwitch:
+  Enabled: false
+  Component:
+    CursorsLight: 
+    CursorsDark: 
+Sunrise: 2024-12-06T05:00:00.0000000
+Sunset: 2024-12-06T17:00:00.0000000
+Location:
+  PollingCooldownTimeSpan: 1.00:00:00
+  Enabled: false
+  UseGeolocatorService: true
+  SunsetOffsetMin: 0
+  SunriseOffsetMin: 0
+  CustomLat: 0
+  CustomLon: 0
+Tunable:
+  BatterySliderDefaultValue: 25
+  DisableEnergySaverOnThemeSwitch: false
+  UseLogonTask: false
+  Debug: false
+  Trace: false
+  DebugTimerMessage: false
+  ShowTrayIcon: true
+  AlwaysFullDwmRefresh: false
+  UICulture: en
+GPUMonitoring:
+  Enabled: true
+  Threshold: 30
+  Samples: 1
+ProcessBlockList:
+  ProcessNames: []
+  Enabled: false
+Events:
+  DarkThemeOnBattery: false
+  Win10AllowLockscreenSwitch: false
+Notifications:
+  OnAutoThemeSwitching: true
+  OnSkipNextSwitch: true
+AutoSwitchNotify:
+  Enabled: false
+  GracePeriodMinutes: 5
+Hotkeys:
+  Enabled: false
+  ForceLight: 
+  ForceDark: 
+  NoForce: 
+  ToggleTheme: 
+  TogglePostpone: 
+  ToggleAutoThemeSwitch: 
+IdleChecker:
+  Enabled: true
+  Threshold: 2
+WallpaperSwitch:
+  Enabled: false
+  Component:
+    TypeLight: Individual
+    TypeDark: Individual
+    Position: Fill
+    GlobalWallpaper:
+      Light: 
+      Dark: 
+    SolidColors:
+      Light: '#FFFFFF'
+      Dark: '#000000'
+    Monitors:
+    - Id: '\\?\DISPLAY#CMN15E6#4&39f8b583&0&UID8388688#{e6f07b5f-ee97-4a90-b076-33f57bf4eaa7}'
+      LightThemeWallpaper: C:\WINDOWS\web\wallpaper\Windows\img19.jpg
+      DarkThemeWallpaper: C:\WINDOWS\web\wallpaper\Windows\img19.jpg
+Updater:
+  AutoInstall: false
+  Enabled: true
+  Silent: false
+  DaysBetweenUpdateCheck: 7
+  CheckOnStart: false
+  VersionQueryUrl: 
+  DownloadBaseUrl: 
+  ZipCustomUrl: 
+  HashCustomUrl: 
+
