@@ -11,13 +11,17 @@ First, install Chocolatey package manager for Windows:
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 ```
 
-Secondly, install these packages with Chocolatey:
+Secondly, install these softwares:
 
 - `alacritty`.
 - `git`.
 - `neovim`.
+- `python`.
+- Can be installed with installer on the official websites:
+    - Microsoft PowerToys.
+    - Everything search.
 
 ```powershell
-choco install alacritty git neovim
+choco install alacritty git neovim python
 ```
 
