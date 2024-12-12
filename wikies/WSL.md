@@ -66,25 +66,16 @@ curl -sS https://starship.rs/install.sh | sh
   source ~/.bashrc
   ```
 
-- Neovim.
-
-  - Install NvChad.
+- Neovim: Install NvChad.
 
     ```bash
     git clone https://github.com/NvChad/starter ~/.config/nvim && nvim
     ```
 
-    Run `:MasonInstallAll` and `:Lazy sync`, then run:
+    Run `:MasonInstallAll` and `:Lazy sync`, then delete `.git` folder:
 
     ```bash
     rm -rf ~/.config/nvim/.git
-    ```
-
-  - Setup my custom NvChad configs:
-
-    ```bash
-    rm -rf ~/.config/nvim/lua
-    ln -s ~/.dotfiles/configs/nvim/ ~/.config/nvim/lua
     ```
 
 - Tmux.
