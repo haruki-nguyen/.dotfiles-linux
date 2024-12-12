@@ -2,6 +2,7 @@
 
 > Install Powershell on [https://github.com/PowerShell/PowerShell/releases/](https://github.com/PowerShell/PowerShell/releases/).
 > Note that Powershell must be run in Administrator mode.
+> Environment variables to set: `EDITOR="nvim"`
 
 ## Installations
 
@@ -29,7 +30,7 @@ Secondly, install these softwares:
 choco install git neovim ripgrep mingw nodejs choco python espanso -y
 ```
 
-## Install NvChad
+## Set up NvChad
 
 ```powershell
 git clone https://github.com/NvChad/starter $ENV:USERPROFILE\AppData\Local\nvim && nvim
