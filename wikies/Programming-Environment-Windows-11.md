@@ -20,12 +20,13 @@ Secondly, install these softwares:
     - `gnuwin32`: download from <https://sourceforge.net/projects/gnuwin32>.
     - `nodejs`.
 - `python`.
+- `espanso`: text expander.
 - Can be installed with installer on the official websites:
     - Microsoft PowerToys.
     - Everything search.
 
 ```powershell
-choco install git neovim ripgrep mingw nodejs choco python -y
+choco install git neovim ripgrep mingw nodejs choco python espanso -y
 ```
 
 ## Install NvChad
