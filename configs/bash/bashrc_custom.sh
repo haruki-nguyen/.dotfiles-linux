@@ -15,7 +15,7 @@ source ~/.dotfiles/configs/bash/z.sh
 # Alias
 alias md="mkdir -p"
 alias t="touch"
-alias bashs="source ~/.bashrc"
+alias refsh="source ~/.bashrc"
 
 alias g="git"
 alias gs="git status"
@@ -31,10 +31,4 @@ alias gcz="git cz"
 
 # Add PATH
 export PATH="/home/haruki/.cargo/bin:/home/haruki/.local/bin:$PATH"
-
-# Setups for Android development
-export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
-export PATH=$JAVA_HOME/bin:$PATH
-export ANDROID_HOME=~/android-sdk
-export PATH=$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools:$PATH
 
