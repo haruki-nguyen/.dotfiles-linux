@@ -1,31 +1,43 @@
-# espanso match file
-
-# For a complete introduction, visit the official docs at: https://espanso.org/docs/
-
-# You can use this file to define the base matches (aka snippets)
-# that will be available in every application when using espanso.
-
-# Matches are substitution rules: when you type the "trigger" string
-# it gets replaced by the "replace" string.
-matches:
-  # Print the current date
-  - trigger: ":date"
-    replace: "{{mydate}}"
-    vars:
-      - name: mydate
-        type: date
-        params:
-          format: "%m/%d/%Y"
-
-  - trigger: ":@mail1"
-    replace: "nmd.extra@gmail.com"
-
-  - trigger: ":@mail2"
-    replace: "nmd03pvt@gmail.com"
-
-  - trigger: ":@mail3"
-    replace: "nmd03life@gmail.com"
-
-  - trigger: ":@mail4"
-    replace: "nmduymthcuc2003@gmail.com"
-
+# espanso match file
+
+# For a complete introduction, visit the official docs at: https://espanso.org/docs/
+
+# You can use this file to define the base matches (aka snippets)
+# that will be available in every application when using espanso.
+
+# Matches are substitution rules: when you type the "trigger" string
+# it gets replaced by the "replace" string.
+matches:
+  # Print the current date
+  - trigger: ":date"
+    replace: "{{mydate}}"
+    vars:
+      - name: mydate
+        type: date
+        params:
+          format: "%m/%d/%Y"
+
+  # Emails
+  - trigger: ":@mail1"
+    replace: "nmd.extra@gmail.com"
+
+  - trigger: ":@mail2"
+    replace: "nmd03pvt@gmail.com"
+
+  - trigger: ":@mail3"
+    replace: "nmd03life@gmail.com"
+
+  - trigger: ":@mail4"
+    replace: "nmduymthcuc2003@gmail.com"
+
+  # Webpages
+  - trigger: "://cal"
+    replace: "https://calendar.google.com"
+
+  - trigger: "://kee"
+    replace: "https://keep.google.com"
+
+  # Text
+  - trigger: ":#as"
+    replace: "answer shortly, thanks."
+
