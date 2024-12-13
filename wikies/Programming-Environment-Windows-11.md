@@ -30,7 +30,7 @@ Secondly, install these softwares:
 choco install git neovim ripgrep mingw nodejs choco python espanso -y
 ```
 
-## Set up NvChad
+## Set Up NvChad
 
 ```powershell
 git clone https://github.com/NvChad/starter $ENV:USERPROFILE\AppData\Local\nvim && nvim
@@ -41,4 +41,10 @@ Run `:MasonInstallAll` and `:Lazy sync`, then delete `.git` folder:
 ```bash
 rm -r -Force $ENV:USERPROFILE\AppData\Local\nvim\.git
 ```
+
+## Set Up other Softwares
+
+- Run `espanso edit` to update Espanso config.
+- Run `nvim $profile` to update Powershell scripts.
+- Other configs can be found in the settings.
 
