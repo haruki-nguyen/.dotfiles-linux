@@ -8,16 +8,7 @@
 # Matches are substitution rules: when you type the "trigger" string
 # it gets replaced by the "replace" string.
 matches:
-  # Print the current date
-  - trigger: ":date"
-    replace: "{{mydate}}"
-    vars:
-      - name: mydate
-        type: date
-        params:
-          format: "%m/%d/%Y"
-
-  # Emails
+  # EMAILS
   - trigger: ":@mail1"
     replace: "nmd.extra@gmail.com"
 
@@ -30,14 +21,36 @@ matches:
   - trigger: ":@mail4"
     replace: "nmduymthcuc2003@gmail.com"
 
-  # Webpages
-  - trigger: "://cal"
+  # WEBPAGES
+  - trigger: ":/cal"
     replace: "https://calendar.google.com"
 
-  - trigger: "://kee"
+  - trigger: ":/kee"
     replace: "https://keep.google.com"
 
-  # Text
+  # TEXT
   - trigger: ":#as"
     replace: "answer shortly, thanks."
+    
+  - trigger: ":#wo"
+    replace: "which one I should choose?"
+
+  # VARIABLES
+  - trigger: ":$dc"
+    replace: "Double Commander"
+
+  - trigger: ":$ub"
+    replace: "_Ubuntu"
+
+  - trigger: ":$ps"
+    replace: "_Powershell"
+
+  ## Print the current date
+  - trigger: ":date"
+    replace: "{{mydate}}"
+    vars:
+      - name: mydate
+        type: date
+        params:
+          format: "%m/%d/%Y"
 
