@@ -15,11 +15,7 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 Secondly, install these softwares:
 
 - `git`.
-- `neovim` and dependencies for NvChad:
-    - `ripgrep`.
-    - `mingw`.
-    - `gnuwin32`: download from <https://sourceforge.net/projects/gnuwin32>.
-    - `nodejs`.
+- `neovim`.
 - `python`.
 - `espanso`: text expander.
 - Can be installed with installer on the official websites:
@@ -27,19 +23,7 @@ Secondly, install these softwares:
     - Everything search.
 
 ```powershell
-choco install git neovim ripgrep mingw nodejs choco python espanso -y
-```
-
-## Set Up NvChad
-
-```powershell
-git clone https://github.com/NvChad/starter $ENV:USERPROFILE\AppData\Local\nvim && nvim
-```
-
-Run `:MasonInstallAll` and `:Lazy sync`, then delete `.git` folder:
-
-```bash
-rm -r -Force $ENV:USERPROFILE\AppData\Local\nvim\.git
+choco install git neovim python espanso -y
 ```
 
 ## Set Up other Softwares
