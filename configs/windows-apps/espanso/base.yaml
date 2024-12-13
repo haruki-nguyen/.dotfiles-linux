@@ -36,9 +36,6 @@ matches:
     replace: "which one I should choose?"
 
   # VARIABLES
-  - trigger: ":$dc"
-    replace: "Double Commander"
-
   - trigger: ":$ub"
     replace: "_Ubuntu"
 
