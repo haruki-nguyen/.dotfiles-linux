@@ -18,12 +18,14 @@ Secondly, install these softwares:
 - `neovim`.
 - `python`.
 - `espanso`: text expander.
+- `z`: z directory jumper for Powershell.
 - Can be installed with installer on the official websites:
     - Microsoft PowerToys.
     - Everything search.
 
 ```powershell
 choco install git neovim python espanso -y
+Install-Module -Name z
 ```
 
 ## Set Up other Softwares
