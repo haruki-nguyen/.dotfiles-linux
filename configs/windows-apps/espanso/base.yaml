@@ -1,56 +1,40 @@
-# espanso match file
-
-# For a complete introduction, visit the official docs at: https://espanso.org/docs/
-
-# You can use this file to define the base matches (aka snippets)
-# that will be available in every application when using espanso.
-
-# Matches are substitution rules: when you type the "trigger" string
-# it gets replaced by the "replace" string.
-matches:
-  # EMAILS
-  - trigger: ":@mail1"
-    replace: "nmd.extra@gmail.com"
-
-  - trigger: ":@mail2"
-    replace: "nmd03pvt@gmail.com"
-
-  - trigger: ":@mail3"
-    replace: "nmd03life@gmail.com"
-
-  - trigger: ":@mail4"
-    replace: "nmduymthcuc2003@gmail.com"
-
-  # WEBPAGES
-  - trigger: ":/cal"
-    replace: "https://calendar.google.com/"
-
-  - trigger: ":/kee"
-    replace: "https://keep.google.com/"
-
-  - trigger: ":/ch"
-    replace: "https://chatgpt.com/"
-
-  # TEXT
-  - trigger: ":#as"
-    replace: "answer shortly, thanks."
-    
-  - trigger: ":#wo"
-    replace: "which one I should choose?"
-
-  # VARIABLES
-  - trigger: ":$ub"
-    replace: "_Ubuntu"
-
-  - trigger: ":$ps"
-    replace: "_Powershell"
-
-  ## Print the current date
-  - trigger: ":date"
-    replace: "{{mydate}}"
-    vars:
-      - name: mydate
-        type: date
-        params:
-          format: "%m/%d/%Y"
-
+# espanso match file
+
+# For a complete introduction, visit the official docs at: https://espanso.org/docs/
+
+# You can use this file to define the base matches (aka snippets)
+# that will be available in every application when using espanso.
+
+# Matches are substitution rules: when you type the "trigger" string
+# it gets replaced by the "replace" string.
+matches:
+  # EMAILS
+  - trigger: ":@mail1"
+    replace: "nmd.extra@gmail.com"
+
+  - trigger: ":@mail2"
+    replace: "nmd03pvt@gmail.com"
+
+  - trigger: ":@mail3"
+    replace: "nmd03life@gmail.com"
+
+  - trigger: ":@mail4"
+    replace: "nmduymthcuc2003@gmail.com"
+
+  # WEBPAGES
+  - trigger: ":/ca"
+    replace: "https://calendar.google.com/"
+
+  - trigger: ":/ke"
+    replace: "https://keep.google.com/"
+
+  - trigger: ":/cg"
+    replace: "https://chatgpt.com/"
+
+  # TEXT
+  - trigger: ":#as"
+    replace: "answer shortly, thanks."
+    
+  - trigger: ":#wo"
+    replace: "which one I should choose?"
+
