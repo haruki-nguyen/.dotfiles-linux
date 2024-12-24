@@ -16,7 +16,9 @@ source ~/.dotfiles/configs/bash/z.sh
 alias md="mkdir -p"
 alias t="touch"
 alias refsh="source ~/.bashrc"
+alias py="python3"
 
+# Git alias
 alias g="git"
 alias gs="git status"
 alias gl="git log --graph --oneline --decorate"
