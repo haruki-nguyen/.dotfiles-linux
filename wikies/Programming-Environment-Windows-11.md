@@ -20,12 +20,15 @@ Secondly, install these softwares:
 - `espanso`: text expander.
 - `yt-dlp`, `ffmpeg`: for downloading videos from YouTube.
 - `z`: z directory jumper for Powershell.
+- `7zip`.
+- `qutebrowser`.
+- `vlc`.
 - Can be installed with installer on the official websites:
     - Microsoft PowerToys.
     - Everything search.
 
 ```powershell
-choco install git neovim python espanso yt-dlp ffmpeg -y
+choco install git neovim python espanso yt-dlp ffmpeg 7zip.install qutebrowser vlc -y
 Install-Module -Name z
 ```
 
