@@ -3,7 +3,7 @@ Import-Module $env:ChocolateyInstall\helpers\chocolateyProfile.psm1
 
 # UPDATE SYSTEM
 # Define paths to git repositories
-$projectPaths = @("")
+$projectPaths = @("C:\Users\nmdex\Documents\simple-irrigation-system")
 
 function Git-PullAll {
     foreach ($path in $projectPaths) {
@@ -35,9 +35,8 @@ function Update-System {
 }
 
 # ALIASES
-Set-Alias -Name refsh -Value refreshShell
 Set-Alias -Name py -Value python
 
-# ADD PATH
+# ADD ENV
 $env:EDITOR = "nvim"
-
+$env:PATH += ";C:\Users\nmdex\AppData\Roaming\Python\Python313\Scripts"
