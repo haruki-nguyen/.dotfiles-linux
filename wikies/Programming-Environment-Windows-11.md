@@ -37,6 +37,7 @@ Install-Module -Name z
 ```
 
 > Follow this guide to install Doom Emacs: <https://github.com/doomemacs/doomemacs/blob/master/docs/getting_started.org#with-wsl--ubuntu-1804-lts>
+> Currently, I'm using Spacemacs, because Doom Emacs is getting error while installing it, read this doc for Spacemacs installation: <https://github.com/syl20bnr/spacemacs/blob/master/README.md#windows>.
 
 ## Add ENV
 
