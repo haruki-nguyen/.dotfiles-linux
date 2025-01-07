@@ -36,7 +36,3 @@ function Update-System {
 
 # ALIASES
 Set-Alias -Name py -Value python
-
-# ADD ENV
-$env:EDITOR = "nvim"
-$env:PATH += ";C:\Users\nmdex\AppData\Roaming\Python\Python313\Scripts"
