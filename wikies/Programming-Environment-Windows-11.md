@@ -22,14 +22,21 @@ Secondly, install these softwares:
 - `z`: z directory jumper for Powershell.
 - `7zip`.
 - `vlc`.
+- Doom Emacs dependencies:
+    - `emacs`.
+    - `ripgrep`.
+    - Install GNU finds (aka `findutils`) on <https://sourceforge.net/projects/gnuwin32/files/findutils/>.
+    - `fd`.
 - Can be installed with installer on the official websites:
     - Microsoft PowerToys.
     - Everything search.
 
 ```powershell
-choco install git neovim python espanso yt-dlp ffmpeg 7zip.install vlc -y
+choco install git neovim python espanso yt-dlp ffmpeg 7zip.install emacs ripgrep fd vlc -y
 Install-Module -Name z
 ```
+
+> Follow this guide to install Doom Emacs: <https://github.com/doomemacs/doomemacs/blob/master/docs/getting_started.org#with-wsl--ubuntu-1804-lts>
 
 ## Add ENV
 
