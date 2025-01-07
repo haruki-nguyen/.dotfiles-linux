@@ -3,7 +3,7 @@ Import-Module $env:ChocolateyInstall\helpers\chocolateyProfile.psm1
 
 # UPDATE SYSTEM
 # Define paths to git repositories
-$projectPaths = @("C:\Users\nmdex\Documents\simple-irrigation-system")
+$projectPaths = @("C:\Users\nmdex\Documents\IoT-irrigation-system")
 
 function Git-PullAll {
     foreach ($path in $projectPaths) {
