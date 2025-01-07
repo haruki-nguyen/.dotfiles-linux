@@ -31,6 +31,13 @@ choco install git neovim python espanso yt-dlp ffmpeg 7zip.install vlc -y
 Install-Module -Name z
 ```
 
+## Add ENV
+
+Set these key-value pairs to ENV:
+
+- EDITOR: "nvim"
+- PATH: C:\Users\nmdex\AppData\Roaming\Python\Python{xxx}\Scripts" (xxx is the x.xx version of Python).
+
 ## Set Up other Softwares
 
 - Run `espanso edit` to update Espanso config.
