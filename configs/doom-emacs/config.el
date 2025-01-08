@@ -24,8 +24,7 @@
 ;;(setq doom-font (font-spec :family "Fira Code" :size 12 :weight 'semi-light)
 ;;      doom-variable-pitch-font (font-spec :family "Fira Sans" :size 13))
 ;;
-(setq doom-font (font-spec :family "JetBrainsMono NF" :size 15)
-      doom-symbol-font (font-spec :family "Symbola"))
+(setq doom-font (font-spec :family "JetBrainsMono NF" :size 15))
 
 ;; If you or Emacs can't find your font, use 'M-x describe-font' to look them
 ;; up, `M-x eval-region' to execute elisp code, and 'M-x doom/reload-font' to
@@ -45,7 +44,28 @@
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
 ;; (setq org-directory "~/org/")
-(setq org-directory "C:/Users/nmdex/Documents/Data/Central Data/Zettelkasten")
+(setq org-directory "C:/Users/nmdex/Documents/Data-Org/")
+
+(use-package! org-roam
+  :init
+  (setq org-roam-directory "C:/Users/nmdex/Documents/Data-Org/")
+  :config
+  (org-roam-db-autosync-mode))
+(use-package! org-roam-ui
+  :after org-roam
+  :config
+  (setq org-roam-ui-sync-theme t
+        org-roam-ui-follow t
+        org-roam-ui-update-on-save t
+        org-roam-ui-open-on-start t))
+
+(after! org-roam
+  (setq org-roam-file-extensions '("org" "md")) ; Enable markdown
+  (setq org-roam-directory (file-truename "C:/Users/nmdex/Documents/Data-Org/"))
+  (setq md-roam-file-extension "md") ; Specify extension
+  (require 'md-roam)
+  (md-roam-mode 1) ; Enable md-roam mode
+  (org-roam-db-autosync-mode 1)) ; Enable auto-sync
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `after!' block, otherwise Doom's defaults may override your settings. E.g.
@@ -78,3 +98,5 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
+
+;; (setq scroll-conservatively 5)
