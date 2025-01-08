@@ -22,6 +22,7 @@ Secondly, install these softwares:
 - `z`: z directory jumper for Powershell.
 - `7zip`.
 - `vlc`.
+- `lf`.
 - Doom Emacs dependencies:
     - `emacs`.
     - `ripgrep`.
@@ -32,7 +33,7 @@ Secondly, install these softwares:
     - Everything search.
 
 ```powershell
-choco install git neovim python espanso yt-dlp ffmpeg 7zip.install emacs ripgrep fd vlc -y
+choco install git neovim python espanso yt-dlp ffmpeg 7zip.install vlc lf emacs ripgrep fd -y
 Install-Module -Name z
 ```
 
