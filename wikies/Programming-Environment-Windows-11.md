@@ -24,16 +24,30 @@ Secondly, install these softwares:
 - `vlc`.
 - `lf`.
 - Doom Emacs dependencies:
-    - `emacs`.
-    - `ripgrep`.
-    - Install GNU finds (aka `findutils`) on <https://sourceforge.net/projects/gnuwin32/files/findutils/>.
-    - `fd`.
+  - `emacs`.
+  - `ripgrep`.
+  - Install GNU finds (aka `findutils`) on <https://sourceforge.net/projects/gnuwin32/files/findutils/>.
+  - `fd`.
+  - `pandoc`.
+  - `cmake` and `make`.
+  - `fontconfig`:
+    - Download and install **MSYS2** from [msys2.org](https://www.msys2.org/).
+    - Open the MSYS2 terminal and run:
+
+         ```bash
+         pacman -S mingw-w64-x86_64-fontconfig
+         ```
+
+    - Add MSYS2 to your `PATH` in the system environment variables.
+
+After installing, run `doom sync` again to ensure Doom Emacs recognizes the changes.
+
 - Can be installed with installer on the official websites:
-    - Microsoft PowerToys.
-    - Everything search.
+  - Microsoft PowerToys.
+  - Everything search.
 
 ```powershell
-choco install git neovim python espanso yt-dlp ffmpeg 7zip.install vlc lf emacs ripgrep fd -y
+choco install git neovim python espanso yt-dlp ffmpeg 7zip.install vlc lf emacs ripgrep fd pandoc cmake make -y
 Install-Module -Name z
 ```
 
@@ -45,11 +59,11 @@ Install-Module -Name z
 Set these key-value pairs to ENV:
 
 - EDITOR: "nvim"
-- PATH: C:\Users\nmdex\AppData\Roaming\Python\Python{xxx}\Scripts" (xxx is the x.xx version of Python).
+- PATH: C:\Users\nmdex\AppData\Roaming\Python\Python{xxx}\Scripts"
+ (xxx is the x.xx version of Python).
 
 ## Set Up other Softwares
 
 - Run `espanso edit` to update Espanso config.
 - Run `nvim $profile` to update Powershell scripts.
 - Other configs can be found in the settings.
-
