@@ -16,6 +16,7 @@
 - `gdb`: for C debugging.
 - `gitui`.
 - `cz-git` and `commitizen`: for conventional commit messages.
+- `ranger`.
 
 ## Installation
 
@@ -24,7 +25,7 @@
 sudo add-apt-repository ppa:neovim-ppa/unstable
 
 # install packages
-sudo apt update && sudo apt upgrade && sudo apt install neovim tmux zip ripgrep nodejs npm poppler-utils gdb
+sudo apt update && sudo apt upgrade && sudo apt install neovim tmux zip ripgrep nodejs npm poppler-utils gdb ranger
 
 # install gitui
 sudo apt install cargo && cargo install gitui --locked
