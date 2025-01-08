@@ -30,15 +30,6 @@ Secondly, install these softwares:
   - `fd`.
   - `pandoc`.
   - `cmake` and `make`.
-  - `fontconfig`:
-    - Download and install **MSYS2** from [msys2.org](https://www.msys2.org/).
-    - Open the MSYS2 terminal and run:
-
-         ```bash
-         pacman -S mingw-w64-x86_64-fontconfig
-         ```
-
-    - Add MSYS2 to your `PATH` in the system environment variables.
 
 After installing, run `doom sync` again to ensure Doom Emacs recognizes the changes.
 
