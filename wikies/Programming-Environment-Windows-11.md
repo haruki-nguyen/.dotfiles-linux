@@ -23,6 +23,7 @@ Secondly, install these softwares:
 - `7zip`.
 - `vlc`.
 - `lf`.
+- `notion`.
 - Doom Emacs dependencies:
   - `emacs`.
   - `ripgrep`.
@@ -38,7 +39,7 @@ After installing, run `doom sync` again to ensure Doom Emacs recognizes the chan
   - Everything search.
 
 ```powershell
-choco install git neovim python espanso yt-dlp ffmpeg 7zip.install vlc lf emacs ripgrep fd pandoc cmake make -y
+choco install git neovim python espanso yt-dlp ffmpeg 7zip.install vlc lf notion emacs ripgrep fd pandoc cmake make -y
 Install-Module -Name z
 ```
 
