@@ -25,6 +25,7 @@ Secondly, install these softwares:
 - `lf`.
 - `notion`.
 - `obs-studio`.
+- `openshot`.
 - `nodejs` (for insatlling git conventional message utilities).
 - Doom Emacs dependencies:
   - `emacs`.
@@ -41,7 +42,7 @@ After installing, run `doom sync` again to ensure Doom Emacs recognizes the chan
   - Everything search.
 
 ```powershell
-choco install git neovim python espanso yt-dlp ffmpeg 7zip.install vlc lf notion obs-studio nodejs emacs ripgrep fd pandoc cmake make -y
+choco install git neovim python espanso yt-dlp ffmpeg 7zip.install vlc lf notion obs-studio openshot nodejs emacs ripgrep fd pandoc cmake make -y
 Install-Module -Name z
 ```
 
