@@ -12,6 +12,13 @@ First, install Chocolatey package manager for Windows:
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 ```
 
+First, install Scoop package manager for Windows:
+
+```powershell
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
+```
+
 Secondly, install these softwares:
 
 - `git`.
@@ -27,6 +34,8 @@ Secondly, install these softwares:
 - `obs-studio`.
 - `openshot`.
 - `nodejs` (for insatlling git conventional message utilities).
+- `firefox`.
+- `flow-launcher`.
 - Doom Emacs dependencies:
   - `emacs`.
   - `ripgrep`.
@@ -35,14 +44,14 @@ Secondly, install these softwares:
   - `pandoc`.
   - `cmake` and `make`.
 
-After installing, run `doom sync` again to ensure Doom Emacs recognizes the changes.
+  After installing, run `doom sync` again to ensure Doom Emacs recognizes the changes.
 
 - Can be installed with installer on the official websites:
   - Microsoft PowerToys.
   - Everything search.
 
 ```powershell
-choco install git neovim python espanso yt-dlp ffmpeg 7zip.install vlc lf notion obs-studio openshot nodejs emacs ripgrep fd pandoc cmake make -y
+scoop install git neovim python espanso yt-dlp ffmpeg 7zip vlc lf notion obs-studio openshot nodejs firefox flow-launcher emacs ripgrep fd pandoc cmake make
 Install-Module -Name z
 ```
 
