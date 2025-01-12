@@ -62,7 +62,7 @@ Install-Module -Name z
 
 Set these key-value pairs to ENV:
 
-- EDITOR: "nvim"
+- EDITOR: "C:\Users\nmdex\AppData\Local\Programs\Microsoft VS Code\Code.exe"
 - PATH: C:\Users\nmdex\AppData\Roaming\Python\Python{xxx}\Scripts"
  (xxx is the x.xx version of Python).
 
