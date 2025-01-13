@@ -15,21 +15,19 @@ source ~/.dotfiles/configs/bash/z.sh
 # Alias
 alias md="mkdir -p"
 alias t="touch"
-alias refsh="source ~/.bashrc"
+alias refresh="source ~/.bashrc"
 alias py="python3"
 
 # Git alias
-alias g="git"
-alias gs="git status"
-alias gl="git log --graph --oneline --decorate"
-alias gaa="git add ."
-alias ga="git add"
-alias gcm="git commit -m"
-alias gc="git commit"
-alias gpl="git pull --rebase"
-alias gps="git pull --rebase & git push"
-alias gitui="gitui -t catppuccin_mocha.ron"
-alias gcz="git cz"
+alias gits="git status"
+alias gitl="git log --graph --oneline --decorate"
+alias gitaa="git add ."
+alias gita="git add"
+alias gitc="git commit"
+alias gitpr="git pull --rebase"
+alias gitsync="git pull --rebase && git push"
+alias gititui="gitui -t catppuccin_mocha.ron"
+alias gitcz="git cz"
 
 # Add PATH
 export PATH="/home/haruki/.cargo/bin:/home/haruki/.local/bin:$PATH"
