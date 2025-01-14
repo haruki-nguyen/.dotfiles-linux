@@ -58,6 +58,14 @@ Install-Module -Name z
 > Follow this guide to install Doom Emacs: <https://github.com/doomemacs/doomemacs/blob/master/docs/getting_started.org#install>
 > Currently, I'm using Spacemacs, because Doom Emacs is getting error while installing it, read this doc for Spacemacs installation: <https://github.com/syl20bnr/spacemacs/blob/master/README.md#windows>.
 
+## Startup Apps
+
+Set Espanso as startup app:
+
+```powershell
+espansod service register
+```
+
 ## Add ENV
 
 Set these key-value pairs to ENV:
