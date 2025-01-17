@@ -1,6 +1,6 @@
 # UPDATE SYSTEM
 # Define paths to git repositories
-$projectPaths = @("C:\Users\nmdex\Documents\IoT-irrigation-system")
+$projectPaths = @("C:\Users\nmdex\Documents\Projects\IoT-irrigation-system")
 
 function Get-RepoUpdates {
     foreach ($path in $projectPaths) {
