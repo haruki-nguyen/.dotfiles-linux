@@ -36,6 +36,7 @@ Secondly, install these softwares:
 - `nodejs` (for insatlling git conventional message utilities).
 - `firefox`.
 - `flow-launcher`.
+- `kicad`.
 - Doom Emacs dependencies:
   - `emacs`.
   - `ripgrep`.
@@ -51,7 +52,7 @@ Secondly, install these softwares:
   - Everything search.
 
 ```powershell
-scoop install git neovim python espanso yt-dlp ffmpeg 7zip vlc lf notion obs-studio openshot nodejs firefox flow-launcher emacs ripgrep fd pandoc cmake make
+scoop install git neovim python espanso yt-dlp ffmpeg 7zip vlc lf notion obs-studio openshot nodejs firefox flow-launcher kicad emacs ripgrep fd pandoc cmake make
 Install-Module -Name z
 ```
 
