@@ -27,7 +27,6 @@ Secondly, install these softwares:
 - `espanso`: text expander.
 - `yt-dlp`, `ffmpeg`: for downloading videos from YouTube.
 - `z`: z directory jumper for Powershell.
-- `7zip`.
 - `vlc`.
 - `lf`.
 - `notion`.
@@ -37,6 +36,7 @@ Secondly, install these softwares:
 - `firefox`.
 - `flow-launcher`.
 - `kicad`.
+- `autohotkey`.
 - Doom Emacs dependencies:
   - `emacs`.
   - `ripgrep`.
@@ -52,7 +52,7 @@ Secondly, install these softwares:
   - Everything search.
 
 ```powershell
-scoop install git neovim python espanso yt-dlp ffmpeg 7zip vlc lf notion obs-studio openshot nodejs firefox flow-launcher kicad emacs ripgrep fd pandoc cmake make
+scoop install git neovim python espanso yt-dlp ffmpeg vlc lf notion obs-studio openshot nodejs firefox flow-launcher kicad autohotkey emacs ripgrep fd pandoc cmake make
 Install-Module -Name z
 ```
 
