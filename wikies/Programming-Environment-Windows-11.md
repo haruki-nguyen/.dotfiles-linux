@@ -80,3 +80,18 @@ Set these key-value pairs to ENV:
 - Run `espanso edit` to update Espanso config.
 - Run `nvim $profile` to update Powershell scripts.
 - Other configs can be found in the settings.
+
+## Set Up SSH for GitHub repositories
+
+- Setting up SSH key on your device.
+
+```bash
+ssh-keygen -t ed25519 -C "your_email@example.com"
+Get-Service -Name ssh-agent | Set-Service -StartupType manual
+Start-Service ssh-agent
+ssh-add c:/Users/YOU/.ssh/id_ed25519
+```
+
+- Then add the SSH key to your GitHub account: <https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account>.
+- Update the remote URL: `git remote set-url origin <URL>`.
+
