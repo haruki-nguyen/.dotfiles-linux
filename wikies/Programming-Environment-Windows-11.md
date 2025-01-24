@@ -2,7 +2,6 @@
 
 > Install Powershell on [https://github.com/PowerShell/PowerShell/releases/](https://github.com/PowerShell/PowerShell/releases/).
 > Note that Powershell must be run in Administrator mode.
-> Environment variables to set: `EDITOR="nvim"`
 
 ## Installations
 
