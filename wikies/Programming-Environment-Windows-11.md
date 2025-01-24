@@ -26,7 +26,6 @@ Secondly, install these softwares:
 - `espanso`: text expander.
 - `yt-dlp`, `ffmpeg`: for downloading videos from YouTube.
 - `z`: z directory jumper for Powershell.
-- `vlc`.
 - `lf`.
 - `notion`.
 - `obs-studio`.
@@ -42,7 +41,7 @@ Secondly, install these softwares:
   - Everything search.
 
 ```powershell
-scoop install git neovim python espanso yt-dlp ffmpeg vlc lf notion obs-studio openshot nodejs firefox flow-launcher kicad autohotkey sharex
+scoop install git neovim python espanso yt-dlp ffmpeg lf notion obs-studio openshot nodejs firefox flow-launcher kicad autohotkey sharex
 Install-Module -Name z
 ```
 
