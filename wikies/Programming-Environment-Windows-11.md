@@ -42,7 +42,7 @@ Secondly, install these softwares:
   - Everything search.
 
 ```powershell
-scoop install git neovim python espanso yt-dlp ffmpeg vlc lf notion obs-studio openshot nodejs firefox flow-launcher kicad autohotkey sharex emacs ripgrep fd pandoc cmake make
+scoop install git neovim python espanso yt-dlp ffmpeg vlc lf notion obs-studio openshot nodejs firefox flow-launcher kicad autohotkey sharex
 Install-Module -Name z
 ```
 
