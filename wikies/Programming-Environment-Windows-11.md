@@ -37,16 +37,6 @@ Secondly, install these softwares:
 - `flow-launcher`.
 - `kicad`.
 - `autohotkey`.
-- Doom Emacs dependencies:
-  - `emacs`.
-  - `ripgrep`.
-  - Install GNU finds (aka `findutils`) on <https://sourceforge.net/projects/gnuwin32/files/findutils/>.
-  - `fd`.
-  - `pandoc`.
-  - `cmake` and `make`.
-
-  After installing, run `doom sync` again to ensure Doom Emacs recognizes the changes.
-
 - Can be installed with installer on the official websites:
   - Microsoft PowerToys.
   - Everything search.
@@ -55,9 +45,6 @@ Secondly, install these softwares:
 scoop install git neovim python espanso yt-dlp ffmpeg vlc lf notion obs-studio openshot nodejs firefox flow-launcher kicad autohotkey emacs ripgrep fd pandoc cmake make
 Install-Module -Name z
 ```
-
-> Follow this guide to install Doom Emacs: <https://github.com/doomemacs/doomemacs/blob/master/docs/getting_started.org#install>
-> Currently, I'm using Spacemacs, because Doom Emacs is getting error while installing it, read this doc for Spacemacs installation: <https://github.com/syl20bnr/spacemacs/blob/master/README.md#windows>.
 
 ## Startup Apps
 
