@@ -35,13 +35,12 @@ Secondly, install these softwares:
 - `flow-launcher`.
 - `kicad`.
 - `autohotkey`.
-- `sharex`.
 - Can be installed with installer on the official websites:
   - Microsoft PowerToys.
   - Everything search.
 
 ```powershell
-scoop install git neovim python espanso yt-dlp ffmpeg lf notion obs-studio openshot nodejs firefox flow-launcher kicad autohotkey sharex
+scoop install git neovim python espanso yt-dlp ffmpeg lf notion obs-studio openshot nodejs firefox flow-launcher kicad autohotkey
 Install-Module -Name z
 ```
 
