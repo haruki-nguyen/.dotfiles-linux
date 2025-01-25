@@ -58,8 +58,9 @@ espansod service register
 Set these key-value pairs to ENV:
 
 - EDITOR: "C:\Users\nmdex\AppData\Local\Programs\Microsoft VS Code\Code.exe"
-- PATH: C:\Users\nmdex\AppData\Roaming\Python\Python{xxx}\Scripts"
- (xxx is the x.xx version of Python).
+- PATH: 
+    - "C:\Users\nmdex\AppData\Roaming\Python\Python{xxx}\Scripts" (xxx is the x.xx version of Python).
+    - For PlatformIO on VSCode: "C:\Users\nmdex\.platformio\penv\Scripts\"
 
 ## Set Up other Softwares
 
