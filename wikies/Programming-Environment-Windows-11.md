@@ -35,12 +35,13 @@ Secondly, install these softwares:
 - `flow-launcher`.
 - `kicad`.
 - `autohotkey`.
+- `super-productivity`.
 - Can be installed with installer on the official websites:
   - Microsoft PowerToys.
   - Everything search.
 
 ```powershell
-scoop install git neovim python espanso yt-dlp ffmpeg lf notion obs-studio openshot nodejs firefox flow-launcher kicad autohotkey
+scoop install git neovim python espanso yt-dlp ffmpeg lf notion obs-studio openshot nodejs firefox flow-launcher kicad autohotkey super-productivity
 Install-Module -Name z
 ```
 
