@@ -37,12 +37,13 @@ Secondly, install these softwares:
 - `autohotkey`.
 - `super-productivity`.
 - `gitleaks`.
+- `session`.
 - Can be installed with installer on the official websites:
   - Microsoft PowerToys.
   - Everything search.
 
 ```powershell
-scoop install git neovim python espanso yt-dlp ffmpeg lf notion obs-studio openshot nodejs firefox flow-launcher kicad autohotkey super-productivity gitleaks
+scoop install git neovim python espanso yt-dlp ffmpeg lf notion obs-studio openshot nodejs firefox flow-launcher kicad autohotkey super-productivity gitleaks session
 Install-Module -Name z
 ```
 
