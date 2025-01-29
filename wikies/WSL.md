@@ -17,6 +17,7 @@
 - `gitui`.
 - `cz-git` and `commitizen`: for conventional commit messages.
 - `ranger`.
+- `gitleaks`.
 
 ## Installation
 
@@ -36,6 +37,12 @@ npm i -g cz-git commitizen
 # install starship
 curl -sS https://starship.rs/install.sh | sh
 ```
+
+**Install gitleaks**
+
+- Use `wget` command to download the binary release on GitHub: <https://github.com/gitleaks/gitleaks>.
+- Use `tart -xvzf` command to extract the binary.
+- Then move the binary to `/usr/local/bin`.
 
 ## Setting up
 
