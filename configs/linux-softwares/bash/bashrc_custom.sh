@@ -17,6 +17,7 @@ alias md="mkdir -p"
 alias t="touch"
 alias refresh="source ~/.bashrc"
 alias py="python3"
+alias open="explorer.exe"
 
 # Git alias
 alias gits="git status"
