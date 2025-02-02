@@ -70,7 +70,7 @@ curl -sS https://starship.rs/install.sh | sh
 - Bash.
 
   ```bash
-  echo -e "\nsource ~/.dotfiles/configs/bash/bashrc_custom.sh" >> ~/.bashrc
+  echo -e "\nsource ~/.dotfiles/configs/linux-softwares/bash/bashrc_custom.sh" >> ~/.bashrc
   source ~/.bashrc
   ```
 
@@ -96,7 +96,7 @@ curl -sS https://starship.rs/install.sh | sh
 
     ```bash
     mkdir ~/.config/tmux
-    ln -s ~/.dotfiles/configs/tmux/tmux.conf ~/.config/tmux
+    ln -s ~/.dotfiles/configs/linux-softwares/tmux/tmux.conf ~/.config/tmux
     ```
 
   - Then reload Tmux with `tmux source ~/.config/tmux/tmux.conf` and install the plugins with `<prefix> + I`.
@@ -104,12 +104,12 @@ curl -sS https://starship.rs/install.sh | sh
 - Starship
 
   ```bash
-  ln -s ~/.dotfiles/configs/starship/starship.toml ~/.config
+  ln -s ~/.dotfiles/configs/linux-softwares/starship/starship.toml ~/.config
 
 - GitUI
 
   ```bash
-  ln -s ~/.dotfiles/configs/gitui/ ~/.config/
+  ln -s ~/.dotfiles/configs/linux-softwares/gitui/ ~/.config/
   ```
 
 - cz-git:
