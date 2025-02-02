@@ -47,6 +47,7 @@
             "cursorShape": "filledBox",
             "experimental.retroTerminalEffect": false,
             "font": {
+                "builtinGlyphs": true,
                 "face": "JetBrainsMono Nerd Font",
                 "size": 13
             },
