@@ -65,7 +65,7 @@ curl -sS https://starship.rs/install.sh | sh
 
 - Install the repository: `git clone git@github.com:haruki-nguyen/.dotfiles.git`.
 
-- Git: `ln -s ~/.dotfiles/configs/git/.gitconfig ~/`.
+- Git: `ln -s ~/.dotfiles/configs/common-softwares/git/.gitconfig ~/`.
 
 - Bash.
 
@@ -115,5 +115,5 @@ curl -sS https://starship.rs/install.sh | sh
 - cz-git:
 
   ```bash
-  ln -s ~/.dotfiles/configs/cz-git/.czrc ~/
+  ln -s ~/.dotfiles/configs/common-softwares/cz-git/.czrc ~/
   ```
