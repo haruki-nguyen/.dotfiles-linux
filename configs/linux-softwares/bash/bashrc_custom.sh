@@ -1,16 +1,16 @@
 #!/bin/bash
  
 # Add system updating script
-source ~/.dotfiles/configs/bash/update-system.sh
+source ~/.dotfiles/configs/linux-softwares/bash/update-system.sh
 
 # Add search and replace script
-source ~/.dotfiles/configs/bash/search-replace.sh
+source ~/.dotfiles/configs/linux-softwares/bash/search-replace.sh
 
 # Prompt theme
 eval "$(starship init bash)"
 
 # Z directory jumper
-source ~/.dotfiles/configs/bash/z.sh
+source ~/.dotfiles/configs/linux-softwares/bash/z.sh
 
 # Alias
 alias md="mkdir -p"
