@@ -26,8 +26,7 @@ alias gita="git add"
 alias gitc="git commit"
 alias gitpr="git pull --rebase"
 alias gitsync="git pull --rebase && git push"
-# TODO gititui => gitui
-alias gititui="gitui -t catppuccin_mocha.ron"
+alias gitui="gitui -t catppuccin_mocha.ron"
 alias gitcz="git cz"
 
 # Add PATH
