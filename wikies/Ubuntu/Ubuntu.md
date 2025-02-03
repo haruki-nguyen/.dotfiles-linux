@@ -18,6 +18,7 @@
 - `cz-git` and `commitizen`: for conventional commit messages.
 - `ranger`.
 - `gitleaks`.
+- `taskwarrior`.
 
 ## Installation
 
