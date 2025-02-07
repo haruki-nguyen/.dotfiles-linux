@@ -7,7 +7,7 @@ source ~/.dotfiles/configs/linux-softwares/bash/update-system.sh
 source ~/.dotfiles/configs/linux-softwares/bash/search-replace.sh
 
 # Prompt theme
-eval "$(starship init bash)"
+# eval "$(starship init bash)"
 
 # Z directory jumper
 source ~/.dotfiles/configs/linux-softwares/bash/z.sh
