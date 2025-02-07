@@ -31,8 +31,6 @@ Write-Host "Please update the remote URL to SSH: ``git remote set-url origin <UR
 
 # Set up NvChad
 Write-Host "Setting up NvChad..."
-git clone https://github.com/NvChad/starter $ENV:USERPROFILE\AppData\Local\nvim
-rm -r -Force $ENV:USERPROFILE\AppData\Local\nvim\.git
 New-Item -ItemType SymbolicLink -Path "$ENV:USERPROFILE\AppData\Local\nvim" -Target "$ENV:USERPROFILE\.dotfiles\configs\common-softwares\nvim"
 Write-Host "Finish setting up NvChad"
 
