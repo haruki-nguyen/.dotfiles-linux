@@ -13,3 +13,4 @@
 
 - Replace `{xxx}` in the Python path with your Python version.
 - Manually add your SSH key to GitHub and configure tools like Espanso and Neovim after running the script.
+- Install [GnuWin32](https://sourceforge.net/projects/gnuwin32/) and set on path for NvChad to work correctly.

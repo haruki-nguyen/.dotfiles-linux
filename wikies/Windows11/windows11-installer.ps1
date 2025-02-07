@@ -4,7 +4,9 @@ Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
 
 # Install software via Scoop
 # llvm: for using `clang-format` cmd
-scoop install git neovim python espanso yt-dlp ffmpeg lf notion obs-studio openshot nodejs firefox flow-launcher kicad autohotkey super-productivity gitleaks session discord draw.io gh llvm
+scoop install git neovim python espanso yt-dlp ffmpeg lf notion obs-studio openshot nodejs firefox flow-launcher kicad autohotkey super-productivity gitleaks session discord draw.io gh llvm ripgrep mingw
+
+Write-Host "Install GnuWin32 and set on path"
 
 # Install Z directory jumper
 Install-Module -Name z -Force
