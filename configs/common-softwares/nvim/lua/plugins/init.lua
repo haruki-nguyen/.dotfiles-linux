@@ -11,6 +11,7 @@ return {
     config = function()
       require "configs.lspconfig"
     end,
+    enabled = false,
   },
 
   {
