@@ -29,4 +29,11 @@ Start-Service ssh-agent
 ssh-add C:\Users\$env:USERNAME\.ssh\id_ed25519
 Write-Host "Please update the remote URL to SSH: ``git remote set-url origin <URL>``."
 
+# Set up NvChad
+Write-Host "Setting up NvChad..."
+git clone https://github.com/NvChad/starter $ENV:USERPROFILE\AppData\Local\nvim
+rm -r -Force $ENV:USERPROFILE\AppData\Local\nvim\.git
+New-Item -ItemType SymbolicLink -Path "$ENV:USERPROFILE\AppData\Local\nvim" -Target "$ENV:USERPROFILE\.dotfiles\configs\common-softwares\nvim"
+Write-Host "Finish setting up NvChad"
+
 Write-Host "Setup complete! Please add your SSH key to GitHub and configure Espanso, Neovim, and other tools manually."
