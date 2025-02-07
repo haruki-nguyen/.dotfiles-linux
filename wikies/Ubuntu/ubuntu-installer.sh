@@ -68,5 +68,10 @@ ln -s ~/.dotfiles/configs/linux-softwares/gitui/ ~/.config/
 
 # Set up cz-git
 ln -s ~/.dotfiles/configs/common-softwares/cz-git/.czrc ~/
+#
+# Set up NvChad
+echo "Setting up NvChad..."
+ln -s ~/.dotfiles/configs/common-softwares/nvim ~/.config/nvim
+echo "Finish setting up NvChad"
 
 echo "Setup complete! Please restart your terminal and WSL environment."

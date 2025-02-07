@@ -34,3 +34,5 @@ Download the [installer](./ubuntu-installer.sh) and run it.
 - **Neovim Setup**: After cloning the NvChad starter config, you will need to manually run `:MasonInstallAll` and `:Lazy sync` within Neovim.
 - **Tmux Plugins**: After sourcing the Tmux configuration, you will need to manually install the plugins using `<prefix> + I` (where `<prefix>` is usually `Ctrl + b`).
 - Replace `GITLEAKS_VERSION="vx.xx.x"` to the corrected version.
+- Open neovim and run `:MasonInstallAll` to finish setting up NvChad.
+
