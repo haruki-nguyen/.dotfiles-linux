@@ -1,5 +1,5 @@
 return {
   view = {
-    side = "right",
+    side = "left",
   },
 }
