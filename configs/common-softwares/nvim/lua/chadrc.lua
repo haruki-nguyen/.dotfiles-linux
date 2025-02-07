@@ -5,7 +5,7 @@
 ---@type ChadrcConfig
 local M = {
   base46 = {
-    theme = "default-dark",
+    theme = "gruvbox",
     hl_add = {},
     -- hl_override = {
     -- 	Comment = { italic = true },
@@ -14,7 +14,7 @@ local M = {
     integrations = {},
     -- changed_themes = {},
     transparency = false,
-    -- theme_toggle = { "default-dark", "one_light" },
+    -- theme_toggle = { "gruvbox", "one_light" },
   },
 
   ui = {
