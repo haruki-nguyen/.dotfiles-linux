@@ -32,9 +32,4 @@ return {
     "hrsh7th/nvim-cmp",
     enabled = false,
   },
-  -- Set up nvim-tree
-  {
-    "nvim-tree/nvim-tree.lua",
-    opts = require "configs.nvim-tree",
-  },
 }
