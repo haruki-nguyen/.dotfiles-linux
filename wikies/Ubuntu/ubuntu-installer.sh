@@ -8,7 +8,7 @@ sudo add-apt-repository ppa:neovim-ppa/unstable -y
 sudo apt update
 
 # Install necessary packages
-sudo apt install -y neovim tmux zip ripgrep nodejs npm poppler-utils gdb ranger cargo taskwarrior
+sudo apt install -y neovim tmux zip ripgrep nodejs npm poppler-utils gdb ranger cargo
 
 # Install gitui
 cargo install gitui --locked
