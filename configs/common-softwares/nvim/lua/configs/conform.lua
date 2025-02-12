@@ -1,6 +1,6 @@
 local options = {
   formatters_by_ft = {
-    lua = { "stylua", "black", "clang-format" },
+    lua = { "stylua", "black", "clang-format", "markdownlint" },
   },
 
   format_on_save = {
