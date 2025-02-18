@@ -32,7 +32,7 @@ source ~/.dotfiles/bash/z.sh
 # Alias
 alias md="mkdir -p"
 alias t="touch"
-alias refresh="source ~/.bashrc"
+alias refresh="source ~/.bashrc && cd ~/.dotfiles && stow . && cd -"
 alias py="python3"
 
 # Git alias
