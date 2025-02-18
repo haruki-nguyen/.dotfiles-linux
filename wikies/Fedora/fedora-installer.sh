@@ -8,7 +8,8 @@ sudo dnf update -y || { echo "System update failed"; exit 1; }
 
 # Install necessary packages
 # `fuse` and `fuse-libs`: run `espanso` AppImage.
-sudo dnf install -y neovim tmux zip ripgrep nodejs npm gdb python3 yt-dlp ffmpeg obs-studio openshot firefox gitleaks gh llvm fuse fuse-libs || { echo "Package installation failed"; exit 1; }
+# `rofi`: program launcher replacement for the default `dmenu`.
+sudo dnf install -y neovim tmux zip ripgrep nodejs npm gdb python3 yt-dlp ffmpeg obs-studio openshot firefox gitleaks gh llvm fuse fuse-libs rofi || { echo "Package installation failed"; exit 1; }
 
 # Install Espanso
 # Create the $HOME/opt destination folder
