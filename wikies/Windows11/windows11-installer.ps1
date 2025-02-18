@@ -4,7 +4,7 @@ Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
 
 # Install software via Scoop
 # llvm: for using `clang-format` cmd
-scoop install git neovim python espanso yt-dlp ffmpeg lf notion obs-studio openshot nodejs firefox flow-launcher kicad autohotkey super-productivity gitleaks discord draw.io gh llvm ripgrep mingw
+scoop install git neovim python espanso yt-dlp ffmpeg lf notion obs-studio openshot nodejs firefox flow-launcher gitleaks discord draw.io gh llvm ripgrep mingw
 
 Write-Host "Install GnuWin32 and set on path"
 
@@ -31,7 +31,7 @@ Write-Host "Please update the remote URL to SSH: ``git remote set-url origin <UR
 
 # Set up NvChad
 Write-Host "Setting up NvChad..."
-New-Item -ItemType SymbolicLink -Path "$ENV:USERPROFILE\AppData\Local\nvim" -Target "$ENV:USERPROFILE\.dotfiles\configs\common-softwares\nvim"
+New-Item -ItemType SymbolicLink -Path "$ENV:USERPROFILE\AppData\Local\nvim" -Target "$ENV:USERPROFILE\.dotfiles\nvim"
 Write-Host "Finish setting up NvChad"
 
 Write-Host "Setup complete! Please add your SSH key to GitHub and configure Espanso, Neovim, and other tools manually."
