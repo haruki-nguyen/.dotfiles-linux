@@ -21,49 +21,29 @@ update_system() {
 
     echo "Removing unused packages..."
     yay -Yc --noconfirm
-
-    echo "System update and cleanup complete!"
-
-    echo "Updating packages of npm..."
-    sudo npm update -g
-
-    echo "Pulling updates from the repositories"
-    git_pull_all
-    echo "Done!"
   elif type "apt" >/dev/null 2>&1 || type "apt-get" >/dev/null 2>&1; then
     echo "Updating system with apt..."
     sudo apt update && sudo apt upgrade -y
 
     echo "Removing unused packages..."
     sudo apt autoremove -y
-
-    echo "System update and cleanup complete!"
-
-    echo "Updating packages of npm..."
-    # Not use `sudo npm` because we use `npm` installed by `nvm`
-    npm update -g
-
-    echo "Pulling updates from the repositories"
-    git_pull_all
-    echo "Done!"
-  elif type "dnf" >/dev/null 2>&1 then
+  elif type "dnf" >/dev/null 2>&1; then
     echo "Updating system with dnf..."
-    sudo apt update && sudo apt upgrade -y
+    sudo dnf update -y
 
     echo "Removing unused packages..."
-    sudo apt autoremove -y
-
-    echo "System update and cleanup complete!"
-
-    echo "Updating packages of npm..."
-    # Not use `sudo npm` because we use `npm` installed by `nvm`
-    npm update -g
-
-    echo "Pulling updates from the repositories"
-    git_pull_all
-    echo "Done!"
+    sudo dnf autoremove -y
   else
     echo "Unknown OS"
   fi
+
+  echo "System update and cleanup complete!"
+
+  echo "Updating packages of npm..."
+  sudo npm update -g
+
+  echo "Pulling updates from the repositories"
+  git_pull_all
+  echo "Done!"
 }
 
