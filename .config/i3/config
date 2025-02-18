@@ -60,14 +60,17 @@ bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
 
-# screenshot tool
+# Screenshot tool
 bindsym Print exec flameshot gui
 
+# File manager
+bindsym $mod+Shift+f exec thunar
+
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -76,10 +79,10 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+semicolon move right
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -88,7 +91,7 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+h split h
+bindsym $mod+semicolon split h
 
 # split in vertical orientation
 bindsym $mod+v split v
@@ -165,10 +168,10 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
+        bindsym h resize shrink width 10 px or 10 ppt
+        bindsym j resize grow height 10 px or 10 ppt
+        bindsym k resize shrink height 10 px or 10 ppt
+        bindsym l resize grow width 10 px or 10 ppt
 
         # same bindings, but for the arrow keys
         bindsym Left resize shrink width 10 px or 10 ppt
@@ -184,28 +187,70 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# class                 border  bground text    indicator child_border
-client.focused          #83CAFA #51A2DA #FFFFFF #83CAFA   #51A2DA
-client.focused_inactive #8C8C8C #4C4C4C #FFFFFF #4C4C4C   #8C8C8C
-client.unfocused        #4C4C4C #222222 #888888 #292D2E   #222222
-client.urgent           #EC69A0 #DB3279 #FFFFFF #DB3279   #DB3279
-client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
+# Windows
+default_border normal 2
+hide_edge_borders smart_no_gaps
+title_align left
 
-client.background       #FFFFFF
+# Theme for i3wm
+set $bg #282828
+set $red1 #cc241d
+set $green1 #98971a
+set $yellow1 #d79921
+set $blue1 #458588
+set $purple1 #b16286
+set $aqua1 #689d6a
+set $gray1 #a89984
+set $gray2 #928374
+set $red2 #fb4934
+set $green2 #b8bb26
+set $yellow2 #fabd2f
+set $blue2 #83a598
+set $purple2 #d3869b
+set $aqua2 #8ec07c
+set $fg #ebdbb2
+set $bg0_h #1d2021
+set $bg0 #282828
+set $bg1 #3c3836
+set $bg2 #504945
+set $bg3 #665c54
+set $bg4 #7c6f64
+set $gray3 #928374
+set $orange1 #d65d0e
+set $bg0_s #32302f
+set $fg4 #a89984
+set $fg3 #bdae93
+set $fg2 #d5c4a1
+set $fg1 #ebdbb2
+set $fg0 #fbf1c7
+set $orange2 #fe8019
+
+
+# target                 title       bg    text     indicator  border
+client.focused           $blue2      $bg   $fg      $yellow2   $blue2
+client.focused_inactive  $blue1      $bg   $fg      $yellow2   $blue1   
+client.unfocused         $blue1      $bg   $fg      $yellow2   $blue1   
+client.urgent            $yellow1    $bg   $yellow1 $blue1     $yellow1
+client.placeholder       $blue1      $bg   $fg      $blue1     $blue1   
+client.background        $bg  
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
   colors {
-    background #000000
-    statusline #FFFFFF
-    separator  #666666
+    background         $bg  
+    statusline         $fg  
+    separator          $fg  
+    focused_statusline $fg  
+    focused_separator  $bg  
 
-    focused_workspace  #83CAFA #51A2DA #FFFFFF
-    active_workspace   #3C6EB4 #294172 #FFFFFF
-    inactive_workspace #8C8C8C #4C4C4C #888888
-    urgent_workspace   #EC69A0 #DB3279 #FFFFFF
-    binding_mode       #b691d3 #A07CBC #FFFFFF
+    # target           border    bg          text
+    focused_workspace  $bg       $yellow1    $bg0_h
+    active_workspace   $bg       $bg0        $fg  
+    inactive_workspace $bg       $bg         $fg  
+    urgent_workspace   $bg       $red        $bg0_h
+    binding_mode       $yellow2  $yellow1    $fg  
   }
   status_command i3status
 }
+
