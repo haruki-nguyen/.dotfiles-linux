@@ -20,7 +20,9 @@
     - Install Tmux plugins with `<prefix> + I` after the script completes.
     - Run `:MasonInstallAll` and `:Lazy sync` manually to complete NvChad setup.
 
-5. **Restart Terminal**: After the script finishes, restart your terminal.
+5. **Refresh environment and create symolic links**: run `refresh` command.
 
-6. **Optional**: Manually install the JetBrainsMono Nerd font if desired.
+6. **Restart Terminal**: After the script finishes, restart your terminal.
+
+7. **Optional**: Manually install the JetBrainsMono Nerd font if desired.
 
