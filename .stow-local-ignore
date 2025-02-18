@@ -1,0 +1,33 @@
+# Comments and blank lines are allowed.
+# Default ignores
+
+RCS
+.+,v
+
+CVS
+\.\#.+       # CVS conflict files / emacs lock files
+\.cvsignore
+
+\.svn
+_darcs
+\.hg
+
+\.git
+\.gitignore
+\.gitmodules
+
+.+~          # emacs backup files
+\#.*\#       # emacs autosave files
+
+^/README.*
+^/LICENSE.*
+^/COPYING
+
+# My ignores
+flow-launcher
+powershell7
+powertoys
+tmux
+wikies
+windows-terminal
+MBLABXIDE-configs.zip
