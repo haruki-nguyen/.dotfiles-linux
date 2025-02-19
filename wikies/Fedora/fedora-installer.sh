@@ -12,7 +12,8 @@ sudo dnf update -y || { echo "System update failed"; exit 1; }
 # `lxappearance`: for modifying GTK themes.
 # `gtk-murrine-engine`: GTK Gruvbox theme dependencies.
 # `btop`: task manager.
-sudo dnf install -y neovim tmux zip ripgrep nodejs npm gdb python3 yt-dlp ffmpeg obs-studio openshot firefox gitleaks gh llvm fuse fuse-libs rofi lxappearance gtk-murrine-engine btop || { echo "Package installation failed"; exit 1; }
+# `flatpak`: use to install packages that are not available with dnf method
+sudo dnf install -y neovim tmux zip ripgrep nodejs npm gdb python3 yt-dlp ffmpeg obs-studio openshot firefox gitleaks gh llvm fuse fuse-libs rofi lxappearance gtk-murrine-engine btop flatpak syncthing || { echo "Package installation failed"; exit 1; }
 
 # Install ProtonVPN
 echo "Installing ProtonVPN"
@@ -21,6 +22,9 @@ sudo dnf install ./protonvpn-stable-release-1.0.2-1.noarch.rpm || { echo "Failed
 sudo dnf check-update --refresh
 sudo dnf install proton-vpn-gnome-desktop || { echo "Failed to install ProtonVPN Gnome Desktop package"; exit 1; }
 echo "Sucessfully install ProtonVPN"
+
+# Install Obsidian
+flatpak install flathub md.obsidian.Obsidian
 
 # Install Espanso
 # Create the $HOME/opt destination folder
