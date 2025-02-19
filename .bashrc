@@ -26,8 +26,8 @@ unset rc
 
 # My custom scripts
 # Add custom scripts
-source ~/.dotfiles/bash/update-system.sh
-source ~/.dotfiles/bash/z.sh
+source ~/.dotfiles/.config/bash/update-system.sh
+source ~/.dotfiles/.config/bash/z.sh
 
 # Alias
 alias md="mkdir -p"
