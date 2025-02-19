@@ -12,8 +12,9 @@ sudo dnf update -y || { echo "System update failed"; exit 1; }
 # `lxappearance`: for modifying GTK themes.
 # `gtk-murrine-engine`: GTK Gruvbox theme dependencies.
 # `btop`: task manager.
-# `flatpak`: use to install packages that are not available with dnf method
-sudo dnf install -y neovim tmux zip ripgrep nodejs npm gdb python3 yt-dlp ffmpeg obs-studio openshot firefox gitleaks gh llvm fuse fuse-libs rofi lxappearance gtk-murrine-engine btop flatpak syncthing || { echo "Package installation failed"; exit 1; }
+# `flatpak`: use to install packages that are not available with dnf method.
+# kernel-devel kernel-headers gcc make perl: for installing Virtualbox.
+sudo dnf install -y neovim tmux zip ripgrep nodejs npm gdb python3 yt-dlp ffmpeg obs-studio openshot firefox gitleaks gh llvm fuse fuse-libs rofi lxappearance gtk-murrine-engine btop flatpak syncthing kernel-devel kernel-headers gcc make perl || { echo "Package installation failed"; exit 1; }
 
 # Install ProtonVPN
 echo "Installing ProtonVPN"

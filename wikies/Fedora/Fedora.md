@@ -29,17 +29,19 @@
     - Manually install the JetBrainsMono Nerd font if desired.
     - Change the wallpaper in LightDM, follow these steps:
 
-         Edit the greeter's configuration file:  
+        Edit the greeter's configuration file:  
 
-         ```sh
-         sudo nano /etc/lightdm/lightdm-gtk-greeter.conf
-         ```  
+        ```sh
+        sudo nano /etc/lightdm/lightdm-gtk-greeter.conf
+        ```  
 
-         Add or modify the following line to set your desired background image:  
+        Add or modify the following line to set your desired background image:  
 
-         ```
-         background=/path/to/your/wallpaper.jpg
-         ```  
+        ```
+        background=/path/to/your/wallpaper.jpg
+        ```  
 
-         Replace `/path/to/your/wallpaper.jpg` with the actual path to your image. Note that the background image has to be placed inside the `/usr/share/backgrounds` folder.
+        Replace `/path/to/your/wallpaper.jpg` with the actual path to your image. Note that the background image has to be placed inside the `/usr/share/backgrounds` folder.
+
+    - Download the Virtualbox RPM file from <https://download.virtualbox.org/virtualbox/7.1.6/VirtualBox-7.1-7.1.6_167084_fedora40-1.x86_64.rpm>, install it, and then run `sudo /sbin/vboxconfig` to rebuilds and configures the VirtualBox kernel modules on the system, it ensures that VirtualBox works properly with the current kernel. 
 
