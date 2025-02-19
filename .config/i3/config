@@ -226,12 +226,12 @@ set $fg0 #fbf1c7
 set $orange2 #fe8019
 
 
-# target                 title       bg    text     indicator  border
-client.focused           $blue2      $bg   $fg      $yellow2   $blue2
-client.focused_inactive  $blue1      $bg   $fg      $yellow2   $blue1   
-client.unfocused         $blue1      $bg   $fg      $yellow2   $blue1   
-client.urgent            $yellow1    $bg   $yellow1 $blue1     $yellow1
-client.placeholder       $blue1      $bg   $fg      $blue1     $blue1   
+# target                 title        bg       text     indicator   border
+client.focused           $blue2       $blue1   $fg      $yellow2    $blue2
+client.focused_inactive  $green1      $bg      $fg      $yellow2    $green1   
+client.unfocused         $green1      $bg      $fg      $yellow2    $green1   
+client.urgent            $yellow1     $bg      $yellow1 $green1     $yellow1
+client.placeholder       $green1      $bg      $fg      $green1     $green1   
 client.background        $bg  
 
 # Start i3bar to display a workspace bar (plus the system information i3status
