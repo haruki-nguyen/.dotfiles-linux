@@ -24,5 +24,22 @@
 
 6. **Restart Terminal**: After the script finishes, restart your terminal.
 
-7. **Optional**: Manually install the JetBrainsMono Nerd font if desired.
+7. **Additional Steps**:
+
+    - Manually install the JetBrainsMono Nerd font if desired.
+    - Change the wallpaper in LightDM, follow these steps:
+
+         Edit the greeter's configuration file:  
+
+         ```sh
+         sudo nano /etc/lightdm/lightdm-gtk-greeter.conf
+         ```  
+
+         Add or modify the following line to set your desired background image:  
+
+         ```
+         background=/path/to/your/wallpaper.jpg
+         ```  
+
+         Replace `/path/to/your/wallpaper.jpg` with the actual path to your image. Note that the background image has to be placed inside the `/usr/share/backgrounds` folder.
 

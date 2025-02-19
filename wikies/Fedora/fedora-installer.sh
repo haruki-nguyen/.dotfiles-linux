@@ -81,5 +81,10 @@ rm -rf ~/Downloads/*
 echo "Moving to the home directory."
 cd ~
 
+# Set wallpaper for desktop and display manager
+feh --bg-fill ~/.dotfiles/wallpapers/road.png
+# Copy wallpaper to global shared backgrounds folder
+sudo cp ~/.dotfiles/wallpapers/road.png /usr/share/backgrounds/ || { echo "Failed to copy wallpaper to global shared backgrounds folder"; exit 1; }
+
 echo "Setup complete! Please restart your terminal."
 
