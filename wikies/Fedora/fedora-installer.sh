@@ -11,8 +11,16 @@ sudo dnf update -y || { echo "System update failed"; exit 1; }
 # `rofi`: program launcher replacement for the default `dmenu`.
 # `lxappearance`: for modifying GTK themes.
 # `gtk-murrine-engine`: GTK Gruvbox theme dependencies.
-# `btop`: task manager
+# `btop`: task manager.
 sudo dnf install -y neovim tmux zip ripgrep nodejs npm gdb python3 yt-dlp ffmpeg obs-studio openshot firefox gitleaks gh llvm fuse fuse-libs rofi lxappearance gtk-murrine-engine btop || { echo "Package installation failed"; exit 1; }
+
+# Install ProtonVPN
+echo "Installing ProtonVPN"
+wget "https://repo.protonvpn.com/fedora-$(cat /etc/fedora-release | cut -d' ' -f 3)-stable/protonvpn-stable-release/protonvpn-stable-release-1.0.2-1.noarch.rpm" || { echo "Failed to install ProtonVPN"; exit 1; }
+sudo dnf install ./protonvpn-stable-release-1.0.2-1.noarch.rpm || { echo "Failed to install the ProtonVPN repository package from the local RPM file"; exit 1; }
+sudo dnf check-update --refresh
+sudo dnf install proton-vpn-gnome-desktop || { echo "Failed to install ProtonVPN Gnome Desktop package"; exit 1; }
+echo "Sucessfully install ProtonVPN"
 
 # Install Espanso
 # Create the $HOME/opt destination folder
