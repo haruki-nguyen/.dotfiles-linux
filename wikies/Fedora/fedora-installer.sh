@@ -24,7 +24,7 @@ sudo dnf install proton-vpn-gnome-desktop || { echo "Failed to install ProtonVPN
 echo "Sucessfully install ProtonVPN"
 
 # Install Obsidian
-flatpak install flathub md.obsidian.Obsidian
+flatpak install flathub md.obsidian.Obsidian || { echo "Failed to install packages with Flatpak"; exit 1; }
 
 # Install Espanso
 # Create the $HOME/opt destination folder
