@@ -6,4 +6,6 @@
   <property name="last-window-width" type="int" value="679"/>
   <property name="last-window-height" type="int" value="720"/>
   <property name="last-window-maximized" type="bool" value="true"/>
+  <property name="last-separator-position" type="int" value="170"/>
+  <property name="misc-single-click" type="bool" value="false"/>
 </channel>
