@@ -1,3 +1,4 @@
 .config/tmux/plugins/
 .config/btop/btop.log
 .config/gtk-3.0/bookmarks
+.config/dconf/
