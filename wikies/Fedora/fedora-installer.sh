@@ -17,7 +17,8 @@ sudo dnf update -y || { echo "System update failed"; exit 1; }
 # `mpc-qt`: video player.
 # `gthumb`: image viewer.
 # `fastfetch`: display system info.
-sudo dnf install -y neovim tmux zip ripgrep nodejs npm gdb python3 yt-dlp ffmpeg obs-studio openshot firefox gitleaks gh llvm fuse fuse-libs rofi lxappearance gtk-murrine-engine btop flatpak syncthing kernel-devel kernel-headers gcc make perl mpc-qt gthumb fastfetch || { echo "Package installation failed"; exit 1; }
+# `okular`: pdf viewer.
+sudo dnf install -y neovim tmux zip ripgrep nodejs npm gdb python3 yt-dlp ffmpeg obs-studio openshot firefox gitleaks gh llvm fuse fuse-libs rofi lxappearance gtk-murrine-engine btop flatpak syncthing kernel-devel kernel-headers gcc make perl mpc-qt gthumb fastfetch okular || { echo "Package installation failed"; exit 1; }
 
 # Install ProtonVPN
 echo "Installing ProtonVPN"
