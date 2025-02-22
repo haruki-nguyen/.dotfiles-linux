@@ -1,3 +1,4 @@
+# INSTALL DEPENDENCIES
 # Install Powershell and Windows Terminal from Microsoft Store
 # Install JetBrainsMono Nerd Font from https://www.nerdfonts.com/font-downloads
 # And then set JetBrainsMono Nerd Font as the font for Windows Terminal
@@ -16,6 +17,7 @@ scoop bucket add extras
 # `ffmpeg`: dependency of `yt-dlp`
 scoop install obsidian flow-launcher everything firefox syncthing powertoys neovim nodejs ripgrep mingw python espanso llvm yt-dlp ffmpeg notion obs-studio gitleaks discord draw.io gh
 
+# SET UP CONFIGS
 # Set up SSH for GitHub
 $email = "nmd03pvt@gmail.com"
 ssh-keygen -t ed25519 -C "$email"
@@ -81,6 +83,7 @@ git config --global user.email "nmd03pvt@gmail.com"
 git config --global user.name "Haruki Nguyen"
 Write-Host "Finish setting up Git"
 
+# ADDITIONAL STEPS
 # Update power plan in Control Panel > Power Options
 # Low level: 20%
 # Reserve level: 15%
