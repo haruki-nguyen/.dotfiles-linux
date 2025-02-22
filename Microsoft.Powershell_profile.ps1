@@ -1,35 +1,54 @@
 # UPDATE SYSTEM
 # Define paths to git repositories
-$projectPaths = @("C:\Users\nmdex\Documents\Projects\IoT-irrigation-system")
+$projectPaths = @("C:\Users\nmdex\Documents\Projects\IoT-irrigation-system", "C:\Users\nmdex\Documents\University")
 
 function Get-RepoUpdates {
     foreach ($path in $projectPaths) {
-        Write-Host "Going to $path"
-        Set-Location -Path $path
-        Write-Host "Pulling..."
-        git pull
-        Write-Host "Done!"
-        Write-Host "Going back..."
-        Set-Location -Path -
+
+        if (-Not (Test-Path $path)) {
+            Write-Host "Invalid path: $path"
+            #break
+            continue
+        }
+
+        try {
+            Write-Host "Going to $path"
+            Set-Location -Path $path
+            Write-Host "Pulling..."
+            git pull
+            Write-Host "Done!"
+        }
+        catch {
+            Write-Host "Fail to update the repo in $path, $_"
+        }
+        finally {
+            Write-Host "Going back..."
+            Set-Location -Path $path -ErrorAction SilentlyContinue
+        }
     }
 }
 
 function Update-System {
     # Check if Chocolatey and npm are available
-    if (Get-Command scoop -ErrorAction SilentlyContinue) {
-        Write-Host "Updating system with Scoop..."
-        scoop update *
-
-        Write-Host "Updating PowerShell modules from Gallery..."
-        Get-InstalledModule | Update-Module
-
-        Write-Host "Pulling updates from the repositories"
-        Get-RepoUpdates
-        Write-Host "Done!"
-    }
-    else {
-        Write-Host "Scoop isn't installed."
-    }
+    try {
+        if (Get-Command scoop -ErrorAction Stop) {
+            Write-Host "Updating system with Scoop..."
+            scoop update *
+
+            Write-Host "Updating PowerShell modules from Gallery..."
+            Get-InstalledModule | Update-Module
+
+            Write-Host "Pulling updates from the repositories"
+            Get-RepoUpdates
+            Write-Host "Done!"
+        }
+        else {
+            Write-Host "Scoop isn't installed."
+        }
+    }
+    catch {
+        Write-Host "An error occured: $_"
+    }
 }
 
 # ALIASES
@@ -75,9 +94,6 @@ function Invoke-GitSync {
     git pull --rebase
     git push
 }
-function Invoke-GitCommitizen {
-    git cz
-}
 
 Set-Alias -Name gits -Value Invoke-GitStatus
 Set-Alias -Name gitl -Value Invoke-GitLog
@@ -86,4 +102,3 @@ Set-Alias -Name gita -Value Invoke-GitAdd
 Set-Alias -Name gitc -Value Invoke-GitCommit
 Set-Alias -Name gitpr -Value Invoke-GitPullRebase
 Set-Alias -Name gitsync -Value Invoke-GitSync
-Set-Alias -Name gitcz -Value Invoke-GitCommitizen
