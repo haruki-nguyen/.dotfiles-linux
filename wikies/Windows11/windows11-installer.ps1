@@ -87,3 +87,6 @@ Write-Host "Finish setting up Git"
 # Critical level: 10%
 
 # Update Windows settings for developers in System > For developers
+
+# You can set Neovim as the default text editor for any file types with its link: C:\Users\nmdex\scoop\apps\neovim\current\bin\nvim.exe 
+
