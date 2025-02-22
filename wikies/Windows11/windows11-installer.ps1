@@ -85,6 +85,9 @@ New-Item -ItemType
 Write-Host "Finish setting up Git"
 
 # ADDITIONAL STEPS
+# Softwares to update configs manually
+# 1. Windows Terminal
+
 # Update power plan in Control Panel > Power Options
 # Low level: 20%
 # Reserve level: 15%
