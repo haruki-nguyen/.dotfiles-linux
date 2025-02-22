@@ -79,8 +79,9 @@ Write-Host "Finish setting up Espanso"
 
 # Set up email and name for Git
 Write-Host "Setting up Git..."
-git config --global user.email "nmd03pvt@gmail.com"
-git config --global user.name "Haruki Nguyen"
+Remove-Item "$ENV:USERPROFILE\.gitconfig"
+New-Item -Item SymbolicLink -Path  "$ENV:USERPROFILE\.gitconfig" -Target  "$ENV:USERPROFILE\.dotfiles\.gitconfig"
+New-Item -ItemType 
 Write-Host "Finish setting up Git"
 
 # ADDITIONAL STEPS
