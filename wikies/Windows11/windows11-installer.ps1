@@ -63,7 +63,7 @@ git clone git@github.com:haruki-nguyen/.dotfiles.git ~
 
 # Set up Powershell configs
 Write-Host "Setting up Powershell configs..."
-New-Item -ItemType SymbolicLink -Path "$ENV:USERPROFILE\Documents\PowerShell\Microsoft.PowerShell_profile.ps1" -Target "$ENV:USERPROFILE\.dotfiles\Microsoft.Powershell_profile.ps1"
+New-Item -ItemType SymbolicLink -Path "$ENV:USERPROFILE\Documents\PowerShell\Microsoft.PowerShell_profile.ps1" -Target "$ENV:USERPROFILE\.dotfiles\powershell-configs.ps1"
 Write-Host "Finish setting up NvChad"
 
 # Set up NvChad
