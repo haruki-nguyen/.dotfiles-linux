@@ -33,7 +33,7 @@ matches:
 
   # TEXT
   - trigger: ":#as"
-    replace: "answer shortly, thanks."
+    replace: "answer simply and shortly, thanks."
     
   - trigger: ":#wo"
     replace: "which one I should choose?"
