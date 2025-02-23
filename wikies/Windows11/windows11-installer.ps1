@@ -87,6 +87,8 @@ Write-Host "Finish setting up Git"
 # Softwares to update configs manually
 # 1. Windows Terminal
 # 2. FlowLauncher
+# 3. PowerToys
+# 4. MBLAB X IDE
 
 # Update power plan in Control Panel > Power Options
 # Low level: 20%
