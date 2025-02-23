@@ -80,13 +80,13 @@ Write-Host "Finish setting up Espanso"
 # Set up email and name for Git
 Write-Host "Setting up Git..."
 Remove-Item "$ENV:USERPROFILE\.gitconfig"
-New-Item -Item SymbolicLink -Path  "$ENV:USERPROFILE\.gitconfig" -Target  "$ENV:USERPROFILE\.dotfiles\.gitconfig"
-New-Item -ItemType 
+New-Item -ItemType SymbolicLink -Path  "$ENV:USERPROFILE\.gitconfig" -Target  "$ENV:USERPROFILE\.dotfiles\.gitconfig"
 Write-Host "Finish setting up Git"
 
 # ADDITIONAL STEPS
 # Softwares to update configs manually
 # 1. Windows Terminal
+# 2. FlowLauncher
 
 # Update power plan in Control Panel > Power Options
 # Low level: 20%
