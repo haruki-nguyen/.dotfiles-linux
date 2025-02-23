@@ -83,6 +83,11 @@ Remove-Item "$ENV:USERPROFILE\.gitconfig"
 New-Item -ItemType SymbolicLink -Path  "$ENV:USERPROFILE\.gitconfig" -Target  "$ENV:USERPROFILE\.dotfiles\.gitconfig"
 Write-Host "Finish setting up Git"
 
+# Create Projects folder
+Write-Host "Create Projects folder..."
+New-Item -ItemType Directory -Path Projects
+Write-Host "Finish creating Projects folder."
+
 # ADDITIONAL STEPS
 # Softwares to update configs manually
 # 1. Windows Terminal
