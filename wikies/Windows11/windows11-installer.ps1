@@ -12,8 +12,7 @@ scoop install git
 # Add extras bucket
 scoop bucket add extras
 # `nodejs`, `python`: to install dependencies for Neovim using Lazy package manager
-# `ripgrep`, `mingw`: NvChad' dependencies,
-# also note that I can use `mingw` as a compiler for C/C++
+# `ripgrep`, `mingw`: NvChad' dependencies
 # `llvm`: get `clang` to installing packages for Treesitter in Neovim
 # `ffmpeg`: dependency of `yt-dlp`
 # `fzf`: fuzzy finder
@@ -94,11 +93,6 @@ Write-Host "Finish downloading and installing PlatformIO."
 Write-Host "Setting up ENV in Path for PlatformIO..."
 [System.Environment]::SetEnvironmentVariable("Path", $ENV:Path + ";C:\Users\nmdex\.platformio\penv\Scripts\", [System.EnvironmentVariableTarget]::User)
 Write-Host "Finish setting up ENV in Path for PlatformIO."
-
-# Set up C/C++ compiler
-Write-Host "Setting mingw to Path..."
-[System.Environment]::SetEnvironmentVariable("Path", $ENV:Path + ";C:\Users\nmdex\scoop\apps\mingw\current\bin", [System.EnvironmentVariableTarget]::User)
-Write-Host "Finishing setting mingw to Path."
 
 # Create Projects folder
 Write-Host "Create Projects folder..."
