@@ -15,7 +15,8 @@ scoop bucket add extras
 # `ripgrep`, `mingw`: NvChad' dependencies
 # `llvm`: get `clang` to installing packages for Treesitter in Neovim
 # `ffmpeg`: dependency of `yt-dlp`
-scoop install obsidian flow-launcher everything firefox syncthing powertoys neovim nodejs ripgrep mingw python espanso llvm yt-dlp ffmpeg notion obs-studio gitleaks discord draw.io gh
+# `fzf`: fuzzy finder
+scoop install obsidian flow-launcher everything firefox syncthing powertoys neovim nodejs ripgrep mingw python espanso llvm yt-dlp ffmpeg notion obs-studio gitleaks discord draw.io gh wget fzf
 
 # SET UP CONFIGS
 # Set up SSH for GitHub
@@ -82,6 +83,15 @@ Write-Host "Setting up Git..."
 Remove-Item "$ENV:USERPROFILE\.gitconfig"
 New-Item -ItemType SymbolicLink -Path  "$ENV:USERPROFILE\.gitconfig" -Target  "$ENV:USERPROFILE\.dotfiles\.gitconfig"
 Write-Host "Finish setting up Git"
+
+# Set up PlatformIO for IoT development
+Write-Host "Setting up PlatformIO..."
+Write-Host "Downloading and installing PlatformIO..."
+wget -P "$ENV:USERPROFILE\.dotfiles\" "https://raw.githubusercontent.com/platformio/platformio-core-installer/master/get-platformio.py"
+Write-Host "Finish downloading and installing PlatformIO."
+Write-Host "Setting up ENV in Path for PlatformIO..."
+[System.Environment]::SetEnvironmentVariable("Path", $ENV:Path + ";C:\Users\nmdex\.platformio\penv\Scripts\", [System.EnvironmentVariableTarget]::User)
+Write-Host "Finish setting up ENV in Path for PlatformIO."
 
 # Create Projects folder
 Write-Host "Create Projects folder..."
