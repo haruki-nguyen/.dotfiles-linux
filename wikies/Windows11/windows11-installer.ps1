@@ -52,6 +52,7 @@ Install-Module -Name z -Force
 # 14. PSIM
 # 15. GnuWin32: for Neovim (https://sourceforge.net/projects/gnuwin32/)
 # 16. Battery Percentage - Pure Battery add-on (from Microsoft Store)
+# 17. CP2102 USB to UART bridge driver for Windows 11: for ESP32 with CP2102 chip development
 
 # Set up Git for Data center
 cd ~\Downloads\Data
