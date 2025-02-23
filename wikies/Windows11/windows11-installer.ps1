@@ -16,7 +16,7 @@ scoop bucket add extras
 # `llvm`: get `clang` to installing packages for Treesitter in Neovim
 # `ffmpeg`: dependency of `yt-dlp`
 # `fzf`: fuzzy finder
-scoop install obsidian flow-launcher everything firefox powertoys neovim nodejs ripgrep mingw python espanso llvm yt-dlp ffmpeg notion obs-studio gitleaks discord draw.io gh wget fzf
+scoop install obsidian flow-launcher everything firefox powertoys neovim nodejs ripgrep mingw python espanso llvm yt-dlp ffmpeg notion obs-studio gitleaks discord draw.io gh wget fzf vscode
 
 # SET UP CONFIGS
 # Set up SSH for GitHub
