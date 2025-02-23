@@ -52,6 +52,7 @@ Install-Module -Name z -Force
 # 13. Proteus: installer is on "C:\Users\nmdex\Documents\Data\Large Data\Softwares\Proteus 8.17 SP2 Pro.zip".
 # 14. PSIM
 # 15. GnuWin32: for Neovim (https://sourceforge.net/projects/gnuwin32/)
+# 16. Battery Percentage - Pure Battery add-on (from Microsoft Store)
 
 # Set up Git for Data center
 cd ~\Downloads\Data
