@@ -46,10 +46,10 @@
   "TimeFormat": "hh:mm tt",
   "DateFormat": "MM\u0027/\u0027dd ddd",
   "FirstLaunch": false,
-  "SettingWindowWidth": 1025,
-  "SettingWindowHeight": 519,
+  "SettingWindowWidth": 1382,
+  "SettingWindowHeight": 736,
   "SettingWindowTop": -28,
-  "SettingWindowLeft": 104,
+  "SettingWindowLeft": -8,
   "SettingWindowState": 2,
   "CustomExplorerIndex": 0,
   "CustomExplorerList": [
@@ -128,7 +128,7 @@
   "CustomWindowTop": 0,
   "KeepMaxResults": false,
   "MaxResultsToShow": 5,
-  "ActivateTimes": 235,
+  "ActivateTimes": 256,
   "CustomPluginHotkeys": [],
   "CustomShortcuts": [],
   "DontPromptUpdateMsg": false,
@@ -248,7 +248,7 @@
           "*"
         ],
         "Priority": 0,
-        "Disabled": true
+        "Disabled": false
       },
       "0308FD86DE0A4DEE8D62B9B535370992": {
         "ID": "0308FD86DE0A4DEE8D62B9B535370992",
