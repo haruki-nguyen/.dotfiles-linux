@@ -31,4 +31,10 @@ return {
     "hrsh7th/nvim-cmp",
     enabled = false,
   },
+
+  -- Easy motion for Neovim
+  {
+    "smoka7/hop.nvim",
+    opts = require "configs.hop",
+  },
 }
