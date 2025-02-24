@@ -114,5 +114,5 @@ Write-Host "Finish creating Projects folder."
 
 # Update Windows settings for developers in System > For developers
 
-# You can set Neovim as the default text editor for any file types with its link: C:\Users\nmdex\scoop\apps\neovim\current\bin\nvim.exe 
+# You can set the default text editor for any file types with its link: C:\Users\nmdex\scoop\apps\<app name>\current\executable-file-path.exe
 
