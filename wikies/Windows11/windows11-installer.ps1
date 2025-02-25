@@ -88,12 +88,8 @@ New-Item -ItemType SymbolicLink -Path  "$ENV:USERPROFILE\.gitconfig" -Target  "$
 Write-Host "Finish setting up Git"
 
 # Set up PlatformIO for IoT development
-Write-Host "Setting up PlatformIO..."
-Write-Host "Downloading and installing PlatformIO..."
-wget -P "$ENV:USERPROFILE\.dotfiles\" "https://raw.githubusercontent.com/platformio/platformio-core-installer/master/get-platformio.py"
-Write-Host "Finish downloading and installing PlatformIO."
 Write-Host "Setting up ENV in Path for PlatformIO..."
-[System.Environment]::SetEnvironmentVariable("Path", $ENV:Path + ";C:\Users\nmdex\.platformio\penv\Scripts\", [System.EnvironmentVariableTarget]::User)
+[System.Environment]::SetEnvironmentVariable("Path", $ENV:Path + ";$ENV:USERPROFILE\.platformio\penv\Scripts\", [System.EnvironmentVariableTarget]::User)
 Write-Host "Finish setting up ENV in Path for PlatformIO."
 
 # Create Projects folder
@@ -115,7 +111,7 @@ Write-Host "Finish creating Projects folder."
 
 # Update Windows settings for developers in System > For developers
 
-# You can set the default text editor for any file types with its link: C:\Users\nmdex\scoop\apps\<app name>\current\executable-file-path.exe
+# You can set the default text editor for any file types with its link: $ENV:USERPROFILE\scoop\apps\<app name>\current\executable-file-path.exe
 
 # Install Banana cursor: https://github.com/ful1e5/banana-cursor and create themes for it
 
