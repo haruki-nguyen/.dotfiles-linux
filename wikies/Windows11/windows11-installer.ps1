@@ -117,3 +117,5 @@ Write-Host "Finish creating Projects folder."
 
 # You can set the default text editor for any file types with its link: C:\Users\nmdex\scoop\apps\<app name>\current\executable-file-path.exe
 
+# Install Banana cursor: https://github.com/ful1e5/banana-cursor and create themes for it
+
