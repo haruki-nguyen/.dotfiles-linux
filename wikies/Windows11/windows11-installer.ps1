@@ -32,9 +32,6 @@ Write-Host "Please update the remote URL to SSH: ``git remote set-url origin <UR
 # Install Z directory jumper
 Install-Module -Name z -Force
 
-# Add ENV variables
-[System.Environment]::SetEnvironmentVariable("EDITOR", [System.EnvironmentVariableTarget]::User)
-
 # Softwares to install from the official websites/installer that I stored in my Data center
 # 1. 7zip
 # 2. Google Drive
@@ -91,6 +88,11 @@ Write-Host "Finish setting up Git"
 Write-Host "Setting up ENV in Path for PlatformIO..."
 [System.Environment]::SetEnvironmentVariable("Path", $ENV:Path + ";$ENV:USERPROFILE\.platformio\penv\Scripts\", [System.EnvironmentVariableTarget]::User)
 Write-Host "Finish setting up ENV in Path for PlatformIO."
+
+# Add ENV variables for the default text editor
+Write-Host "Add ENV variables for the default text editor..."
+[System.Environment]::SetEnvironmentVariable("EDITOR", "code", [System.EnvironmentVariableTarget]::User)
+Write-Host "Add ENV variables for the default text editor."
 
 # Create Projects folder
 Write-Host "Create Projects folder..."
