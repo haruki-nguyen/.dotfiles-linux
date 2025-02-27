@@ -16,7 +16,7 @@ scoop bucket add extras
 # `llvm`: get `clang` to installing packages for Treesitter in Neovim
 # `ffmpeg`: dependency of `yt-dlp`
 # `fzf`: fuzzy finder
-scoop install obsidian flow-launcher everything firefox powertoys neovim nodejs ripgrep mingw python espanso llvm yt-dlp ffmpeg notion obs-studio gitleaks discord draw.io gh wget fzf vscode
+scoop install obsidian flow-launcher everything firefox powertoys neovim nodejs ripgrep mingw python espanso llvm yt-dlp ffmpeg notion obs-studio gitleaks discord draw.io gh wget fzf vscode freecad
 
 # SET UP CONFIGS
 # Set up SSH for GitHub
@@ -41,16 +41,15 @@ Install-Module -Name z -Force
 # 6. MBLAB X IDE
 # 7. VLC
 # 8. Microsoft 365 and Office (https://account.microsoft.com/services)
-# 9. Okular
-# 10. Syncthing
-# 11. Microsoft PC Manager
-# 12. Visual Studio (For editing Espanso with Neovim): Install "Desktop development with C++" in Visual Studio Installer.
-# 13. Proteus: installer is on "C:\Users\nmdex\Documents\Data\Large Data\Softwares\Proteus 8.17 SP2 Pro.zip".
-# 14. PSIM
-# 15. GnuWin32: for Neovim (https://sourceforge.net/projects/gnuwin32/)
-# 16. Battery Percentage - Pure Battery add-on (from Microsoft Store)
-# 17. CP2102 USB to UART bridge driver for Windows 11: for ESP32 with CP2102 chip development
-# 18. PDFgear
+# 9. Syncthing
+# 10. Microsoft PC Manager
+# 11. Visual Studio (For editing Espanso with Neovim): Install "Desktop development with C++" in Visual Studio Installer.
+# 12. Proteus: installer is on "C:\Users\nmdex\Documents\Data\Large Data\Softwares\Proteus 8.17 SP2 Pro.zip".
+# 13. PSIM
+# 14. GnuWin32: for Neovim (https://sourceforge.net/projects/gnuwin32/)
+# 15. Battery Percentage - Pure Battery add-on (from Microsoft Store)
+# 16. CP2102 USB to UART bridge driver for Windows 11: for ESP32 with CP2102 chip development
+# 17. PDFgear
 
 # Set up Git for Data center
 cd ~\Downloads\Data
