@@ -50,6 +50,7 @@ Install-Module -Name z -Force
 # 15. Battery Percentage - Pure Battery add-on (from Microsoft Store)
 # 16. CP2102 USB to UART bridge driver for Windows 11: for ESP32 with CP2102 chip development
 # 17. PDFgear
+# 18. Google Quick Share
 
 # Set up Git for Data center
 cd ~\Downloads\Data
