@@ -19,13 +19,16 @@ scoop bucket add extras
 scoop install obsidian flow-launcher everything firefox powertoys neovim nodejs ripgrep mingw python espanso llvm yt-dlp ffmpeg notion obs-studio gitleaks discord draw.io gh wget fzf vscode freecad oh-my-posh
 
 # SET UP CONFIGS
+# Set location to HOME to clone repositories
+Set-Location ~
+
 # Set up SSH for GitHub
 $email = "nmd03pvt@gmail.com"
 ssh-keygen -t ed25519 -C "$email"
 Get-Service -Name ssh-agent | Set-Service -StartupType manual
 Start-Service ssh-agent
 ssh-add C:\Users\$env:USERNAME\.ssh\id_ed25519
-cat ~/.ssh/id_ed25519.pub | clip
+Get-Content ~/.ssh/id_ed25519.pub | clip
 Write-Host "Copied the content of ~/.ssh/id_ed25519.pub to the clipboard, please add it to your GitHub account on this page: https://github.com/settings/keys"
 Write-Host "Please update the remote URL to SSH: ``git remote set-url origin <URL>``."
 
@@ -53,9 +56,9 @@ Install-Module -Name z -Force
 # 18. Google Quick Share
 
 # Set up Git for Data center
-cd ~\Downloads\Data
+Set-Location "C:\Users\nmdex\Documents\Data"
 git remote set-url origin git@github.com:haruki-nguyen/Data.git
-cd -
+Set-Location ~
 
 # Set up .dotfiles
 git clone git@github.com:haruki-nguyen/.dotfiles.git ~
