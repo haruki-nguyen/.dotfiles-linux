@@ -54,6 +54,7 @@ Install-Module -Name z -Force
 # 16. CP2102 USB to UART bridge driver for Windows 11: for ESP32 with CP2102 chip development
 # 17. PDFgear
 # 18. Google Quick Share
+# 19. PICkit 2 from Microchip (for programming PIC)
 
 # Set up Git for Data center
 Set-Location "C:\Users\nmdex\Documents\Data"
