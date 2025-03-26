@@ -1,6 +1,7 @@
 # INSTALL DEPENDENCIES
 # Install Powershell and Windows Terminal from Microsoft Store
 # Install JetBrainsMono Nerd Font from https://www.nerdfonts.com/font-downloads
+# Open Windows Terminal with Administrator Privileges
 # And then set JetBrainsMono Nerd Font as the font for Windows Terminal
 
 # Install Scoop pkg manager
@@ -104,6 +105,9 @@ New-Item -ItemType Directory -Path Projects
 Write-Host "Finish creating Projects folder."
 
 # ADDITIONAL STEPS
+# Enable hibernate the machine through Powershell command: `shutdown.exe /h`
+powercfg.exe /hibernate on
+
 # Softwares to update configs manually
 # 1. Windows Terminal
 # 2. FlowLauncher
