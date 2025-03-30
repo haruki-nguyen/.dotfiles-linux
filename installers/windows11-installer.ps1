@@ -121,6 +121,8 @@ powercfg.exe /hibernate on
 
 # Update Windows settings for developers in System > For developers
 
+# Add additional features: Wireless Display
+
 # You can set the default text editor for any file types with its link: $ENV:USERPROFILE\scoop\apps\<app name>\current\executable-file-path.exe
 
 # Install Banana cursor: https://github.com/ful1e5/banana-cursor and create themes for it
