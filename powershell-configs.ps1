@@ -4,8 +4,6 @@
 
 $projectPaths = @("C:\Users\nmdex\Documents\Projects\IoT-irrigation-system", "C:\Users\nmdex\Documents\Projects\IoT-IS-circuit-design", "C:\Users\nmdex\Documents\Projects\University", "C:\Users\nmdex\.dotfiles")
 
-
-
 function Get-RepoUpdates {
 
     foreach ($path in $projectPaths) {
