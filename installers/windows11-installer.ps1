@@ -17,11 +17,12 @@ scoop bucket add extras
 # `llvm`: get `clang` to installing packages for Treesitter in Neovim
 # `ffmpeg`: dependency of `yt-dlp`
 # `fzf`: fuzzy finder
+# `windhawk`: for customizing Windows's features
 
 # Add scoop nonportable bucket
 scoop add nonportable
 
-scoop install obsidian flow-launcher everything firefox powertoys neovim nodejs ripgrep mingw python espanso llvm yt-dlp ffmpeg notion obs-studio gitleaks discord draw.io gh wget fzf vscode freecad oh-my-posh windirstat
+scoop install obsidian flow-launcher everything firefox powertoys neovim nodejs ripgrep mingw python espanso llvm yt-dlp ffmpeg notion obs-studio gitleaks discord draw.io gh wget fzf vscode freecad oh-my-posh windirstat windhawk
 
 # SET UP CONFIGS
 # Set location to HOME to clone repositories
