@@ -99,6 +99,9 @@ Write-Host "Setting up ENV in Path for PlatformIO..."
 [System.Environment]::SetEnvironmentVariable("Path", $ENV:Path + ";$ENV:USERPROFILE\.platformio\penv\Scripts\", [System.EnvironmentVariableTarget]::User)
 Write-Host "Finish setting up ENV in Path for PlatformIO."
 
+# Set up Windhawk
+# Add its shortcut to the Startup folder (Startup folder => Win + R => shell:startup)
+
 # Add ENV variables for the default text editor
 Write-Host "Add ENV variables for the default text editor..."
 [System.Environment]::SetEnvironmentVariable("EDITOR", "code", [System.EnvironmentVariableTarget]::User)
