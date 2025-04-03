@@ -128,7 +128,7 @@
   "CustomWindowTop": 0,
   "KeepMaxResults": false,
   "MaxResultsToShow": 5,
-  "ActivateTimes": 329,
+  "ActivateTimes": 2094,
   "CustomPluginHotkeys": [],
   "CustomShortcuts": [],
   "DontPromptUpdateMsg": false,
@@ -281,11 +281,11 @@
           "stackoverflow",
           "lucky",
           "image",
-          "youtube",
           "bing",
           "yahoo",
           "bd",
-          "dk"
+          "dk",
+          "yt"
         ],
         "Priority": 0,
         "Disabled": false
