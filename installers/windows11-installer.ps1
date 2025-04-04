@@ -22,7 +22,7 @@ scoop bucket add extras
 # Add scoop nonportable bucket
 scoop add nonportable
 
-scoop install obsidian flow-launcher everything firefox powertoys neovim nodejs ripgrep mingw python espanso llvm yt-dlp ffmpeg notion obs-studio gitleaks discord draw.io gh wget fzf vscode freecad oh-my-posh windirstat windhawk googlechrome
+scoop install obsidian flow-launcher everything firefox powertoys neovim nodejs ripgrep mingw python espanso llvm yt-dlp ffmpeg notion obs-studio gitleaks discord draw.io gh wget fzf vscode freecad oh-my-posh windirstat windhawk googlechrome moneymanagerex
 
 # SET UP CONFIGS
 # Set location to HOME to clone repositories
