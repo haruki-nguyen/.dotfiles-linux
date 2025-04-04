@@ -61,6 +61,7 @@ Install-Module -Name z -Force
 # 17. PDFgear
 # 18. Google Quick Share
 # 19. PICkit 2 from Microchip (for programming PIC)
+# 20. Power Automate
 
 # Set up Git for Data center
 Set-Location "C:\Users\nmdex\Documents\Data"
