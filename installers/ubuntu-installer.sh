@@ -7,7 +7,7 @@ cd ~/Downloads || { echo "Failed to cd to ~/Downloads"; exit 1; }
 sudo apt update && sudo apt upgrade -y || { echo "System update failed"; exit 1; }
 
 # Install essential tools
-sudo apt install -y tmux zip ripgrep nodejs npm gdb python3-pip python3.12-venv ffmpeg obs-studio openshot-qt firefox llvm gnome-tweaks gnome-shell-extensions build-essential wget unzip git gh btop gthumb okular curl stow gnome-browser-connector || { echo "Package install failed"; exit 1; }
+sudo apt install -y tmux zip ripgrep nodejs npm gdb python3-pip python3.12-venv ffmpeg obs-studio openshot-qt firefox llvm gnome-tweaks gnome-shell-extensions build-essential wget unzip git gh btop gthumb okular curl stow gnome-browser-connector kitty gdm-settings || { echo "Package install failed"; exit 1; }
 
 # Install Google Chrome
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb || { echo "Chrome download failed"; exit 1; }
@@ -70,6 +70,8 @@ git clone https://github.com/vinceliuice/WhiteSur-icon-theme --depth=1
 cd WhiteSur-icon-theme
 ./install.sh -b
 # Then use Gnome Tweaks to adjust the appearance settings
+
+# To change the background of the login screen, use gdm-settings
 
 # Cleanup
 rm -rf ~/Downloads/*
