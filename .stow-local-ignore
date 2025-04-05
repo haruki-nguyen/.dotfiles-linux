@@ -24,10 +24,25 @@ _darcs
 ^/COPYING
 
 # My ignores
-flow-launcher
-powershell7
-powertoys
+.config/btop
+.config/dunst
+.config/espanso
+.config/i3
+.config/polybar
+.config/pulse
+.config/rofi
+.config/systemd
+.config/volumeicon
+.config/xfce4
+.config/user-dirs.dirs
+.config/user-dirs.locale
+installers
 wikies
-windows-terminal
+windhawk
 MBLABXIDE-configs.zip
-wallpapers
+README.md
+flowlauncher-settings.json
+get-platformio.py
+powershell-configs.ps1
+windows-terminal-settings.json
+.bashrc.bak
