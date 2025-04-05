@@ -63,6 +63,8 @@ sudo ./tweaks.sh -g -i apple -b default -p 45 -h default -sf -nd -nb
 sudo ./tweaks.sh -o normal -c dark -t default -s standard -d
 # Fix for Flatpak apps
 sudo flatpak override --filesystem=xdg-config/gtk-3.0 && sudo flatpak override --filesystem=xdg-config/gtk-4.0
+# Don't install "Dash to Dock" (https://extensions.gnome.org/extension/307/dash-to-dock/) b/c it has issue
+# And turn off blur for Dock in "Blur my Shell" (https://extensions.gnome.org/extension/3193/blur-my-shell/) b/c it has issue too
 
 git clone https://github.com/vinceliuice/WhiteSur-icon-theme --depth=1
 cd WhiteSur-icon-theme
