@@ -7,7 +7,7 @@ cd ~/Downloads || { echo "Failed to cd to ~/Downloads"; exit 1; }
 sudo apt update && sudo apt upgrade -y || { echo "System update failed"; exit 1; }
 
 # Install essential tools
-sudo apt install -y tmux zip ripgrep nodejs npm gdb python3-pip python3.12-venv ffmpeg obs-studio openshot-qt firefox llvm gnome-tweaks gnome-shell-extensions build-essential wget unzip git gh btop gthumb okular curl stow || { echo "Package install failed"; exit 1; }
+sudo apt install -y tmux zip ripgrep nodejs npm gdb python3-pip python3.12-venv ffmpeg obs-studio openshot-qt firefox llvm gnome-tweaks gnome-shell-extensions build-essential wget unzip git gh btop gthumb okular curl stow gnome-browser-connector || { echo "Package install failed"; exit 1; }
 
 # Install Google Chrome
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb || { echo "Chrome download failed"; exit 1; }
@@ -54,6 +54,20 @@ rm ~/.bashrc.bak || true
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm || { echo "TMUX plugin manager clone failed"; exit 1; }
 tmux source ~/.config/tmux/tmux.conf || { echo "TMUX config reload failed"; exit 1; }
 echo "Press <prefix> + I to install Tmux plugins."
+
+# Set up macOS theme
+git clone https://github.com/vinceliuice/WhiteSur-gtk-theme.git --depth=1
+cd WhiteSur-gtk-theme
+./install.sh -m -c dark -o normal -a all -t default -N glassy --round --shell -i apple -b default -p 45 -h default
+sudo ./tweaks.sh -g -i apple -b default -p 45 -h default -sf -nd -nb
+sudo ./tweaks.sh -o normal -c dark -t default -s standard -d
+# Fix for Flatpak apps
+sudo flatpak override --filesystem=xdg-config/gtk-3.0 && sudo flatpak override --filesystem=xdg-config/gtk-4.0
+
+git clone https://github.com/vinceliuice/WhiteSur-icon-theme --depth=1
+cd WhiteSur-icon-theme
+./install.sh -b
+# Then use Gnome Tweaks to adjust the appearance settings
 
 # Cleanup
 rm -rf ~/Downloads/*
