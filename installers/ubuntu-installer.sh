@@ -8,7 +8,9 @@ sudo apt update && sudo apt upgrade -y || { echo "System update failed"; exit 1;
 
 # Install essential tools
 # copyq: use with Ulauncher
-sudo apt install -y tmux zip ripgrep nodejs npm gdb python3-pip python3.12-venv ffmpeg obs-studio openshot-qt firefox llvm gnome-tweaks gnome-shell-extensions build-essential wget unzip git gh btop gthumb okular curl stow gnome-browser-connector kitty gdm-settings p7zip-full copyq kdeconnect || { echo "Package install failed"; exit 1; }
+sudo apt install -y tmux zip ripgrep nodejs npm gdb python3-pip python3.12-venv ffmpeg obs-studio openshot-qt firefox llvm gnome-tweaks gnome-shell-extensions build-essential wget unzip git gh btop gthumb okular curl stow gnome-browser-connector kitty gdm-settings p7zip-full copyq kdeconnect ibus-unikey || { echo "Package install failed"; exit 1; }
+# Restart ibus daemon
+ibus restart
 
 # Install Google Chrome
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb || { echo "Chrome download failed"; exit 1; }
@@ -149,5 +151,7 @@ cd ~
 # 1. PDFGear (https://downloadfiles.pdfgear.com/releases/windows/pdfgear_setup_v2.1.12.exe).
 # 2. PICkit 3 (https://drive.google.com/file/d/1n2TvjxdgW9LkJmYouvCARYuZuhBnHlKp/view?usp=drive_link).
 # 3. Proteus (https://drive.google.com/file/d/1n0qbE-ceSHu-XHStL0oTjrmgvbMjZymp/view?usp=drive_link).
+
+# Set up Unikey at Settings > Keyboard > Input Sources > Vietnamese (Unikey)
 
 echo "Setup complete! Restart your terminal."
