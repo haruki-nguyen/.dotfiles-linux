@@ -138,6 +138,5 @@ cd ~
 # 1. PDFGear (https://downloadfiles.pdfgear.com/releases/windows/pdfgear_setup_v2.1.12.exe).
 # 2. PICkit 3 (https://drive.google.com/file/d/1n2TvjxdgW9LkJmYouvCARYuZuhBnHlKp/view?usp=drive_link).
 # 3. Proteus (https://drive.google.com/file/d/1n0qbE-ceSHu-XHStL0oTjrmgvbMjZymp/view?usp=drive_link).
-# 4. Zalo (https://download.com.vn/download/zalo-83959).
 
 echo "Setup complete! Restart your terminal."
