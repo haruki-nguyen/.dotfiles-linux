@@ -98,9 +98,6 @@ stow . || { echo "Stowing dotfiles failed"; exit 1; }
 cd -
 rm ~/.bashrc.bak || true
 
-# Set up Google Drives
-mkdir ~/'Google Drives' 
-
 # Tmux plugin manager
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm || { echo "TMUX plugin manager clone failed"; exit 1; }
 tmux source ~/.config/tmux/tmux.conf || { echo "TMUX config reload failed"; exit 1; }
@@ -123,6 +120,13 @@ cd WhiteSur-icon-theme
 # Then use Gnome Tweaks to adjust the appearance settings
 
 # To change the background of the login screen, use gdm-settings
+
+# Set up Data center folder
+mkdir ~/Documents/Data
+# Set up Syncthing service
+systemctl --user enable syncthing.service
+systemctl --user start syncthing.service
+systemctl --user status syncthing.service
 
 # Cleanup
 rm -rf ~/Downloads/*
