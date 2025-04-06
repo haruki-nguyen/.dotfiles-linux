@@ -27,6 +27,29 @@ flatpak install -y flathub md.obsidian.Obsidian com.protonvpn.www com.usebottles
 # Install apps from Snap: OnlyOffice
 sudo snap install onlyoffice-desktopeditors
 
+# RQuickShare (Rust implementation of QuickShare)
+# Define the GitHub repository
+REPO="Martichou/rquickshare"
+# Fetch the latest release tag from GitHub API
+LATEST_RELEASE=$(curl -s "https://api.github.com/repos/$REPO/releases/latest" | jq -r .tag_name)
+# Construct the download URL for the latest .deb package
+DEB_PACKAGE="r-quick-share-main_${LATEST_RELEASE}_glibc-2.39_amd64.deb"
+DOWNLOAD_URL="https://github.com/$REPO/releases/download/$LATEST_RELEASE/$DEB_PACKAGE"
+# Download the .deb package
+echo "Downloading $DEB_PACKAGE..."
+wget -q --show-progress "$DOWNLOAD_URL"
+# Install the downloaded package
+echo "Installing $DEB_PACKAGE..."
+sudo apt install -y ./"$DEB_PACKAGE"
+# Clean up by removing the downloaded .deb package
+rm "$DEB_PACKAGE"
+echo "RQuickShare version $LATEST_RELEASE has been installed successfully."
+
+# Discord
+wget "https://discord.com/api/download?platform=linux&format=deb" -O discord.deb
+sudo apt install ./discord.deb
+rm discord.deb
+
 # MPLAB X IDE
 # Download URL (update if version changes)
 MPLABXIDE_URL="https://ww1.microchip.com/downloads/aemDocuments/documents/DEV/ProductDocuments/SoftwareTools/MPLABX-v6.25-linux-installer.tar"
@@ -104,5 +127,13 @@ cd WhiteSur-icon-theme
 # Cleanup
 rm -rf ~/Downloads/*
 cd ~
+
+# Additional Steps
+
+# Install Windows and run softwares with Bottles
+# 1. PDFGear (https://downloadfiles.pdfgear.com/releases/windows/pdfgear_setup_v2.1.12.exe).
+# 2. PICkit 3 (https://drive.google.com/file/d/1n2TvjxdgW9LkJmYouvCARYuZuhBnHlKp/view?usp=drive_link).
+# 3. Proteus (https://drive.google.com/file/d/1n0qbE-ceSHu-XHStL0oTjrmgvbMjZymp/view?usp=drive_link).
+# 4. Zalo (https://download.com.vn/download/zalo-83959).
 
 echo "Setup complete! Restart your terminal."
