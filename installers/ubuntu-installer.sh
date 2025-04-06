@@ -8,7 +8,7 @@ sudo apt update && sudo apt upgrade -y || { echo "System update failed"; exit 1;
 
 # Install essential tools
 # copyq: use with Ulauncher
-sudo apt install -y tmux zip ripgrep nodejs npm gdb python3-pip python3.12-venv ffmpeg obs-studio openshot-qt firefox llvm gnome-tweaks gnome-shell-extensions build-essential wget unzip git gh btop gthumb okular curl stow gnome-browser-connector kitty gdm-settings p7zip-full copyq || { echo "Package install failed"; exit 1; }
+sudo apt install -y tmux zip ripgrep nodejs npm gdb python3-pip python3.12-venv ffmpeg obs-studio openshot-qt firefox llvm gnome-tweaks gnome-shell-extensions build-essential wget unzip git gh btop gthumb okular curl stow gnome-browser-connector kitty gdm-settings p7zip-full copyq kdeconnect || { echo "Package install failed"; exit 1; }
 
 # Install Google Chrome
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb || { echo "Chrome download failed"; exit 1; }
