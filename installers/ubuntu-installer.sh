@@ -7,7 +7,8 @@ cd ~/Downloads || { echo "Failed to cd to ~/Downloads"; exit 1; }
 sudo apt update && sudo apt upgrade -y || { echo "System update failed"; exit 1; }
 
 # Install essential tools
-sudo apt install -y tmux zip ripgrep nodejs npm gdb python3-pip python3.12-venv ffmpeg obs-studio openshot-qt firefox llvm gnome-tweaks gnome-shell-extensions build-essential wget unzip git gh btop gthumb okular curl stow gnome-browser-connector kitty gdm-settings p7zip-full rclone || { echo "Package install failed"; exit 1; }
+# copyq: use with Ulauncher
+sudo apt install -y tmux zip ripgrep nodejs npm gdb python3-pip python3.12-venv ffmpeg obs-studio openshot-qt firefox llvm gnome-tweaks gnome-shell-extensions build-essential wget unzip git gh btop gthumb okular curl stow gnome-browser-connector kitty gdm-settings p7zip-full copyq || { echo "Package install failed"; exit 1; }
 
 # Install Google Chrome
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb || { echo "Chrome download failed"; exit 1; }
@@ -18,6 +19,16 @@ sudo apt --fix-broken install || { echo "Fixing Chrome dependencies failed"; exi
 sudo add-apt-repository -y ppa:neovim-ppa/unstable
 sudo apt update
 sudo apt install neovim -y || { echo "Neovim install failed"; exit 1; }
+
+# Ulauncher
+sudo add-apt-repository universe -y
+sudo add-apt-repository ppa:agornostal/ulauncher -y
+sudo apt update 
+sudo apt install -y ulauncher
+# Set up keyboard shortcut for Ulauncher
+# 1. Settings => Remove Alt+Space: active the window menu.
+# 2. Ulauncher => Alt+Space.
+# 3. Set Ulauncher keyboard shortcut: https://github.com/Ulauncher/Ulauncher/wiki/Hotkey-In-Wayland.
 
 # Install Flatpak apps: Obsidian, ProtonVPN, Bottles (for running Windows softwares)
 sudo apt install -y flatpak gnome-software-plugin-flatpak || { echo "Flatpak install failed"; exit 1; }
