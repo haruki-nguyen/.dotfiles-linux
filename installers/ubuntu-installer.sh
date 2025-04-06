@@ -19,10 +19,35 @@ sudo add-apt-repository -y ppa:neovim-ppa/unstable
 sudo apt update
 sudo apt install neovim -y || { echo "Neovim install failed"; exit 1; }
 
-# Install Flatpak apps
+# Install Flatpak apps: Obsidian, ProtonVPN, Bottles (for running Windows softwares)
 sudo apt install -y flatpak gnome-software-plugin-flatpak || { echo "Flatpak install failed"; exit 1; }
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo || true
-flatpak install -y flathub md.obsidian.Obsidian com.protonvpn.www || { echo "Flatpak app install failed"; exit 1; }
+flatpak install -y flathub md.obsidian.Obsidian com.protonvpn.www com.usebottles.bottles || { echo "Flatpak app install failed"; exit 1; }
+
+# Install apps from Snap: OnlyOffice
+sudo snap install onlyoffice-desktopeditors
+
+# MPLAB X IDE
+# Download URL (update if version changes)
+MPLABXIDE_URL="https://ww1.microchip.com/downloads/aemDocuments/documents/DEV/ProductDocuments/SoftwareTools/MPLABX-v6.25-linux-installer.tar"
+# Download and extract
+# Use direct link b/c the link is protected or redirects.
+wget --referer="https://www.microchip.com" --user-agent="Mozilla" "$MPLABXIDE_URL" -O mplabx.tar
+tar -xf mplabx.tar
+# Run installer (non-GUI, accept defaults)
+chmod +x MPLABX-v6.25-linux-installer.sh
+sudo ./MPLABX-v6.25-linux-installer.sh -- --mode unattended
+#
+# XC8 compiler
+XC8_URL="https://ww1.microchip.com/downloads/aemDocuments/documents/DEV/ProductDocuments/SoftwareTools/xc8-v3.00-full-install-linux-x64-installer.run"
+# Use direct link b/c the link is protected or redirects.
+wget --referer="https://www.microchip.com" --user-agent="Mozilla" "$XC8_URL" -O xc8.run
+# Run installer (non-GUI, accept defaults)
+chmod +x xc8.run
+sudo ./xc8.run
+#
+# Clean up
+rm mplabx.tar MPLABX-v6.25-linux-installer.sh xc8.run
 
 # Install Nerd Font
 wget -O JetBrainsMono.zip "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/JetBrainsMono.zip" || { echo "Font download failed"; exit 1; }
