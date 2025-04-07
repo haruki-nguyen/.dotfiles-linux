@@ -32,10 +32,10 @@ sudo apt install -y ulauncher
 # 2. Ulauncher => Alt+Space.
 # 3. Set Ulauncher keyboard shortcut: https://github.com/Ulauncher/Ulauncher/wiki/Hotkey-In-Wayland.
 
-# Install Flatpak apps: Obsidian, ProtonVPN, Bottles (for running Windows softwares)
+# Install Flatpak apps: Obsidian, ProtonVPN, Bottles (for running Windows softwares), Money Manager Ex
 sudo apt install -y flatpak gnome-software-plugin-flatpak || { echo "Flatpak install failed"; exit 1; }
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo || true
-flatpak install -y flathub md.obsidian.Obsidian com.protonvpn.www com.usebottles.bottles || { echo "Flatpak app install failed"; exit 1; }
+flatpak install -y flathub md.obsidian.Obsidian com.protonvpn.www com.usebottles.bottles org.moneymanagerex.MMEX || { echo "Flatpak app install failed"; exit 1; }
 # Grand permissions to folders for apps installed by Bottles
 flatpak override --user --filesystem=~/Downloads --filesystem=~/Documents com.usebottles.bottles
 
