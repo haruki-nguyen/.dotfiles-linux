@@ -8,7 +8,7 @@ sudo apt update && sudo apt upgrade -y || { echo "System update failed"; exit 1;
 
 # Install essential tools
 # copyq: use with Ulauncher
-sudo apt install -y tmux zip ripgrep nodejs npm gdb python3-pip python3.12-venv ffmpeg obs-studio openshot-qt firefox llvm gnome-tweaks gnome-shell-extensions build-essential wget unzip git gh btop gthumb okular curl stow gnome-browser-connector kitty gdm-settings p7zip-full copyq kdeconnect ibus-unikey || { echo "Package install failed"; exit 1; }
+sudo apt install -y tmux zip ripgrep nodejs npm gdb python3-pip python3.12-venv ffmpeg obs-studio openshot-qt firefox llvm gnome-tweaks gnome-shell-extensions build-essential wget unzip git gh btop gthumb okular curl stow gnome-browser-connector gdm-settings p7zip-full copyq kdeconnect ibus-unikey || { echo "Package install failed"; exit 1; }
 # Restart ibus daemon
 ibus restart
 
@@ -118,17 +118,16 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm || { echo "TMU
 tmux source ~/.config/tmux/tmux.conf || { echo "TMUX config reload failed"; exit 1; }
 echo "Press <prefix> + I to install Tmux plugins."
 
-# Set up macOS theme
+# Set up themes for Ubuntu GNOME
 git clone https://github.com/vinceliuice/WhiteSur-gtk-theme.git --depth=1
 cd WhiteSur-gtk-theme
-./install.sh -m -c dark -o normal -a all -t default -N glassy --round --shell -i apple -b default -p 45 -h default
+./install.sh
 sudo ./tweaks.sh -g -i apple -b default -p 45 -h default -sf -nd -nb
-sudo ./tweaks.sh -o normal -c dark -t default -s standard -d
-# Fix for Flatpak apps
-sudo flatpak override --filesystem=xdg-config/gtk-3.0 && sudo flatpak override --filesystem=xdg-config/gtk-4.0
+# Install User Themes extension (https://extensions.gnome.org/extension/19/user-themes/)
 # Don't install "Dash to Dock" (https://extensions.gnome.org/extension/307/dash-to-dock/) b/c it has issue
 # And turn off blur for Dock in "Blur my Shell" (https://extensions.gnome.org/extension/3193/blur-my-shell/) b/c it has issue too
-
+# macOS icons
+cd -
 git clone https://github.com/vinceliuice/WhiteSur-icon-theme --depth=1
 cd WhiteSur-icon-theme
 ./install.sh -b
@@ -137,7 +136,7 @@ cd WhiteSur-icon-theme
 # To change the background of the login screen, use gdm-settings
 
 # Set up Data center folder
-mkdir ~/Documents/Data
+mkdir "~/Documents/My Data"
 # Set up Syncthing service
 systemctl --user enable syncthing.service
 systemctl --user start syncthing.service
