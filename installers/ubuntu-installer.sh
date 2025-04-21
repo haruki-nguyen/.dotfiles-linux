@@ -87,6 +87,10 @@ sudo ./xc8.run
 # Clean up
 rm mplabx.tar MPLABX-v6.25-linux-installer.sh xc8.run
 
+# Set Up CopyQ
+# Edit autostart
+copyq disable-autostart
+
 # Install Nerd Font
 wget -O JetBrainsMono.zip "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/JetBrainsMono.zip" || { echo "Font download failed"; exit 1; }
 mkdir -p ~/.local/share/fonts

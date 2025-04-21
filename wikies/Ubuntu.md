@@ -25,8 +25,20 @@
 6. **Optional Manual Steps**:
    - Change GNOME wallpaper via `gnome-tweaks`.
    - Install additional fonts or themes as desired.
+   - Create a .desktop entry for CopyQ:
 
-7. **Flatpak Apps**:
-   - Obsidian and ProtonVPN installed via Flatpak.
-   - Open via application launcher.
+        ```bash
+        nano ~/.config/autostart/copyq.desktop
+        ```
 
+        Then add this:
+
+        ```
+        [Desktop Entry]
+        Type=Application
+        Exec=env QT_QPA_PLATFORM=xcb copyq
+        Hidden=false
+        NoDisplay=false
+        X-GNOME-Autostart-enabled=true
+        Name=CopyQ
+        ```
