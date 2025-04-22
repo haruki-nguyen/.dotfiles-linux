@@ -17,6 +17,9 @@ wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb |
 sudo apt install ./google-chrome-stable_current_amd64.deb || true
 sudo apt --fix-broken install || { echo "Fixing Chrome dependencies failed"; exit 1; }
 
+# Set Alacritty as the default terminal emulator on GNOME
+gsettings set org.gnome.desktop.default-applications.terminal exec alacritty
+
 # Install Neovim
 sudo add-apt-repository -y ppa:neovim-ppa/unstable
 sudo apt update
