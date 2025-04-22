@@ -28,6 +28,7 @@ _darcs
 .config/dunst
 .config/espanso
 .config/i3
+.config/kitty
 .config/polybar
 .config/pulse
 .config/rofi
