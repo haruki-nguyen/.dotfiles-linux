@@ -8,7 +8,7 @@ sudo apt update && sudo apt upgrade -y || { echo "System update failed"; exit 1;
 
 # Install essential tools
 # copyq: use with Ulauncher
-sudo apt install -y tmux zip ripgrep nodejs npm gdb python3-pip python3.12-venv ffmpeg obs-studio openshot-qt llvm gnome-tweaks gnome-shell-extensions build-essential wget unzip git gh btop gthumb okular curl stow gnome-browser-connector gdm-settings p7zip-full copyq kdeconnect ibus-unikey alacritty || { echo "Package install failed"; exit 1; }
+sudo apt install -y tmux zip ripgrep nodejs npm gdb python3-pip python3.12-venv ffmpeg obs-studio openshot-qt llvm gnome-tweaks gnome-shell-extensions build-essential wget unzip git gh btop gthumb okular curl stow gnome-browser-connector gdm-settings p7zip-full copyq kdeconnect alacritty || { echo "Package install failed"; exit 1; }
 # Restart ibus daemon
 ibus restart
 
