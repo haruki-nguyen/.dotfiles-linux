@@ -1,3 +1,7 @@
+.config/copyq/copyq.lock
+.config/copyq/copyq_no_session.ini
+.config/copyq/copyq_tab_JmNsaXBib2FyZA==.dat
+.config/copyq/copyq_tabs.ini
 .config/tmux/plugins/
 .config/btop/btop.log
 .config/gtk-3.0/bookmarks
