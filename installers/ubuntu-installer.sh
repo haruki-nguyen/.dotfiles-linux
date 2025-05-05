@@ -11,6 +11,8 @@ sudo apt update && sudo apt upgrade -y || { echo "System update failed"; exit 1;
 sudo apt install -y tmux zip ripgrep nodejs npm gdb python3-pip python3.12-venv ffmpeg obs-studio openshot-qt llvm build-essential wget unzip git gh btop gthumb okular curl stow gdm-settings p7zip-full copyq kdeconnect alacritty ibus-unikey keepassxc || { echo "Package install failed"; exit 1; }
 # Restart ibus daemon
 ibus restart
+# Fix ibus-unikey issue with Electron app
+echo 'GTK_IM_MODULE=ibus' >> ~/.profile
 
 # Install Google Chrome
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb || { echo "Chrome download failed"; exit 1; }
