@@ -33,7 +33,7 @@
 
         Then add this:
 
-        ```
+        ```txt
         [Desktop Entry]
         Type=Application
         Exec=env QT_QPA_PLATFORM=xcb copyq
@@ -42,3 +42,5 @@
         X-GNOME-Autostart-enabled=true
         Name=CopyQ
         ```
+
+   - Set `Prompt=normal` in `/etc/update-manager/release-upgrades`: for upgrading to non-LTS Ubuntu releases.
