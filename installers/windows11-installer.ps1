@@ -17,13 +17,12 @@ scoop bucket add extras
 # `llvm`: get `clang` to installing packages for Treesitter in Neovim
 # `ffmpeg`: dependency of `yt-dlp`
 # `fzf`: fuzzy finder
-# `windhawk`: for customizing Windows's features
 # `keepassxc`: password manager
 
 # Add scoop nonportable bucket
 scoop add nonportable
 
-scoop install obsidian flow-launcher everything firefox powertoys neovim nodejs ripgrep mingw python espanso llvm yt-dlp ffmpeg notion obs-studio gitleaks discord draw.io gh wget fzf vscode freecad oh-my-posh windirstat windhawk googlechrome moneymanagerex keepassxc
+scoop install obsidian flow-launcher everything firefox powertoys neovim nodejs ripgrep mingw python espanso llvm yt-dlp ffmpeg notion obs-studio gitleaks discord draw.io gh wget fzf vscode freecad oh-my-posh windirstat googlechrome moneymanagerex keepassxc
 
 # SET UP CONFIGS
 # Set location to HOME to clone repositories
@@ -117,8 +116,7 @@ powercfg.exe /hibernate on
 
 # Set up startup apps
 # by add its shortcut to the Startup folder (Startup folder => Win + R => shell:startup)
-# 1. Windhawk
-# 2. Everything
+# Everything
 
 # Softwares to update configs manually
 # 1. Windows Terminal
