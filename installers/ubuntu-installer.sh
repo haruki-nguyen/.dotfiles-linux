@@ -22,11 +22,6 @@ sudo apt --fix-broken install || { echo "Fixing Chrome dependencies failed"; exi
 # Set Alacritty as the default terminal emulator on GNOME
 gsettings set org.gnome.desktop.default-applications.terminal exec alacritty
 
-# Install Neovim
-sudo add-apt-repository -y ppa:neovim-ppa/unstable
-sudo apt update
-sudo apt install neovim -y || { echo "Neovim install failed"; exit 1; }
-
 # Ulauncher
 sudo add-apt-repository universe -y
 sudo add-apt-repository ppa:agornostal/ulauncher -y
