@@ -24,26 +24,10 @@ _darcs
 ^/COPYING
 
 # My ignores
-.config/btop
-.config/dunst
 .config/espanso
-.config/i3
-.config/kitty
-.config/polybar
-.config/pulse
-.config/rofi
-.config/systemd
-.config/volumeicon
-.config/xfce4
-.config/user-dirs.dirs
-.config/user-dirs.locale
 installers
 wikies
-windhawk
 MBLABXIDE-configs.zip
 README.md
 flowlauncher-settings.json
 get-platformio.py
-powershell-configs.ps1
-windows-terminal-settings.json
-.bashrc.bak
