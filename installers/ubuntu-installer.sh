@@ -10,7 +10,7 @@ sudo apt update && sudo apt upgrade -y
 PACKAGES=(
   tmux zip ripgrep nodejs npm gdb python3-pip python3.12-venv ffmpeg obs-studio
   openshot-qt llvm build-essential wget unzip git gh btop gthumb okular curl stow
-  gdm-settings p7zip-full copyq kdeconnect alacritty ibus-unikey keepassxc
+  gdm-settings p7zip-full kdeconnect alacritty ibus-unikey keepassxc
   gnome-browser-connector gnome-tweaks gnome-shell-extension-manager zsh zoxide
 )
 sudo apt install -y "${PACKAGES[@]}"
@@ -60,9 +60,6 @@ sudo apt install -y ./discord.deb && rm discord.deb
 # chmod +x xc8.run && sudo ./xc8.run
 # rm -rf mplabx.tar MPLABX-*.sh xc8.run
 
-# CopyQ tweak
-copyq disable-autostart
-
 # Nerd Font
 wget -O JetBrainsMono.zip "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/JetBrainsMono.zip"
 mkdir -p ~/.local/share/fonts && unzip JetBrainsMono.zip -d ~/.local/share/fonts && fc-cache -fv && rm JetBrainsMono.zip
@@ -83,10 +80,6 @@ cd ~/.dotfiles && stow . && cd ~ && rm ~/.bashrc.bak || true
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm || true
 tmux source ~/.config/tmux/tmux.conf || true
 echo "Press <prefix> + I to install Tmux plugins."
-
-# GNOME Theme
-git clone https://github.com/vinceliuice/WhiteSur-icon-theme && cd WhiteSur-icon-theme
-./install.sh -b && cd .. && rm -rf WhiteSur-icon-theme
 
 # Syncthing & Data
 mkdir -p ~/Documents/"My Data"

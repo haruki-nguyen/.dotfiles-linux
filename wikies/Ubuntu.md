@@ -18,13 +18,13 @@
 
    * Add SSH key to GitHub if prompted.
    * Tmux: press `<prefix> + I` to install plugins.
-   * Set JetBrainsMono Nerd Font as system/default terminal font.
+   * Set JetBrainsMono Nerd Font as default terminal font.
    * Set Unikey in Settings → Keyboard → Input Sources → Vietnamese (Unikey).
 
 5. **Manual Steps (Optional)**:
 
    * GNOME tweaks: change wallpaper, set icon theme (WhiteSur), etc.
-   * Recommended GNOME extensions: Dash to Dock, Blur My Shell, Vitals, Clipboard Indicator, Rounded Window Corners Reborn, Just Perfection.
+   * Recommended GNOME extensions: Vitals, Clipboard Indicator, Rounded Window Corners Reborn, Just Perfection.
    * For CopyQ autostart, create:
 
      ```bash
