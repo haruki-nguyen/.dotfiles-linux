@@ -20,11 +20,11 @@
    - Press `<prefix> + I` in Tmux to install plugins after script completes.
    - Manually run `:MasonInstallAll` and `:Lazy sync` in NvChad.
 
-5. **Fonts**: JetBrainsMono Nerd Font will be installed automatically.
+5. **Fonts**: Set JetBrainsMono Nerd Font for the system.
 
 6. **Optional Manual Steps**:
    - Change GNOME wallpaper via `gnome-tweaks`.
-   - Install additional fonts or themes as desired.
+   - Extensions: Dash to Dock, Blur My Shell, Vitals, Clipboard Indicator, Rounded Window Corners Reborn, Just Perfection.
    - Create a .desktop entry for CopyQ:
 
         ```bash

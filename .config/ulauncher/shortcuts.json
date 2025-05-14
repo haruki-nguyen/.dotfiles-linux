@@ -8,25 +8,5 @@
         "is_default_search": true,
         "run_without_argument": false,
         "added": 1743934285.8259618
-    },
-    "bbc58139-bf81-43d0-b122-e18a7726da71": {
-        "id": "bbc58139-bf81-43d0-b122-e18a7726da71",
-        "name": "Stack Overflow",
-        "keyword": "so",
-        "cmd": "https://stackoverflow.com/search?q=%s",
-        "icon": "/usr/share/ulauncher/media/stackoverflow-icon.svg",
-        "is_default_search": true,
-        "run_without_argument": false,
-        "added": 1743934285.8259943
-    },
-    "902f0cbc-116d-427a-9a15-7c69eb0d93c2": {
-        "id": "902f0cbc-116d-427a-9a15-7c69eb0d93c2",
-        "name": "Wikipedia",
-        "keyword": "wiki",
-        "cmd": "https://en.wikipedia.org/wiki/%s",
-        "icon": "/usr/share/ulauncher/media/wikipedia-icon.png",
-        "is_default_search": true,
-        "run_without_argument": false,
-        "added": 1743934285.826028
     }
 }

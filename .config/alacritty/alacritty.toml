@@ -10,7 +10,7 @@ style.shape = "Block"
 style.blinking = "Never"
 
 [window]
-decorations = "Full"
+decorations = "None"
 padding.x = 8
 padding.y = 8
 startup_mode = "Windowed"

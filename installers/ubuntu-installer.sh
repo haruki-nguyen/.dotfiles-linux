@@ -8,7 +8,7 @@ sudo apt update && sudo apt upgrade -y || { echo "System update failed"; exit 1;
 
 # Install essential tools
 # copyq: use with Ulauncher
-sudo apt install -y tmux zip ripgrep nodejs npm gdb python3-pip python3.12-venv ffmpeg obs-studio openshot-qt llvm build-essential wget unzip git gh btop gthumb okular curl stow gdm-settings p7zip-full copyq kdeconnect alacritty ibus-unikey keepassxc || { echo "Package install failed"; exit 1; }
+sudo apt install -y tmux zip ripgrep nodejs npm gdb python3-pip python3.12-venv ffmpeg obs-studio openshot-qt llvm build-essential wget unzip git gh btop gthumb okular curl stow gdm-settings p7zip-full copyq kdeconnect alacritty ibus-unikey keepassxc gnome-browser-connector gnome-tweaks gnome-shell-extension-manager zsh sudo apt install zoxide || { echo "Package install failed"; exit 1; }
 # Restart ibus daemon
 ibus restart
 # Fix ibus-unikey issue with Electron app
@@ -21,6 +21,11 @@ sudo apt --fix-broken install || { echo "Fixing Chrome dependencies failed"; exi
 
 # Set Alacritty as the default terminal emulator on GNOME
 gsettings set org.gnome.desktop.default-applications.terminal exec alacritty
+
+# Set up zsh
+chsh -s $(which zsh)
+# Install Oh My Posh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # Ulauncher
 sudo add-apt-repository universe -y
@@ -42,7 +47,6 @@ flatpak override --user --filesystem=~/Downloads --filesystem=~/Documents com.us
 # Install apps from Snap: OnlyOffice, VSCode
 sudo snap install onlyoffice-desktopeditors
 sudo snap install --classic code
-
 
 # RQuickShare (Rust implementation of QuickShare)
 # Define the GitHub repository
@@ -124,7 +128,14 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm || { echo "TMU
 tmux source ~/.config/tmux/tmux.conf || { echo "TMUX config reload failed"; exit 1; }
 echo "Press <prefix> + I to install Tmux plugins."
 
-# Set up themes for Ubuntu GNOME
+# Set up themes for GNOME
+# Install icon themes
+git clone https://github.com/vinceliuice/WhiteSur-icon-theme
+cd ./WhiteSur-icon-theme/
+# -b: install bold icons on topbar
+./install.sh -b
+cd ..
+rm -rf ./WhiteSur-icon-theme/
 # To change the background of the login screen, use gdm-settings
 
 # Set up Data center folder
