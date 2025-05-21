@@ -40,8 +40,8 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 flatpak install flathub com.protonvpn.www md.obsidian.Obsidian org.moneymanagerex.MMEX
 
 # Snap apps
-sudo snap install onlyoffice-desktopeditors
 sudo snap install --classic code
+sudo snap install postman
 
 # RQuickShare
 REPO="Martichou/rquickshare"
