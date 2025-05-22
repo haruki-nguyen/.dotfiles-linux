@@ -37,7 +37,7 @@ sudo apt update && sudo apt install -y ulauncher
 # Flatpak setup & install
 sudo apt install -y flatpak gnome-software-plugin-flatpak
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-flatpak install flathub com.protonvpn.www md.obsidian.Obsidian org.moneymanagerex.MMEX
+flatpak install flathub com.protonvpn.www md.obsidian.Obsidian org.moneymanagerex.MMEX io.github.realmazharhussain.GdmSettings
 
 # Snap apps
 sudo snap install --classic code
