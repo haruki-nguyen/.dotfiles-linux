@@ -41,7 +41,7 @@ flatpak install flathub com.protonvpn.www md.obsidian.Obsidian org.moneymanagere
 
 # Snap apps
 sudo snap install --classic code
-sudo snap install postman
+sudo snap install postman libreoffice
 
 # RQuickShare
 REPO="Martichou/rquickshare"
