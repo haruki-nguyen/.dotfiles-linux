@@ -10,7 +10,7 @@ sudo apt update && sudo apt upgrade -y
 PACKAGES=(
   tmux zip ripgrep nodejs npm gdb python3-pip python3.12-venv ffmpeg obs-studio
   openshot-qt llvm build-essential wget unzip git gh btop gthumb okular curl stow
-  gdm-settings p7zip-full kdeconnect alacritty ibus-unikey keepassxc
+  gdm-settings p7zip-full alacritty ibus-unikey keepassxc
   gnome-browser-connector gnome-tweaks gnome-shell-extension-manager zsh zoxide
 )
 sudo apt install -y "${PACKAGES[@]}"
