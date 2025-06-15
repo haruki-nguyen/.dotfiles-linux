@@ -22,6 +22,10 @@ echo 'GTK_IM_MODULE=ibus' >> ~/.profile
 wget -q https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo apt install -y ./google-chrome-stable_current_amd64.deb || sudo apt --fix-broken install -y
 
+# Warp Terminal
+wget -O warp.deb "https://app.warp.dev/download?package=deb"
+sudo apt install -y ./warp.deb && rm warp.deb
+
 # Set Alacritty default terminal
 gsettings set org.gnome.desktop.default-applications.terminal exec alacritty
 
