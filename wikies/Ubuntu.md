@@ -1,51 +1,67 @@
-# Setting Up Ubuntu Environment
+# Ubuntu Quick Setup
 
-1. **Download the Script**: Save it as `ubuntu-installer.sh`.
+## 1. Run the Installer
 
-2. **Make It Executable**:
+1. Download `ubuntu-installer.sh`.
+2. Make it executable:
 
    ```bash
    chmod +x ubuntu-installer.sh
    ```
 
-3. **Run the Script**:
+3. Run it:
 
    ```bash
    ./ubuntu-installer.sh
    ```
 
-4. **Post-Install Checklist**:
+---
 
-   * Add SSH key to GitHub if prompted.
-   * Tmux: press `<prefix> + I` to install plugins.
-   * Set JetBrainsMono Nerd Font as default terminal font.
-   * Set Unikey in Settings → Keyboard → Input Sources → Vietnamese (Unikey).
+## 2. What Gets Installed
 
-5. **Manual Steps (Optional)**:
+- **Core tools**: tmux, zip, ripgrep, nodejs, npm, gdb, python3-pip, python3.12-venv, ffmpeg, obs-studio, openshot-qt, llvm, build-essential, wget, unzip, git, gh, btop, gthumb, okular, curl, stow, gdm-settings, p7zip-full, alacritty, ibus-unikey, keepassxc, gnome-browser-connector, gnome-tweaks, gnome-shell-extension-manager, zsh, zoxide.
+- **Google Chrome, Warp Terminal, Discord, RQuickShare** (latest .deb).
+- **Alacritty** set as default terminal.
+- **Zsh & Oh My Zsh** as default shell.
+- **Ulauncher** launcher.
+- **Flatpak** (with ProtonVPN, Obsidian, GdmSettings).
+- **Snap apps**: VS Code, Postman, LibreOffice.
+- **JetBrainsMono Nerd Font**.
+- **GitHub SSH key** (generates if missing, copies to clipboard).
+- **Dotfiles**: Clones and stows your configs.
+- **Tmux Plugin Manager**.
+- **Syncthing** (starts user service, creates `~/Documents/My Data`).
+- **Cleans up** your Downloads folder.
 
-   * GNOME tweaks: change wallpaper, set icon theme (WhiteSur), etc.
-   * Recommended GNOME extensions: Vitals, Clipboard Indicator, Rounded Window Corners Reborn, Just Perfection.
-   * For CopyQ autostart, create:
+---
 
-     ```bash
-     nano ~/.config/autostart/copyq.desktop
-     ```
+## 3. After Install
 
-     With:
+- Add SSH key to GitHub: [GitHub SSH Keys](https://github.com/settings/keys)
+- In tmux, press `<prefix> + I` to install plugins.
+- Set JetBrainsMono Nerd Font in your terminal.
+- Add Vietnamese (Unikey) input in keyboard settings.
+- Restart your terminal.
 
-     ```ini
-     [Desktop Entry]
-     Type=Application
-     Exec=env QT_QPA_PLATFORM=xcb copyq
-     Hidden=false
-     NoDisplay=false
-     X-GNOME-Autostart-enabled=true
-     Name=CopyQ
-     ```
+---
 
-   * Enable non-LTS upgrades:
+## 4. Optional
 
-     ```bash
-     sudo nano /etc/update-manager/release-upgrades
-     # Set Prompt=normal
-     ```
+- Use GNOME Tweaks for appearance.
+- Try GNOME extensions: Vitals, Clipboard Indicator, Rounded Window Corners, Just Perfection.
+- To autostart CopyQ, create `~/.config/autostart/copyq.desktop`:
+
+  ```ini
+  [Desktop Entry]
+  Type=Application
+  Exec=env QT_QPA_PLATFORM=xcb copyq
+  X-GNOME-Autostart-enabled=true
+  Name=CopyQ
+  ```
+
+- To enable non-LTS upgrades:
+
+  ```bash
+  sudo nano /etc/update-manager/release-upgrades
+  # Set Prompt=normal
+  ```
