@@ -90,6 +90,3 @@ systemctl --user start syncthing.service
 # Cleanup
 rm -rf ~/Downloads/*
 echo "Setup complete! Restart your terminal."
-
-# Create ~/Applications folder
-mkdir -p ~/Applications
