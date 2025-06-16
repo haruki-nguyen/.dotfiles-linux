@@ -113,6 +113,7 @@ alias md="mkdir -p"
 alias t="touch"
 alias refresh="source ~/.zshrc && cd ~/.dotfiles && stow . && cd -"
 alias py="python3"
+alias cursor="~/Applications/Cursor*.AppImage --no-sandbox"
 
 # Git aliases
 alias gits="git status"
