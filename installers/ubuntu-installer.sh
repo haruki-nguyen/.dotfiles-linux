@@ -18,11 +18,6 @@ sudo apt install -y "${PACKAGES[@]}"
 ibus restart
 echo 'GTK_IM_MODULE=ibus' >> ~/.profile
 
-# Install Hyprland
-sudo add-apt-repository universe
-sudo apt-get update
-sudo apt-get install -y hyprland
-
 # Chrome install
 wget -q https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo apt install -y ./google-chrome-stable_current_amd64.deb || sudo apt --fix-broken install -y
