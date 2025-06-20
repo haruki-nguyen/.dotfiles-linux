@@ -9,7 +9,7 @@ sudo apt update && sudo apt upgrade -y
 # Install apt packages
 PACKAGES=(
   tmux zip ripgrep nodejs npm gdb python3-pip python3.12-venv ffmpeg obs-studio
-  openshot-qt llvm build-essential wget unzip git gh btop gthumb okular curl stow
+  openshot-qt llvm build-essential wget gpg unzip git gh btop gthumb okular curl stow
   gdm-settings p7zip-full alacritty ibus-unikey keepassxc
   gnome-browser-connector gnome-tweaks gnome-shell-extension-manager zsh zoxide
 )
@@ -24,6 +24,13 @@ sudo apt install -y ./google-chrome-stable_current_amd64.deb || sudo apt --fix-b
 
 # Set Alacritty default terminal
 gsettings set org.gnome.desktop.default-applications.terminal exec alacritty
+
+# Warp Terminal install (official repo)
+wget -qO- https://releases.warp.dev/linux/keys/warp.asc | gpg --dearmor > warpdotdev.gpg
+sudo install -D -o root -g root -m 644 warpdotdev.gpg /etc/apt/keyrings/warpdotdev.gpg
+sudo sh -c 'echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/warpdotdev.gpg] https://releases.warp.dev/linux/deb stable main" > /etc/apt/sources.list.d/warpdotdev.list'
+rm warpdotdev.gpg
+sudo apt update && sudo apt install -y warp-terminal
 
 # ZSH & Oh My Zsh
 chsh -s "$(which zsh)"
