@@ -1,4 +1,5 @@
 #!/usr/bin/env sh
+
 if [ -z "$XDG_PICTURES_DIR" ] ; then
     XDG_PICTURES_DIR="$HOME/Pictures"
 fi
@@ -13,8 +14,7 @@ mkdir -p $save_dir
 mkdir -p $swpy_dir
 echo -e "[Default]\nsave_dir=$save_dir\nsave_filename_format=$save_file" > $swpy_dir/config
 
-function print_error
-{
+print_error() {
 cat << "EOF"
     ./screenshot.sh <action>
     ...valid actions are...
@@ -38,8 +38,12 @@ m)  # print focused monitor
     print_error ;;
 esac
 
-rm "$temp_screenshot"
+# Clean up temp file if it exists
+if [ -f "$temp_screenshot" ]; then
+    rm "$temp_screenshot"
+fi
 
+# Send notification if screenshot was saved
 if [ -f "$save_dir/$save_file" ] ; then
   notify-send -a "Screenshot" -i "${save_dir}/${save_file}" -t 2200 "Screenshot saved" "saved at ${save_dir}/${save_file}"
 fi
