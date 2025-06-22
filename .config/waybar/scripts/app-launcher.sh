@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # App launcher script for Waybar
-# This script provides a simple app launcher interface
+# This script provides a simple app launcher interface using wofi
 
 # Function to get installed applications
 get_apps() {
@@ -21,11 +21,9 @@ get_apps() {
 
 # Function to launch app launcher
 launch_app_launcher() {
-    # Use rofi for app launcher if available
-    if command -v rofi >/dev/null 2>&1; then
-        rofi -show drun -theme ~/.config/rofi/launcher.rasi
-    elif command -v wofi >/dev/null 2>&1; then
-        wofi --show drun
+    # Use wofi for app launcher (Wayland-native)
+    if command -v wofi >/dev/null 2>&1; then
+        wofi --show drun --prompt "Launch application..."
     elif command -v dmenu >/dev/null 2>&1; then
         # Fallback to dmenu with app list
         get_apps | cut -d'|' -f1 | dmenu -i | while read -r selected_app; do
