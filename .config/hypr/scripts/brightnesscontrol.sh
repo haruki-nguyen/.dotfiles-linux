@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-function print_error() {
+print_error() {
 cat << "EOF"
     ./brightnesscontrol.sh <action>
     ...valid actions are...
@@ -9,11 +9,11 @@ cat << "EOF"
 EOF
 }
 
-function get_brightness {
+get_brightness() {
   brightnessctl info | grep -oP "(?<=\()\d+(?=%)" | cat
 }
 
-function get_brightness_info(){
+get_brightness_info(){
   brightnessctl info | awk -F "'" '/Device/ {print $2}'
 }
 

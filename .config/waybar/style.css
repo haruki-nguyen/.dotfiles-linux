@@ -26,7 +26,8 @@ tooltip {
 #network,
 #pulseaudio,
 #custom-app-launcher,
-#custom-wallpapers {
+#custom-wallpapers,
+#custom-brightness {
   margin: 2px 2px 2px 0px;
   padding: 1px 4px;
 }
@@ -97,7 +98,8 @@ tooltip {
 #network,
 #pulseaudio,
 #custom-app-launcher,
-#custom-wallpapers {
+#custom-wallpapers,
+#custom-brightness {
   background-color: #d3c6aa;
   border: 1px solid #a7c080;
   color: #2f383e;
