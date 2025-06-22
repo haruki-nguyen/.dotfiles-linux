@@ -3,31 +3,13 @@
 # Wallpapers script for Waybar
 # This script provides wallpaper management functionality
 
-WALLPAPER_DIR="$HOME/Pictures/Wallpapers"
-DEFAULT_WALLPAPER_DIR="/usr/share/backgrounds"
-
-# Function to get wallpaper directories
-get_wallpaper_dirs() {
-    dirs=()
-    if [[ -d "$WALLPAPER_DIR" ]]; then
-        dirs+=("$WALLPAPER_DIR")
-    fi
-    if [[ -d "$DEFAULT_WALLPAPER_DIR" ]]; then
-        dirs+=("$DEFAULT_WALLPAPER_DIR")
-    fi
-    echo "${dirs[@]}"
-}
+WALLPAPER_DIR="$HOME/.dotfiles/wallpapers"
 
 # Function to get wallpaper files
 get_wallpapers() {
-    local wallpaper_dirs
-    read -ra wallpaper_dirs <<< "$(get_wallpaper_dirs)"
-    
-    for dir in "${wallpaper_dirs[@]}"; do
-        if [[ -d "$dir" ]]; then
-            find "$dir" -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" -o -iname "*.bmp" \) 2>/dev/null
-        fi
-    done
+    if [[ -d "$WALLPAPER_DIR" ]]; then
+        find "$WALLPAPER_DIR" -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" -o -iname "*.bmp" \) 2>/dev/null
+    fi
 }
 
 # Function to set wallpaper
