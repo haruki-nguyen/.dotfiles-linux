@@ -3,7 +3,7 @@
 [[ $- != *i* ]] && set -euo pipefail
 
 # Function for pulling updates from git repositories
-project_paths=("/home/haruki/.dotfiles", "/home/haruki/Projects/focused-life")
+project_paths=("/home/haruki/.dotfiles" "/home/haruki/Projects/focused-life")
 
 git_pull_all() {
   for i in "${project_paths[@]}"; do
