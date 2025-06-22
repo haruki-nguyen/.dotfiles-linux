@@ -24,7 +24,8 @@ tooltip {
 #memory,
 #battery,
 #network,
-#pulseaudio {
+#pulseaudio,
+#custom-app-launcher {
   margin: 2px 2px 2px 0px;
   padding: 1px 4px;
 }
@@ -93,7 +94,8 @@ tooltip {
 #cpu,
 #memory,
 #network,
-#pulseaudio {
+#pulseaudio,
+#custom-app-launcher {
   background-color: #d3c6aa;
   border: 1px solid #a7c080;
   color: #2f383e;
