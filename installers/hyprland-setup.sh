@@ -191,7 +191,19 @@ install_screenshot_tools() {
     else
         log "grimblast is already installed"
     fi
-    
+
+    # Install slurp (area selection for screenshots)
+    if ! command_exists slurp; then
+        log "Installing slurp..."
+        if ! sudo apt install -y slurp; then
+            error "Failed to install slurp"
+            exit 1
+        fi
+        success "Installed slurp"
+    else
+        log "slurp is already installed"
+    fi
+
     # Install swappy (image editor)
     if ! command_exists swappy; then
         log "Installing swappy..."
@@ -202,6 +214,18 @@ install_screenshot_tools() {
         success "Installed swappy"
     else
         log "swappy is already installed"
+    fi
+
+    # Install notify-send (for notifications)
+    if ! command_exists notify-send; then
+        log "Installing libnotify-bin (notify-send)..."
+        if ! sudo apt install -y libnotify-bin; then
+            error "Failed to install libnotify-bin"
+            exit 1
+        fi
+        success "Installed libnotify-bin (notify-send)"
+    else
+        log "notify-send is already installed"
     fi
 }
 
@@ -1349,6 +1373,68 @@ install_optional_tools() {
     done
 }
 
+# Function to install/copy screenshot script
+install_screenshot_script() {
+    log "Setting up Hyprland screenshot script..."
+    local script_dir="$HOME/.config/hypr/scripts"
+    local script_path="$script_dir/screenshot.sh"
+    mkdir -p "$script_dir"
+    cat > "$script_path" <<'EOF'
+#!/usr/bin/env sh
+
+if [ -z "$XDG_PICTURES_DIR" ] ; then
+    XDG_PICTURES_DIR="$HOME/Pictures"
+fi
+
+ScrDir=`dirname "$(realpath "$0")"`
+swpy_dir="${XDG_CONFIG_HOME:-$HOME/.config}/swappy"
+save_dir="${2:-$XDG_PICTURES_DIR/Screenshots}"
+save_file=$(date +'%y%m%d_%Hh%Mm%Ss_screenshot.png')
+temp_screenshot="/tmp/screenshot.png"
+
+mkdir -p $save_dir
+mkdir -p $swpy_dir
+echo -e "[Default]\nsave_dir=$save_dir\nsave_filename_format=$save_file" > $swpy_dir/config
+
+print_error() {
+cat << "EOF"
+    ./screenshot.sh <action>
+    ...valid actions are...
+        p : print all screens
+        s : snip current screen
+        sf : snip current screen (frozen)
+        m : print focused monitor
+EOF
+}
+
+case $1 in
+p)  # print all outputs
+    grimblast copysave screen $temp_screenshot && swappy -f $temp_screenshot ;;
+s)  # drag to manually snip an area / click on a window to print it
+    grimblast copysave area $temp_screenshot && swappy -f $temp_screenshot ;;
+sf)  # frozen screen, drag to manually snip an area / click on a window to print it
+    grimblast --freeze copysave area $temp_screenshot && swappy -f $temp_screenshot ;;
+m)  # print focused monitor
+    grimblast copysave output $temp_screenshot && swappy -f $temp_screenshot ;;
+*)  # invalid option
+    print_error ;;
+esac
+
+# Clean up temp file if it exists
+if [ -f "$temp_screenshot" ]; then
+    rm "$temp_screenshot"
+fi
+
+# Send notification if screenshot was saved
+if [ -f "$save_dir/$save_file" ] ; then
+  notify-send -a "Screenshot" -i "${save_dir}/${save_file}" -t 2200 "Screenshot saved" "saved at ${save_dir}/${save_file}"
+fi
+EOF
+    chmod +x "$script_path"
+    success "Screenshot script installed to $script_path and made executable."
+    info "You can bind it in Hyprland with: bind = \$mod, P, exec, ~/.config/hypr/scripts/screenshot.sh s"
+}
+
 # Main installation function
 main() {
     echo -e "${PURPLE}"
@@ -1436,6 +1522,9 @@ main() {
     verify_installations
     verify_dependencies
     verify_config_installation
+    
+    # Install screenshot script
+    install_screenshot_script
     
     # Show next steps
     show_next_steps
