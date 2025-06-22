@@ -1,4 +1,5 @@
 # ~/.config/alacritty/alacritty.toml
+# Default Alacritty configuration
 
 [font]
 normal.family = "JetBrainsMono Nerd Font"
@@ -11,7 +12,11 @@ style.blinking = "Never"
 
 [window]
 decorations = "None"
-padding.x = 16
-padding.y = 8
+padding.x = 25
+padding.y = 25
 startup_mode = "Windowed"
+opacity = 1.0
 
+[scrolling]
+history = 1500
+multiplier = 10

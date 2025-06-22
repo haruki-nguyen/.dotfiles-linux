@@ -124,8 +124,7 @@ install_apps() {
     
     local apps=(
         "kitty"      # terminal emulator
-        "nemo"       # file explorer
-        "firefox"    # browser
+        "nautilus"   # file explorer
     )
     
     for app in "${apps[@]}"; do
@@ -700,7 +699,7 @@ verify_dependencies() {
     )
     
     local optional_deps=(
-        "kitty" "nemo" "spotify" "firefox" "grimblast" "zsh" "neovim" "fastfetch"
+        "kitty" "nautilus" "spotify" "grimblast" "zsh" "neovim" "fastfetch"
     )
     
     echo "Checking required dependencies:"
