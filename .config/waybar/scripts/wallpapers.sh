@@ -31,6 +31,10 @@ set_wallpaper() {
             return 1
         fi
         
+        # Update the current wallpaper file for hyprlock
+        mkdir -p ~/.local/state/theme
+        cp "$wallpaper" ~/.local/state/theme/current_wallpaper
+        
         notify-send "Wallpaper" "Set to $(basename "$wallpaper")" --icon=preferences-desktop-wallpaper
         return 0
     else
