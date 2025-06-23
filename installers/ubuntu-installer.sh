@@ -22,7 +22,6 @@ readonly APT_PACKAGES=(
     openshot-qt llvm build-essential wget gpg unzip git gh btop gthumb okular curl stow
     gdm-settings p7zip-full alacritty ibus-unikey keepassxc
     gnome-browser-connector gnome-tweaks gnome-shell-extension-manager zsh zoxide
-    hyprland jq waybar rofi wofi dmenu swww feh nitrogen
 )
 
 readonly FLATPAK_APPS=(
