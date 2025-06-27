@@ -10,40 +10,35 @@ git clone git@github.com:haruki-nguyen/.dotfiles.git ~/.dotfiles
 
 # Run the automated installer (Ubuntu)
 cd ~/.dotfiles/installers
-./ubuntu-installer.sh
+./ubuntu-installer.zsh
 ```
 
 ## 📁 Project Structure
 
 ### Core Configuration
 
-- **`.zshrc`** - Zsh shell configuration with Oh My Zsh, custom aliases, and zoxide
-- **`.gitconfig`** - Git configuration and aliases
-- **`.stylua.toml`** - Lua code formatter configuration
+- **.zshrc** - Zsh shell configuration with Oh My Zsh, custom aliases, and zoxide
+- **.gitconfig** - Git configuration and aliases
+- **.stylua.toml** - Lua code formatter configuration
 
 ### Application Configs (`.config/`)
 
-- **`alacritty/`** - Terminal emulator configuration
-- **`btop/`** - System monitor configuration
-- **`espanso/`** - Text expansion tool
-- **`ohmyposh/`** - Shell prompt customization
-- **`tmux/`** - Terminal multiplexer configuration
-- **`ulauncher/`** - Application launcher
-- **`warp-terminal/`** - Modern terminal configuration
-- **`zsh/`** - Additional Zsh scripts and configurations
+- **alacritty/** - Terminal emulator configuration
+- **btop/** - System monitor configuration
+- **espanso/** - Text expansion tool
+- **ohmyposh/** - Shell prompt customization
+- **tmux/** - Terminal multiplexer configuration
+- **zsh/** - Additional Zsh scripts and configurations
 
 ### Tools & Scripts
 
-- **`installers/ubuntu-installer.sh`** - Automated Ubuntu system setup
-- **`automation-scripts/sale-rate.js`** - Custom automation script
-- **`get-platformio.py`** - PlatformIO setup script
+- **installers/ubuntu-installer.zsh** - Automated Ubuntu system setup
+- **automation-scripts/sale-rate.js** - Custom automation script for drink sales data
 
 ### Resources
 
-- **`wallpapers/`** - Desktop wallpapers
-- **`wikies/Ubuntu.md`** - Ubuntu-specific documentation
-- **`flowlauncher-settings.json`** - Flow Launcher configuration
-- **`MBLABXIDE-configs.zip`** - MPLAB X IDE configurations
+- **wallpapers/** - Desktop wallpapers
+- **wikies/Ubuntu.md** - Ubuntu-specific documentation
 
 ## 🛠️ Features
 
@@ -58,7 +53,6 @@ cd ~/.dotfiles/installers
 
 - **Alacritty** configuration
 - **Tmux** setup with plugin manager
-- **Ulauncher** for quick app launching
 - **Espanso** for text expansion
 
 ### System Management
@@ -72,7 +66,7 @@ cd ~/.dotfiles/installers
 
 ### Automated Setup (Recommended)
 
-The `ubuntu-installer.sh` script handles:
+The `ubuntu-installer.zsh` script handles:
 
 - System package installation
 - Terminal emulator setup
@@ -108,6 +102,10 @@ stow .
 - `z` - Navigate to frequently used directories (zoxide)
 - `btop` - System monitoring
 - `tmux` - Terminal multiplexing
+
+### Custom Scripts
+
+- `automation-scripts/sale-rate.js` - Parse and analyze drink sales data (see script for usage)
 
 ## 🔒 Security
 

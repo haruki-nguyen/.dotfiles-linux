@@ -2,32 +2,31 @@
 
 ## 1. Run the Installer
 
-1. Download `ubuntu-installer.sh`.
+1. Download `ubuntu-installer.zsh` (from your dotfiles repo).
 2. Make it executable:
 
    ```bash
-   chmod +x ubuntu-installer.sh
+   chmod +x ubuntu-installer.zsh
    ```
 
 3. Run it:
 
    ```bash
-   ./ubuntu-installer.sh
+   ./ubuntu-installer.zsh
    ```
 
 ---
 
 ## 2. What Gets Installed
 
-- **Core tools**: tmux, zip, nodejs, npm, python3-pip, python3.12-venv, ffmpeg, llvm, wget, unzip, git, btop, gthumb, curl, stow, gdm-settings, alacritty, ibus-unikey, keepassxc, gnome-browser-connector, gnome-tweaks, gnome-shell-extension-manager, zsh, zoxide.
+- **Core tools**: tmux, zip, nodejs, npm, python3-pip, python3-venv, ffmpeg, llvm, wget, gpg, unzip, git, btop, gthumb, curl, stow, alacritty, ibus-unikey, keepassxc, gnome-browser-connector, gnome-tweaks, gnome-shell-extension-manager, zsh, zoxide.
 - **Google Chrome, Discord, RQuickShare** (latest .deb).
 - **Alacritty** set as default terminal.
 - **Zsh & Oh My Zsh** as default shell.
-- **Ulauncher** launcher.
 - **Flatpak** (with ProtonVPN, Obsidian, GdmSettings).
 - **Snap apps**: VS Code, Postman, LibreOffice.
 - **JetBrainsMono Nerd Font**.
-- **GitHub SSH key** (generates if missing, copies to clipboard).
+- **GitHub SSH key** (generates if missing, copies to clipboard if xclip is available).
 - **Dotfiles**: Clones and stows your configs.
 - **Tmux Plugin Manager**.
 - **Syncthing** (starts user service, creates `~/Documents/My Data`).
