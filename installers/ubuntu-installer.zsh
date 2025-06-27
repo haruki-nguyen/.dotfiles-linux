@@ -18,9 +18,9 @@ readonly NC='\033[0m' # No Color
 
 # Package lists
 readonly APT_PACKAGES=(
-    tmux zip ripgrep nodejs npm gdb python3-pip python3-venv ffmpeg obs-studio
-    openshot-qt llvm build-essential wget gpg unzip git gh btop gthumb okular curl stow
-    p7zip-full alacritty ibus-unikey keepassxc
+    tmux zip nodejs npm python3-pip python3-venv ffmpeg
+    llvm wget gpg unzip git btop gthumb curl stow
+    alacritty ibus-unikey keepassxc
     gnome-browser-connector gnome-tweaks gnome-shell-extension-manager zsh zoxide
 )
 
@@ -28,7 +28,6 @@ readonly FLATPAK_APPS=(
     com.protonvpn.www
     md.obsidian.Obsidian
     io.github.realmazharhussain.GdmSettings
-    io.github.Ulauncher.Ulauncher
 )
 
 readonly SNAP_APPS=(
@@ -164,24 +163,6 @@ install_chrome() {
     rm -f "$chrome_deb"
     
     log_success "Google Chrome installed"
-}
-
-install_warp_terminal() {
-    log "Installing Warp Terminal..."
-    
-    # Download and setup GPG key
-    wget -qO- https://releases.warp.dev/linux/keys/warp.asc | gpg --dearmor > warpdotdev.gpg
-    sudo install -D -o root -g root -m 644 warpdotdev.gpg /etc/apt/keyrings/warpdotdev.gpg
-    
-    # Add repository
-    sudo sh -c 'echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/warpdotdev.gpg] https://releases.warp.dev/linux/deb stable main" > /etc/apt/sources.list.d/warpdotdev.list'
-    
-    # Cleanup and install
-    rm -f warpdotdev.gpg
-    run_with_retry sudo apt update
-    run_with_retry sudo apt install -y warp-terminal
-    
-    log_success "Warp Terminal installed"
 }
 
 setup_zsh() {
@@ -370,37 +351,30 @@ main() {
     echo -e "${BLUE}Ubuntu System Installer${NC}"
     echo -e "${BLUE}Log file: $LOG_FILE${NC}"
     echo
-    
     # Change to downloads directory
     cd "$DOWNLOADS_DIR"
-    
     # System setup
     setup_system_repositories
     update_system
     install_apt_packages
     setup_ibus
     setup_alacritty
-    
     # Application installations
     install_chrome
-    install_warp_terminal
     setup_zsh
     setup_flatpak
     install_snap_apps
     install_rquickshare
     install_discord
     install_nerd_fonts
-    
     # Development setup
     setup_github_ssh
     setup_dotfiles
     setup_tmux
-    
     # Additional setup
     setup_syncthing
     create_directories
     cleanup
-    
     echo
     log_success "Installation complete!"
     echo -e "${GREEN}Please restart your terminal to apply all changes.${NC}"

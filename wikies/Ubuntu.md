@@ -19,8 +19,8 @@
 
 ## 2. What Gets Installed
 
-- **Core tools**: tmux, zip, ripgrep, nodejs, npm, gdb, python3-pip, python3.12-venv, ffmpeg, obs-studio, openshot-qt, llvm, build-essential, wget, unzip, git, gh, btop, gthumb, okular, curl, stow, gdm-settings, p7zip-full, alacritty, ibus-unikey, keepassxc, gnome-browser-connector, gnome-tweaks, gnome-shell-extension-manager, zsh, zoxide.
-- **Google Chrome, Warp Terminal, Discord, RQuickShare** (latest .deb).
+- **Core tools**: tmux, zip, nodejs, npm, python3-pip, python3.12-venv, ffmpeg, llvm, wget, unzip, git, btop, gthumb, curl, stow, gdm-settings, alacritty, ibus-unikey, keepassxc, gnome-browser-connector, gnome-tweaks, gnome-shell-extension-manager, zsh, zoxide.
+- **Google Chrome, Discord, RQuickShare** (latest .deb).
 - **Alacritty** set as default terminal.
 - **Zsh & Oh My Zsh** as default shell.
 - **Ulauncher** launcher.

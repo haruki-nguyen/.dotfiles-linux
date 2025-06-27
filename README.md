@@ -56,7 +56,7 @@ cd ~/.dotfiles/installers
 
 ### Development Tools
 
-- **Alacritty** and **Warp Terminal** configurations
+- **Alacritty** configuration
 - **Tmux** setup with plugin manager
 - **Ulauncher** for quick app launching
 - **Espanso** for text expansion
