@@ -18,9 +18,9 @@ readonly NC='\033[0m' # No Color
 
 # Package lists
 readonly APT_PACKAGES=(
-    tmux zip ripgrep nodejs npm gdb python3-pip python3.12-venv ffmpeg obs-studio
+    tmux zip ripgrep nodejs npm gdb python3-pip python3-venv ffmpeg obs-studio
     openshot-qt llvm build-essential wget gpg unzip git gh btop gthumb okular curl stow
-    gdm-settings p7zip-full alacritty ibus-unikey keepassxc
+    p7zip-full alacritty ibus-unikey keepassxc
     gnome-browser-connector gnome-tweaks gnome-shell-extension-manager zsh zoxide
 )
 
@@ -28,6 +28,7 @@ readonly FLATPAK_APPS=(
     com.protonvpn.www
     md.obsidian.Obsidian
     io.github.realmazharhussain.GdmSettings
+    io.github.Ulauncher.Ulauncher
 )
 
 readonly SNAP_APPS=(
@@ -196,16 +197,6 @@ setup_zsh() {
     else
         log "Oh My Zsh already installed"
     fi
-}
-
-install_ulauncher() {
-    log "Installing Ulauncher..."
-    
-    sudo add-apt-repository -y ppa:agornostal/ulauncher
-    run_with_retry sudo apt update
-    run_with_retry sudo apt install -y ulauncher
-    
-    log_success "Ulauncher installed"
 }
 
 setup_flatpak() {
@@ -394,7 +385,6 @@ main() {
     install_chrome
     install_warp_terminal
     setup_zsh
-    install_ulauncher
     setup_flatpak
     install_snap_apps
     install_rquickshare
