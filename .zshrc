@@ -126,8 +126,3 @@ alias gitsync="git pull --rebase && git push"
 
 # Enable zoxide
 eval "$(zoxide init zsh)"
-
-# Always use the latest Hyprland instance signature if available
-if [ -d /run/user/1000/hypr ]; then
-  export HYPRLAND_INSTANCE_SIGNATURE=$(ls -td /run/user/1000/hypr/* | head -1 | xargs -n1 basename)
-fi
