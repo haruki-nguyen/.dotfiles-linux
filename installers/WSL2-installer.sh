@@ -172,18 +172,6 @@ setup_zsh() {
     fi
 }
 
-install_nerd_fonts() {
-    log "Installing Nerd Fonts..."
-    local font_url="https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/JetBrainsMono.zip"
-    local font_dir="$HOME/.local/share/fonts"
-    wget -q --show-progress -O JetBrainsMono.zip "$font_url"
-    mkdir -p "$font_dir"
-    unzip -q JetBrainsMono.zip -d "$font_dir"
-    fc-cache -fv
-    rm -f JetBrainsMono.zip
-    log_success "Nerd Fonts installed"
-}
-
 setup_github_ssh() {
     log "Setting up GitHub SSH..."
     if [ ! -f ~/.ssh/id_ed25519 ]; then
@@ -270,7 +258,6 @@ main() {
     install_apt_packages
     setup_locale
     setup_zsh
-    install_nerd_fonts
     setup_github_ssh
     setup_dotfiles
     setup_tmux
