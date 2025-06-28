@@ -281,6 +281,22 @@ setup_dotfiles() {
     # Clone dotfiles repository
     if [ ! -d ~/.dotfiles ]; then
         git clone "$DOTFILES_REPO" ~/.dotfiles || log_warning "Failed to clone dotfiles"
+    else
+        log "Dotfiles repository already exists"
+    fi
+    
+    # Ensure the repository uses SSH URL
+    if [ -d ~/.dotfiles ]; then
+        cd ~/.dotfiles
+        local current_url=$(git remote get-url origin 2>/dev/null || echo "")
+        if [ "$current_url" != "$DOTFILES_REPO" ]; then
+            log "Updating dotfiles repository URL to SSH format..."
+            git remote set-url origin "$DOTFILES_REPO"
+            log_success "Repository URL updated to SSH format"
+        else
+            log "Repository already using SSH URL"
+        fi
+        cd ~
     fi
     
     # Backup existing bashrc
