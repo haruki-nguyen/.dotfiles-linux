@@ -1,33 +1,46 @@
-# Comments and blank lines are allowed.
-# Default ignores
+# Stow ignore patterns for dotfiles
+# Comments and blank lines are allowed
 
-RCS
-.+,v
+# Version control
+.git
+.gitignore
+.gitmodules
+.gitattributes
 
-CVS
-\.\#.+       # CVS conflict files / emacs lock files
-\.cvsignore
-
-\.svn
-_darcs
-\.hg
-
-\.git
-\.gitignore
-\.gitmodules
-
-.+~          # emacs backup files
-\#.*\#       # emacs autosave files
-
-^/README.*
-^/LICENSE.*
-^/COPYING
-
-# My ignores
-.config/espanso
-installers
-wikies
-MBLABXIDE-configs.zip
+# Documentation
 README.md
-flowlauncher-settings.json
-get-platformio.py
+LICENSE
+COPYING
+*.md
+
+# Build artifacts and temporary files
+*.log
+*.tmp
+*.cache
+*.swp
+*.swo
+*~
+
+# IDE and editor files
+.vscode/
+.idea/
+*.sublime-*
+.atom/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Application-specific ignores
+.config/tmux/plugins/
+.config/btop/btop.log
+.config/warp-terminal/user_preferences.json
+
+# Personal ignores
+installers/
+docs/
+wallpapers/
+scripts/
+*.zip
+*.py
