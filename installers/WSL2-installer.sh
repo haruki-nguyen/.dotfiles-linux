@@ -20,6 +20,7 @@ readonly NC='\033[0m' # No Color
 readonly APT_PACKAGES=(
     tmux zip nodejs npm python3-pip python3-venv ffmpeg
     llvm wget gpg unzip git btop curl stow zsh zoxide
+    locales
 )
 
 # Logging functions
@@ -102,6 +103,63 @@ install_apt_packages() {
     log_success "APT packages installed"
 }
 
+# Locale setup function
+setup_locale() {
+    log "Setting up locale configuration..."
+    
+    # Generate the en_US.UTF-8 locale
+    if ! locale -a | grep -q "en_US.utf8"; then
+        log "Generating en_US.UTF-8 locale..."
+        run_with_retry sudo locale-gen en_US.UTF-8
+        log_success "en_US.UTF-8 locale generated"
+    else
+        log "en_US.UTF-8 locale already exists"
+    fi
+    
+    # Update locale configuration
+    log "Updating locale configuration..."
+    echo "LANG=en_US.UTF-8" | sudo tee /etc/default/locale > /dev/null
+    echo "LC_ALL=en_US.UTF-8" | sudo tee -a /etc/default/locale > /dev/null
+    
+    # Set environment variables for current session
+    export LANG=en_US.UTF-8
+    export LC_ALL=en_US.UTF-8
+    
+    log_success "Locale configuration completed"
+}
+
+# Dotfile conflict resolution function
+resolve_dotfile_conflicts() {
+    log "Resolving dotfile conflicts..."
+    
+    # Handle .zshrc conflicts
+    if [ -f ~/.zshrc ] && [ ! -L ~/.zshrc ]; then
+        log "Backing up existing .zshrc..."
+        cp ~/.zshrc ~/.zshrc.backup
+        log_success "Existing .zshrc backed up to ~/.zshrc.backup"
+        
+        log "Removing existing .zshrc to allow symlink creation..."
+        rm ~/.zshrc
+        log_success "Existing .zshrc removed"
+    fi
+    
+    # Handle other common dotfile conflicts
+    local dotfiles=(".bashrc" ".gitconfig" ".stylua.toml")
+    for dotfile in "${dotfiles[@]}"; do
+        if [ -f ~/"$dotfile" ] && [ ! -L ~/"$dotfile" ]; then
+            log "Backing up existing $dotfile..."
+            cp ~/"$dotfile" ~/"$dotfile.backup"
+            log_success "Existing $dotfile backed up to ~/$dotfile.backup"
+            
+            log "Removing existing $dotfile to allow symlink creation..."
+            rm ~/"$dotfile"
+            log_success "Existing $dotfile removed"
+        fi
+    done
+    
+    log_success "Dotfile conflicts resolved"
+}
+
 # Application installation functions (CLI only)
 setup_zsh() {
     log "Setting up ZSH and Oh My Zsh..."
@@ -148,12 +206,12 @@ setup_dotfiles() {
     if [ ! -d ~/.dotfiles ]; then
         git clone "$DOTFILES_REPO" ~/.dotfiles || log_warning "Failed to clone dotfiles"
     fi
-    if [ -f ~/.bashrc ] && [ ! -f ~/.bashrc.bak ]; then
-        mv ~/.bashrc ~/.bashrc.bak
-    fi
+    
+    # Resolve conflicts before stowing
+    resolve_dotfile_conflicts
+    
     if [ -d ~/.dotfiles ]; then
         cd ~/.dotfiles && stow . && cd ~
-        [ -f ~/.bashrc.bak ] && rm ~/.bashrc.bak
         log_success "Dotfiles configured"
     fi
 }
@@ -194,6 +252,7 @@ main() {
     setup_system_repositories
     update_system
     install_apt_packages
+    setup_locale
     setup_zsh
     install_nerd_fonts
     setup_github_ssh
@@ -205,6 +264,7 @@ main() {
     log_success "WSL2 environment setup complete!"
     echo -e "${GREEN}Please restart your terminal to apply all changes.${NC}"
     echo -e "${YELLOW}Don't forget to add your SSH key to GitHub if you haven't already.${NC}"
+    echo -e "${YELLOW}Note: Any existing dotfiles have been backed up with .backup extension.${NC}"
 }
 
 main "$@" 
