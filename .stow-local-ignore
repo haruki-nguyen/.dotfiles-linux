@@ -44,3 +44,6 @@ wallpapers/
 scripts/
 .*\.zip
 .*\.py
+
+# Git modules
+^shared-dotfiles
