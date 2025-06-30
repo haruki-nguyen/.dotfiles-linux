@@ -11,20 +11,20 @@
 README.md
 LICENSE
 COPYING
-*.md
+.*\.md
 
 # Build artifacts and temporary files
-*.log
-*.tmp
-*.cache
-*.swp
-*.swo
-*~
+.*\.log
+.*\.tmp
+.*\.cache
+.*\.swp
+.*\.swo
+.*~
 
 # IDE and editor files
 .vscode/
 .idea/
-*.sublime-*
+.*\.sublime-.*
 .atom/
 
 # OS-specific files
@@ -42,5 +42,5 @@ installers/
 docs/
 wallpapers/
 scripts/
-*.zip
-*.py
+.*\.zip
+.*\.py

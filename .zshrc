@@ -107,7 +107,7 @@ export LC_ALL=en_US.UTF-8
 # THIS ZSHRC IS FOR UBUNTU
 # My custom scripts
 # Add custom scripts
-source ~/.dotfiles/.config/zsh/update-system.zsh
+source .config/zsh/update-system.zsh
 
 # Aliases
 alias md="mkdir -p"

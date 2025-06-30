@@ -6,7 +6,7 @@
 # Configuration
 typeset -A CONFIG=(
   # Project paths to update via git
-  project_paths "/home/haruki/.dotfiles /home/haruki/Projects/focused-life"
+  project_paths "/home/haruki/.dotfiles-linux /home/haruki/Projects/focused-life"
   
   # Logging
   log_level "INFO"  # DEBUG, INFO, WARN, ERROR
