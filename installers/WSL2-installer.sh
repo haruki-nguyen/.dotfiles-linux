@@ -262,6 +262,10 @@ main() {
     setup_dotfiles
     setup_tmux
     create_directories
+    # Create Projects directory after all installations
+    log "Creating Projects directory..."
+    mkdir -p ~/Projects
+    log_success "Projects directory created"
     cleanup
     echo
     log_success "WSL2 environment setup complete!"
