@@ -11,33 +11,22 @@ wslpath_safe() {
   fi
 }
 
-# Safer cursor command that handles WSL paths properly
+# Simple cursor workaround for UNC path issues
 cursor() {
-  if [[ $# -eq 0 ]]; then
-    # If no arguments, use current directory but avoid UNC paths
-    local winpath=$(wslpath_safe "$PWD")
-    # Check if the path is a UNC path and handle it differently
-    if [[ "$winpath" =~ ^\\\\ ]]; then
-      echo "UNC path detected, using alternative approach..."
-      # Try to use the Linux path directly or map to a drive letter
-      if [[ "$PWD" =~ ^/home/ ]]; then
-        echo "Opening VS Code with Linux path..."
-        cd "$PWD" && command cursor . 2>/dev/null || {
-          echo "Failed to open cursor, please navigate manually or use: code ."
-          return 1
-        }
-      else
-        command cursor "$PWD"
-      fi
-    else
-      command cursor "$winpath" 2>/dev/null || {
-        echo "Failed to open cursor with Windows path, trying direct..."
-        command cursor "$PWD"
-      }
-    fi
+  if [[ $# -eq 0 ]] || [[ "$1" == "." ]]; then
+    echo "UNC path workaround: Opening cursor manually required"
+    echo "Current directory: $PWD"
+    echo "" 
+    echo "Please do one of the following:"
+    echo "  1. Open Cursor manually and use File -> Open Folder"
+    echo "  2. Copy and paste this path: $PWD"
+    echo "  3. Or try this command: open_vscode"
+    echo ""
+    echo "The UNC path issue prevents direct opening from WSL."
+    return 1
   else
-    # For other arguments, pass them through
-    command cursor "$@"
+    # For other arguments, pass them through to the real cursor
+    /mnt/c/Users/nmdex/scoop/shims/cursor "$@"
   fi
 }
 
