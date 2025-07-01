@@ -1,1 +1,4 @@
-./shared-dotfiles/.gitconfig
+[include]
+    path = ./shared-dotfiles/.gitconfig
+[core]
+	sshCommand = /usr/bin/ssh
