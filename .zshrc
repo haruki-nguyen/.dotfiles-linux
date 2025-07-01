@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/bin:$HOME/.local/bin:$PATH"
 
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -112,7 +112,7 @@ source .config/zsh/update-system.zsh
 # Aliases
 alias md="mkdir -p"
 alias t="touch"
-alias refresh="source ~/.zshrc && cd ~/.dotfiles && stow . && cd -"
+alias refresh="source ~/.zshrc && cd ~/.dotfiles-linux && stow . && cd -"
 alias py="python3"
 alias cd="z"
 
@@ -126,4 +126,8 @@ alias gitpr="git pull --rebase"
 alias gitsync="git pull --rebase && git push"
 
 # Enable zoxide
-eval "$(zoxide init zsh)"
+if command -v zoxide >/dev/null 2>&1; then
+  eval "$(zoxide init zsh)"
+else
+  echo "[WARN] zoxide not found in PATH. Please install zoxide for 'cd' alias to work."
+fi
