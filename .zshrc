@@ -1,5 +1,45 @@
 # If you come from bash you might have to change your $PATH.
+# Prioritize Linux paths over Windows paths to avoid UNC path issues
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/bin:$HOME/.local/bin:$PATH"
+
+# Function to safely convert WSL paths for Windows applications
+wslpath_safe() {
+  if command -v wslpath >/dev/null 2>&1; then
+    wslpath -w "$1" 2>/dev/null || echo "$1"
+  else
+    echo "$1"
+  fi
+}
+
+# Safer cursor command that handles WSL paths properly
+cursor() {
+  if [[ $# -eq 0 ]]; then
+    # If no arguments, use current directory but avoid UNC paths
+    local winpath=$(wslpath_safe "$PWD")
+    # Check if the path is a UNC path and handle it differently
+    if [[ "$winpath" =~ ^\\\\ ]]; then
+      echo "UNC path detected, using alternative approach..."
+      # Try to use the Linux path directly or map to a drive letter
+      if [[ "$PWD" =~ ^/home/ ]]; then
+        echo "Opening VS Code with Linux path..."
+        cd "$PWD" && command cursor . 2>/dev/null || {
+          echo "Failed to open cursor, please navigate manually or use: code ."
+          return 1
+        }
+      else
+        command cursor "$PWD"
+      fi
+    else
+      command cursor "$winpath" 2>/dev/null || {
+        echo "Failed to open cursor with Windows path, trying direct..."
+        command cursor "$PWD"
+      }
+    fi
+  else
+    # For other arguments, pass them through
+    command cursor "$@"
+  fi
+}
 
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -121,6 +161,26 @@ alias gita="git add"
 alias gitc="git commit"
 alias gitpr="git pull --rebase"
 alias gitsync="git pull --rebase && git push"
+
+# VS Code aliases that avoid UNC path issues
+alias code.="code ."
+alias vscode="code"
+# Alternative function for opening VS Code without UNC path issues
+open_vscode() {
+  if [[ $# -eq 0 ]]; then
+    # Use current directory, but handle UNC paths gracefully
+    local current_dir="$PWD"
+    echo "Opening VS Code in: $current_dir"
+    code "$current_dir" 2>/dev/null || {
+      echo "Failed to open VS Code, trying alternative method..."
+      (cd "$current_dir" && code . 2>/dev/null) || {
+        echo "Please open VS Code manually or check installation"
+      }
+    }
+  else
+    code "$@"
+  fi
+}
 # SSH Agent Configuration
 # Auto-start SSH agent and load keys
 if [ -z "$SSH_AUTH_SOCK" ]; then
