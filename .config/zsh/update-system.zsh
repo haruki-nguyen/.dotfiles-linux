@@ -306,10 +306,20 @@ git_pull_all() {
       continue
     fi
     
-    (
-      cd "$path" && /usr/bin/git fetch --quiet 2>git_error.log && /usr/bin/git pull --quiet 2>>git_error.log
-    )
-    local git_status=$?
+    if cd "$path"; then
+      SSH_AUTH_SOCK="$SSH_AUTH_SOCK" SSH_AGENT_PID="$SSH_AGENT_PID" /usr/bin/git fetch --quiet 2>git_error.log
+      local fetch_status=$?
+      if [[ $fetch_status -eq 0 ]]; then
+        SSH_AUTH_SOCK="$SSH_AUTH_SOCK" SSH_AGENT_PID="$SSH_AGENT_PID" /usr/bin/git pull --quiet 2>>git_error.log
+        local pull_status=$?
+        local git_status=$pull_status
+      else
+        local git_status=$fetch_status
+      fi
+    else
+      local git_status=1
+      echo "Failed to change directory to $path" > git_error.log
+    fi
     if [[ $git_status -eq 0 ]]; then
       log INFO "✓ Successfully updated: $path"
       ((success_count++))

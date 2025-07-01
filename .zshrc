@@ -105,16 +105,13 @@ export LC_ALL=en_US.UTF-8
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # THIS ZSHRC IS FOR UBUNTU
-# My custom scripts
-# Add custom scripts
-source .config/zsh/update-system.zsh
-
 # Aliases
 alias md="mkdir -p"
 alias t="touch"
 alias refresh="source ~/.zshrc && cd ~/.dotfiles-linux && stow . && cd -"
 alias py="python3"
 alias cd="z"
+alias update_system="zsh ~/.config/zsh/update-system.zsh"
 
 # Git aliases
 alias gits="git status"
@@ -124,10 +121,29 @@ alias gita="git add"
 alias gitc="git commit"
 alias gitpr="git pull --rebase"
 alias gitsync="git pull --rebase && git push"
+# SSH Agent Configuration
+# Auto-start SSH agent and load keys
+if [ -z "$SSH_AUTH_SOCK" ]; then
+  # Check if ssh-agent is already running
+  if [ -f ~/.ssh-agent-env ]; then
+    source ~/.ssh-agent-env > /dev/null
+    if ! kill -0 $SSH_AGENT_PID 2>/dev/null; then
+      # Agent is not running, start a new one
+      eval "$(ssh-agent -s)" > ~/.ssh-agent-env
+      source ~/.ssh-agent-env > /dev/null
+      ssh-add ~/.ssh/id_ed25519 2>/dev/null
+    fi
+  else
+    # No agent environment file, start a new agent
+    eval "$(ssh-agent -s)" > ~/.ssh-agent-env
+    source ~/.ssh-agent-env > /dev/null
+    ssh-add ~/.ssh/id_ed25519 2>/dev/null
+  fi
+fi
 
 # Enable zoxide
-if command -v zoxide >/dev/null 2>&1; then
-  eval "$(zoxide init zsh)"
+if command -v zoxide > /dev/null 2>&1; then
+eval "$(zoxide init zsh)"
 else
   echo "[WARN] zoxide not found in PATH. Please install zoxide for 'cd' alias to work."
 fi
