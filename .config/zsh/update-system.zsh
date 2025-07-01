@@ -83,12 +83,25 @@ error_exit() {
 
 # Command validation
 command_exists() {
+  local cmd="$1"
+  local original_pwd="$PWD"
+  local original_path="$PATH"
+  
+  # Ensure we're in a safe directory and have the full PATH
+  cd /tmp 2>/dev/null || cd / 2>/dev/null || true
+  export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$original_path"
+  
   # Debug output for command_exists
-  echo "[DEBUG] Checking command: $1, PATH: $PATH" >&2
+  echo "[DEBUG] Checking command: $cmd, PATH: $PATH" >&2
   local cmd_path
-  cmd_path=$(command -v "$1" 2>/dev/null)
-  echo "[DEBUG] command -v $1: $cmd_path" >&2
-  if (( $+commands[$1] )); then
+  cmd_path=$(command -v "$cmd" 2>/dev/null)
+  echo "[DEBUG] command -v $cmd: $cmd_path" >&2
+  
+  # Restore original directory and PATH
+  cd "$original_pwd" 2>/dev/null || true
+  export PATH="$original_path"
+  
+  if (( $+commands[$cmd] )); then
     return 0
   elif [[ -n "$cmd_path" ]]; then
     return 0
@@ -138,15 +151,24 @@ track_installed_packages() {
 
 # Find orphaned packages (Nix-like cleanup)
 find_orphaned_packages() {
+  local original_pwd="$PWD"
+  local original_path="$PATH"
+  
+  # Ensure we're in a safe directory and have the full PATH
+  cd "$HOME" 2>/dev/null || cd / 2>/dev/null || true
+  export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$original_path"
+  
   log INFO "Finding orphaned packages for removal"
   
   if ! command_exists apt; then
     log WARN "apt not available, skipping orphan detection"
+    cd "$original_pwd" 2>/dev/null || true
+    export PATH="$original_path"
     return 0
   fi
   
   # Find packages that are no longer needed
-  local orphans=$(apt-mark showauto | xargs apt-mark showmanual 2>/dev/null | grep -v "^$" || true)
+  local orphans=$(/usr/bin/apt-mark showauto | xargs /usr/bin/apt-mark showmanual 2>/dev/null | /usr/bin/grep -v "^$" || true)
   
   if [[ -n "$orphans" ]]; then
     log INFO "Found potentially orphaned packages:"
