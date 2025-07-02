@@ -172,6 +172,31 @@ setup_zsh() {
     fi
 }
 
+setup_nvm_and_node() {
+    log "Installing NVM (Node Version Manager)..."
+    if [ ! -d "$HOME/.nvm" ]; then
+        curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+        log_success "NVM installed"
+    else
+        log "NVM already installed"
+    fi
+    # Load nvm for this script session
+    export NVM_DIR="$HOME/.nvm"
+    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+    [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+    # Install and use Node.js 20 (latest LTS as of 2024)
+    if ! nvm ls 20 &>/dev/null; then
+        log "Installing Node.js v20..."
+        nvm install 20
+        log_success "Node.js v20 installed"
+    else
+        log "Node.js v20 already installed"
+    fi
+    nvm use 20
+    nvm alias default 20
+    log_success "Node.js v20 set as default"
+}
+
 setup_github_ssh() {
     log "Setting up GitHub SSH..."
     if [ ! -f ~/.ssh/id_ed25519 ]; then
@@ -258,6 +283,7 @@ main() {
     install_apt_packages
     setup_locale
     setup_zsh
+    setup_nvm_and_node
     setup_github_ssh
     setup_dotfiles
     setup_tmux
