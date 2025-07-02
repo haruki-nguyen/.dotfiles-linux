@@ -397,6 +397,31 @@ update_wsl2_packages() {
   return 0
 }
 
+# Update NVM and Node.js version 20
+update_nvm_and_node() {
+  log INFO "Updating NVM (Node Version Manager) and Node.js v20"
+  if [ ! -d "$HOME/.nvm" ]; then
+    log INFO "NVM not found, installing..."
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+    log INFO "NVM installed"
+  else
+    log INFO "NVM already installed"
+  fi
+  export NVM_DIR="$HOME/.nvm"
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+  [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+  if ! nvm ls 20 &>/dev/null; then
+    log INFO "Node.js v20 not found, installing..."
+    nvm install 20
+    log INFO "Node.js v20 installed"
+  else
+    log INFO "Node.js v20 already installed"
+  fi
+  nvm use 20
+  nvm alias default 20
+  log INFO "Node.js v20 set as default"
+}
+
 # Update global npm packages
 update_npm_packages() {
   if ! command_exists npm; then
@@ -514,6 +539,9 @@ update_system() {
   
   # Update WSL2-specific packages
   update_wsl2_packages
+  
+  # Update NVM and Node.js
+  update_nvm_and_node
   
   # Update language-specific packages
   update_npm_packages
