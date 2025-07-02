@@ -195,6 +195,15 @@ setup_nvm_and_node() {
     nvm use 20
     nvm alias default 20
     log_success "Node.js v20 set as default"
+    
+    # Install jq globally via npm
+    log "Installing jq globally via npm..."
+    if ! npm list -g jq &>/dev/null; then
+        run_with_retry npm install -g jq
+        log_success "jq installed globally via npm"
+    else
+        log "jq already installed globally via npm"
+    fi
 }
 
 setup_github_ssh() {
@@ -216,15 +225,15 @@ setup_github_ssh() {
 
 setup_dotfiles() {
     log "Setting up dotfiles..."
-    if [ ! -d ~/.dotfiles ]; then
-        git clone "$DOTFILES_REPO" ~/.dotfiles || log_warning "Failed to clone dotfiles"
+    if [ ! -d ~/.dotfiles-linux ]; then
+        git clone "$DOTFILES_REPO" ~/.dotfiles-linux || log_warning "Failed to clone dotfiles"
     else
         log "Dotfiles repository already exists"
     fi
     
     # Ensure the repository uses SSH URL
-    if [ -d ~/.dotfiles ]; then
-        cd ~/.dotfiles
+    if [ -d ~/.dotfiles-linux ]; then
+        cd ~/.dotfiles-linux
         local current_url=$(git remote get-url origin 2>/dev/null || echo "")
         if [ "$current_url" != "$DOTFILES_REPO" ]; then
             log "Updating dotfiles repository URL to SSH format..."
@@ -239,8 +248,8 @@ setup_dotfiles() {
     # Resolve conflicts before stowing
     resolve_dotfile_conflicts
     
-    if [ -d ~/.dotfiles ]; then
-        cd ~/.dotfiles && stow . && cd ~
+    if [ -d ~/.dotfiles-linux ]; then
+        cd ~/.dotfiles-linux && stow . && cd ~
         log_success "Dotfiles configured"
     fi
 }
