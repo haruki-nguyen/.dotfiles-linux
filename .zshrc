@@ -178,13 +178,13 @@ if [ -z "$SSH_AUTH_SOCK" ]; then
     source ~/.ssh-agent-env > /dev/null
     if ! kill -0 $SSH_AGENT_PID 2>/dev/null; then
       # Agent is not running, start a new one
-      eval "$(ssh-agent -s)" > ~/.ssh-agent-env
+      ssh-agent -s > ~/.ssh-agent-env 2>&1
       source ~/.ssh-agent-env > /dev/null
       ssh-add ~/.ssh/id_ed25519 2>/dev/null
     fi
   else
     # No agent environment file, start a new agent
-    eval "$(ssh-agent -s)" > ~/.ssh-agent-env
+    ssh-agent -s > ~/.ssh-agent-env 2>&1
     source ~/.ssh-agent-env > /dev/null
     ssh-add ~/.ssh/id_ed25519 2>/dev/null
   fi
